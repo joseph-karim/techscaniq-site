@@ -1,6 +1,5 @@
 [![CodeGuide](/codeguide-backdrop.svg)](https://codeguide.dev)
 
-
 # CodeGuide Vite + Supabase Starter
 
 A modern web application starter template built with Vite and React, featuring a beautiful UI and Supabase integration.
@@ -10,7 +9,6 @@ A modern web application starter template built with Vite and React, featuring a
 - **Framework:** [Vite](https://vitejs.dev/) + [React](https://react.dev/)
 - **Database:** [Supabase](https://supabase.com/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Payments:** [Stripe](https://stripe.com/)
 - **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
 - **Data Management:** [TanStack Query](https://tanstack.com/query)
 - **Form Handling:** [React Hook Form](https://react-hook-form.com/)
@@ -20,6 +18,7 @@ A modern web application starter template built with Vite and React, featuring a
 ## Prerequisites
 
 Before you begin, ensure you have the following:
+
 - Node.js 18+ installed
 - A [Supabase](https://supabase.com/) account for database
 - Generated project documents from [CodeGuide](https://codeguide.dev/) for best development experience
@@ -27,12 +26,14 @@ Before you begin, ensure you have the following:
 ## Getting Started
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd codeguide-vite-supabase
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -42,6 +43,7 @@ Before you begin, ensure you have the following:
    ```
 
 3. **Environment Variables Setup**
+
    - Copy the `.env.example` file to `.env`:
      ```bash
      cp .env.example .env
@@ -49,6 +51,7 @@ Before you begin, ensure you have the following:
    - Fill in the environment variables in `.env` (see Configuration section below)
 
 4. **Start the development server**
+
    ```bash
    npm run dev
    # or
@@ -62,6 +65,7 @@ Before you begin, ensure you have the following:
 ## Configuration
 
 ### Supabase Setup
+
 1. Go to [Supabase Dashboard](https://app.supabase.com/)
 2. Create a new project
 3. Go to Project Settings > API
@@ -113,15 +117,17 @@ codeguide-vite-supabase/
 To implement the generated documentation from CodeGuide:
 
 1. Create a `documentation` folder in the root directory:
+
    ```bash
    mkdir documentation
    ```
 
 2. Place all generated markdown files from CodeGuide in this directory:
+
    ```bash
    # Example structure
    documentation/
-   ├── project_requirements_document.md             
+   ├── project_requirements_document.md
    ├── app_flow_document.md
    ├── frontend_guideline_document.md
    └── backend_structure_document.md
