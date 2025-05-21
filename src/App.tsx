@@ -1,9 +1,9 @@
-import { Hero } from "./components/ui/animated-hero";
+import { TechScanLandingPage } from "./components/techscan/landing-page";
 
 export default function App() {
   return (
     <div>
-      <Hero />
+      <TechScanLandingPage />
     </div>
   );
 }
