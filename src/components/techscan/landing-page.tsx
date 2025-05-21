@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Check, Clock, FileWarning, MoneyOff, Scan, Browser, FileCheck } from "lucide-react"
+import { ArrowRight, Check, Clock, FileWarning, PhoneOff as MoneyOff, Scan, Rows as Browser, FileCheck } from "lucide-react"
 
 export function TechScanLandingPage() {
   return (
