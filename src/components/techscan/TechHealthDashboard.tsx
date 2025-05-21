@@ -157,7 +157,7 @@ export function TechHealthDashboard({
                 </svg>
               </div>
               <div className="ml-4">
-                <p className="text-lg text-gray-300">Tech 1/10</p>
+                <p className="text-lg text-gray-300">Health 7.8/10</p>
               </div>
             </div>
             
