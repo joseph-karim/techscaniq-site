@@ -10,7 +10,7 @@ export function ReportExcerptCard() {
     {
       id: "summary",
       title: "Summary Verdict",
-      content: "⚠️ Scalable to MVP-stage traction, but re-architecture likely needed for Series A+.",
+      content: "Scalable to MVP-stage traction, but re-architecture likely needed for Series A+.",
       score: "6.1 / 10",
       isWarning: true
     },
