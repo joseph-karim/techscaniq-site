@@ -191,7 +191,7 @@ export function TechScanLandingPage() {
                 <div>
                   <h4 className="text-yellow-400 mb-2">🔧 Infrastructure Flexibility</h4>
                   <ul className="space-y-1 text-gray-300 pl-5">
-                    <li>- Hosted on Vercel (speed > control)</li>
+                    <li>- Hosted on Vercel (speed &gt; control)</li>
                     <li>- No autoscaling/container orchestration</li>
                   </ul>
                 </div>
