@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Check, Clock, FileWarning, PhoneOff as MoneyOff, Scan, Rows as Browser, FileCheck, Shield, Activity, Database, GitBranch } from "lucide-react"
+import { AnimatedBackground } from "./animated-background"
 
 export function TechScanLandingPage() {
   return (
     <div className="relative min-h-screen bg-[#00142c] font-sans text-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full backdrop-blur-sm transition-all">
+      <header className="sticky top-0 z-50 w-full backdrop-blur-md transition-all">
         <div className="container mx-auto flex items-center justify-between py-6">
           <div className="flex items-center pl-2 md:pl-4">
             <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-28 md:h-32" />
@@ -16,76 +17,78 @@ export function TechScanLandingPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="container mx-auto py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              Tech diligence in 2 hours. No engineers needed.
-            </h1>
-            <p className="text-lg text-[#D1D5DB]">
-              TechScan IQ delivers investor-grade assessments for any tech deal. Get clear insights without disrupting your teams or draining engineering resources.
-            </p>
-            <div className="pt-4">
-              <Button className="rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all text-lg px-8 py-6">
-                Get your Tech Health Score <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <div className="flex gap-4 mt-6">
-                <div className="flex items-center text-sm text-[#D1D5DB]">
-                  <Check className="mr-2 h-4 w-4 text-[#22D3EE]" />
-                  <span>Reviewed by Technical Advisor</span>
-                </div>
-                <div className="flex items-center text-sm text-[#D1D5DB]">
-                  <Check className="mr-2 h-4 w-4 text-[#22D3EE]" />
-                  <span>First Scan Free</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="relative flex justify-center">
-            <div className="relative bg-[#12263A] rounded-xl shadow-2xl p-6 w-full max-w-md">
-              <div className="absolute -right-4 -top-4 bg-[#22D3EE] rounded-full w-24 h-24 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-2xl font-bold">87</div>
-                  <div className="text-xs">Tech Score</div>
-                </div>
-              </div>
-              <div className="space-y-4 pt-8">
-                <h3 className="text-xl font-bold">Health Report</h3>
-                <div className="space-y-2">
-                  <div className="bg-[#1E3A5F] rounded-lg p-3">
-                    <div className="flex justify-between">
-                      <span>Code Quality</span>
-                      <span className="font-semibold text-[#22D3EE]">92%</span>
-                    </div>
-                    <div className="mt-1 bg-[#00142c] rounded-full h-2">
-                      <div className="bg-[#22D3EE] h-2 rounded-full" style={{ width: "92%" }}></div>
-                    </div>
+      {/* Hero Section with Animated Background */}
+      <AnimatedBackground className="overflow-hidden">
+        <section className="container mx-auto py-16 md:py-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 backdrop-blur-sm bg-[#00142c]/30 p-6 rounded-xl">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+                Tech diligence in 2 hours. No engineers needed.
+              </h1>
+              <p className="text-lg text-white">
+                TechScan IQ delivers investor-grade assessments for any tech deal. Get clear insights without disrupting your teams or draining engineering resources.
+              </p>
+              <div className="pt-4">
+                <Button className="rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all text-lg px-8 py-6">
+                  Get your Tech Health Score <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+                <div className="flex gap-4 mt-6">
+                  <div className="flex items-center text-sm text-white">
+                    <Check className="mr-2 h-4 w-4 text-[#22D3EE]" />
+                    <span>Reviewed by Technical Advisor</span>
                   </div>
-                  <div className="bg-[#1E3A5F] rounded-lg p-3">
-                    <div className="flex justify-between">
-                      <span>Technical Debt</span>
-                      <span className="font-semibold text-[#22D3EE]">78%</span>
-                    </div>
-                    <div className="mt-1 bg-[#00142c] rounded-full h-2">
-                      <div className="bg-[#22D3EE] h-2 rounded-full" style={{ width: "78%" }}></div>
-                    </div>
-                  </div>
-                  <div className="bg-[#1E3A5F] rounded-lg p-3">
-                    <div className="flex justify-between">
-                      <span>Scalability</span>
-                      <span className="font-semibold text-[#22D3EE]">85%</span>
-                    </div>
-                    <div className="mt-1 bg-[#00142c] rounded-full h-2">
-                      <div className="bg-[#22D3EE] h-2 rounded-full" style={{ width: "85%" }}></div>
-                    </div>
+                  <div className="flex items-center text-sm text-white">
+                    <Check className="mr-2 h-4 w-4 text-[#22D3EE]" />
+                    <span>First Scan Free</span>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="relative flex justify-center">
+              <div className="relative bg-[#12263A]/90 backdrop-blur rounded-xl shadow-2xl p-6 w-full max-w-md border border-[#1E3A5F] transform transition-all hover:scale-[1.02] hover:shadow-cyan-500/20">
+                <div className="absolute -right-4 -top-4 bg-[#22D3EE] rounded-full w-24 h-24 flex items-center justify-center animate-pulse">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold">87</div>
+                    <div className="text-xs">Tech Score</div>
+                  </div>
+                </div>
+                <div className="space-y-4 pt-8">
+                  <h3 className="text-xl font-bold">Health Report</h3>
+                  <div className="space-y-2">
+                    <div className="bg-[#1E3A5F] rounded-lg p-3">
+                      <div className="flex justify-between">
+                        <span>Code Quality</span>
+                        <span className="font-semibold text-[#22D3EE]">92%</span>
+                      </div>
+                      <div className="mt-1 bg-[#00142c] rounded-full h-2">
+                        <div className="bg-gradient-to-r from-[#22D3EE] to-[#0891B2] h-2 rounded-full" style={{ width: "92%" }}></div>
+                      </div>
+                    </div>
+                    <div className="bg-[#1E3A5F] rounded-lg p-3">
+                      <div className="flex justify-between">
+                        <span>Technical Debt</span>
+                        <span className="font-semibold text-[#22D3EE]">78%</span>
+                      </div>
+                      <div className="mt-1 bg-[#00142c] rounded-full h-2">
+                        <div className="bg-gradient-to-r from-[#22D3EE] to-[#0891B2] h-2 rounded-full" style={{ width: "78%" }}></div>
+                      </div>
+                    </div>
+                    <div className="bg-[#1E3A5F] rounded-lg p-3">
+                      <div className="flex justify-between">
+                        <span>Scalability</span>
+                        <span className="font-semibold text-[#22D3EE]">85%</span>
+                      </div>
+                      <div className="mt-1 bg-[#00142c] rounded-full h-2">
+                        <div className="bg-gradient-to-r from-[#22D3EE] to-[#0891B2] h-2 rounded-full" style={{ width: "85%" }}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedBackground>
 
       {/* Problem Section */}
       <section className="bg-[#12263A] py-16 md:py-24">
@@ -94,7 +97,7 @@ export function TechScanLandingPage() {
             Traditional tech diligence doesn't scale.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-            <div className="bg-[#1E3A5F] p-8 rounded-xl">
+            <div className="bg-[#1E3A5F] p-8 rounded-xl transition-transform hover:transform hover:scale-105">
               <div className="bg-[#00142c] w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <Clock className="h-8 w-8 text-[#22D3EE]" />
               </div>
@@ -103,7 +106,7 @@ export function TechScanLandingPage() {
                 Traditional tech audits can take weeks or months, delaying critical investment decisions.
               </p>
             </div>
-            <div className="bg-[#1E3A5F] p-8 rounded-xl">
+            <div className="bg-[#1E3A5F] p-8 rounded-xl transition-transform hover:transform hover:scale-105">
               <div className="bg-[#00142c] w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <MoneyOff className="h-8 w-8 text-[#22D3EE]" />
               </div>
@@ -112,7 +115,7 @@ export function TechScanLandingPage() {
                 Engineering talent is costly. Technical due diligence can run into tens of thousands of dollars.
               </p>
             </div>
-            <div className="bg-[#1E3A5F] p-8 rounded-xl">
+            <div className="bg-[#1E3A5F] p-8 rounded-xl transition-transform hover:transform hover:scale-105">
               <div className="bg-[#00142c] w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <FileWarning className="h-8 w-8 text-[#22D3EE]" />
               </div>
@@ -154,12 +157,12 @@ export function TechScanLandingPage() {
                 description: "Get clear, actionable insights for confident decisions"
               }
             ].map((step, index) => (
-              <div key={index} className="bg-[#12263A] p-8 rounded-xl border border-[#1E3A5F] group hover:border-[#22D3EE] transition-all duration-300">
+              <div key={index} className="bg-[#12263A] p-8 rounded-xl border border-[#1E3A5F] group hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
                 <div className="flex items-center mb-6">
                   <div className="bg-[#1E3A5F] group-hover:bg-[#22D3EE]/20 w-10 h-10 rounded-full flex items-center justify-center text-[#22D3EE] font-bold mr-4 transition-all duration-300">
                     {index + 1}
                   </div>
-                  <div className="bg-[#1E3A5F] p-2 rounded-lg">
+                  <div className="bg-[#1E3A5F] p-2 rounded-lg group-hover:bg-[#1E3A5F]/80">
                     {step.icon}
                   </div>
                 </div>
@@ -183,7 +186,7 @@ export function TechScanLandingPage() {
               </p>
               
               <div className="space-y-5">
-                <div className="bg-[#1E3A5F] p-4 rounded-lg">
+                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
                   <div className="flex items-start">
                     <div className="mr-4 text-[#22D3EE] mt-1">
                       <Activity className="h-5 w-5" />
@@ -195,7 +198,7 @@ export function TechScanLandingPage() {
                   </div>
                 </div>
                 
-                <div className="bg-[#1E3A5F] p-4 rounded-lg">
+                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
                   <div className="flex items-start">
                     <div className="mr-4 text-[#22D3EE] mt-1">
                       <Database className="h-5 w-5" />
@@ -207,7 +210,7 @@ export function TechScanLandingPage() {
                   </div>
                 </div>
                 
-                <div className="bg-[#1E3A5F] p-4 rounded-lg">
+                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
                   <div className="flex items-start">
                     <div className="mr-4 text-[#22D3EE] mt-1">
                       <FileWarning className="h-5 w-5" />
@@ -219,7 +222,7 @@ export function TechScanLandingPage() {
                   </div>
                 </div>
                 
-                <div className="bg-[#1E3A5F] p-4 rounded-lg">
+                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
                   <div className="flex items-start">
                     <div className="mr-4 text-[#22D3EE] mt-1">
                       <Shield className="h-5 w-5" />
@@ -231,7 +234,7 @@ export function TechScanLandingPage() {
                   </div>
                 </div>
                 
-                <div className="bg-[#1E3A5F] p-4 rounded-lg">
+                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
                   <div className="flex items-start">
                     <div className="mr-4 text-[#22D3EE] mt-1">
                       <GitBranch className="h-5 w-5" />
@@ -245,7 +248,7 @@ export function TechScanLandingPage() {
               </div>
             </div>
             <div className="relative flex justify-center">
-              <div className="relative bg-[#1E3A5F] rounded-xl shadow-2xl p-6 max-w-md">
+              <div className="relative bg-[#1E3A5F] rounded-xl shadow-2xl p-6 max-w-md transform transition-all hover:translate-y-[-5px] hover:shadow-cyan-500/20">
                 <div className="absolute -right-4 -top-4 bg-[#22D3EE] rounded-full p-4">
                   <Check className="h-8 w-8 text-white" />
                 </div>
@@ -269,7 +272,7 @@ export function TechScanLandingPage() {
                       <span>Excellent</span>
                     </div>
                     <div className="bg-[#00142c] rounded-full h-2">
-                      <div className="bg-[#22D3EE] h-2 rounded-full" style={{ width: "78%" }}></div>
+                      <div className="bg-gradient-to-r from-[#22D3EE] to-[#0891B2] h-2 rounded-full" style={{ width: "78%" }}></div>
                     </div>
                   </div>
                   
@@ -295,15 +298,15 @@ export function TechScanLandingPage() {
                   
                   <div className="space-y-3">
                     <div className="text-sm font-medium mb-2">Top Concerns</div>
-                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start">
+                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start hover:bg-[#00142c]">
                       <span className="text-amber-400 mr-2">⚠️</span>
                       <span>Monolithic architecture may limit scaling</span>
                     </div>
-                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start">
+                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start hover:bg-[#00142c]">
                       <span className="text-amber-400 mr-2">⚠️</span>
                       <span>Outdated React version (16.8 vs current 18.2)</span>
                     </div>
-                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start">
+                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start hover:bg-[#00142c]">
                       <span className="text-amber-400 mr-2">⚠️</span>
                       <span>No continuous deployment evidence</span>
                     </div>
@@ -320,27 +323,29 @@ export function TechScanLandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-[#00142c]">
-        <div className="container mx-auto text-center max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Have a tech deal on your radar?
-          </h2>
-          <p className="text-xl text-[#D1D5DB] mb-8">
-            Don't make the call without a red flag scan. Your first scan is free.
-          </p>
-          <Button className="rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all text-lg px-8 py-6 w-full md:w-auto">
-            Get your Tech Health Score <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <p className="text-sm text-[#D1D5DB] mt-4">
-            No code access. No delays. Results in 2 hours.
-          </p>
-          <div className="flex justify-center gap-8 mt-12">
-            <div className="text-sm text-[#D1D5DB]">Trusted by VC scouts</div>
-            <div className="text-sm text-[#D1D5DB]">PE-backed</div>
-            <div className="text-sm text-[#D1D5DB]">M&A approved</div>
+      <AnimatedBackground className="overflow-hidden">
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto text-center max-w-3xl backdrop-blur-sm bg-[#00142c]/30 p-10 rounded-xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Have a tech deal on your radar?
+            </h2>
+            <p className="text-xl text-white mb-8">
+              Don't make the call without a red flag scan. Your first scan is free.
+            </p>
+            <Button className="rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all text-lg px-8 py-6 w-full md:w-auto">
+              Get your Tech Health Score <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <p className="text-sm text-white mt-4">
+              No code access. No delays. Results in 2 hours.
+            </p>
+            <div className="flex flex-col md:flex-row justify-center gap-8 mt-12">
+              <div className="text-sm text-white bg-[#1E3A5F]/50 px-4 py-2 rounded-full backdrop-blur-sm">Trusted by VC scouts</div>
+              <div className="text-sm text-white bg-[#1E3A5F]/50 px-4 py-2 rounded-full backdrop-blur-sm">PE-backed</div>
+              <div className="text-sm text-white bg-[#1E3A5F]/50 px-4 py-2 rounded-full backdrop-blur-sm">M&A approved</div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedBackground>
 
       {/* Footer */}
       <footer className="bg-[#00142c] border-t border-[#1E3A5F] py-8">
