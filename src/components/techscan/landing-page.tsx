@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Check, Clock, FileWarning, PhoneOff as MoneyOff, Scan, Rows as Browser, FileCheck, Shield, Activity, Database, GitBranch } from "lucide-react"
 import { AnimatedBackground } from "./animated-background"
 import { TechHealthDashboard } from "./TechHealthDashboard"
+import { ReportExcerptCard } from "./ReportExcerptCard"
 
 export function TechScanLandingPage() {
   return (
@@ -147,71 +148,7 @@ export function TechScanLandingPage() {
               </p>
             </div>
             
-            <div className="bg-[#12263A] p-6 rounded-xl border border-[#1E3A5F] shadow-lg transition-all hover:shadow-cyan-500/10 font-mono">
-              <h3 className="text-xl font-bold mb-6 flex items-center">
-                <span className="text-yellow-400 mr-2">🔍</span> 
-                Scalability & Architecture
-              </h3>
-              
-              <div className="mb-6">
-                <div className="bg-[#0A1A2F]/60 p-3 rounded flex items-center">
-                  <span className="text-yellow-400 mr-2">⚠️</span>
-                  <span className="font-medium">Moderate risk — suitable for current traction, but limited for scale.</span>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-sm">
-                <div>
-                  <h4 className="text-yellow-400 mb-2">🧱 Code Structure & Modularity</h4>
-                  <ul className="space-y-1 text-gray-300 pl-5">
-                    <li>- Monolithic architecture (single JS bundle)</li>
-                    <li>- No microservices or containerization</li>
-                    <li>- Limited ability to scale features independently</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="text-yellow-400 mb-2">🕸 API Design & Documentation</h4>
-                  <ul className="space-y-1 text-gray-300 pl-5">
-                    <li>- RESTful endpoints inferred</li>
-                    <li>- Lacks visible documentation</li>
-                    <li>- Risk of failure in auth/billing paths</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="text-yellow-400 mb-2">⚙️ DevOps & Deployment</h4>
-                  <ul className="space-y-1 text-gray-300 pl-5">
-                    <li>- Only GitHub Actions CI detected</li>
-                    <li>- Manual deploy inferred</li>
-                    <li>- No rollout strategies observed</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="text-yellow-400 mb-2">🔧 Infrastructure Flexibility</h4>
-                  <ul className="space-y-1 text-gray-300 pl-5">
-                    <li>- Hosted on Vercel (speed &gt; control)</li>
-                    <li>- No autoscaling/container orchestration</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="text-yellow-400 mb-2">📊 Tech Debt Warning</h4>
-                  <ul className="space-y-1 text-gray-300 pl-5">
-                    <li>- Bootstrap 4 in use (legacy)</li>
-                    <li>- No automated test coverage</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="mt-8 pt-4 border-t border-[#1E3A5F]">
-                <h4 className="text-sm font-medium mb-2">🗣 Analyst Commentary:</h4>
-                <p className="text-gray-300 italic">
-                  "The team has clearly optimized for speed and iteration — but future-proofing is limited..."
-                </p>
-              </div>
-            </div>
+            <ReportExcerptCard />
           </div>
         </div>
       </section>
