@@ -8,7 +8,7 @@ export function TechScanLandingPage() {
       <header className="sticky top-0 z-50 w-full backdrop-blur-sm transition-all">
         <div className="container mx-auto flex items-center justify-between py-6">
           <div className="flex items-center">
-            <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-10 md:h-12" />
+            <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-14 md:h-16" />
           </div>
           <Button className="hidden md:inline-flex rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all">
             Get your Tech Health Score
@@ -193,7 +193,7 @@ export function TechScanLandingPage() {
             </div>
             <div className="relative flex justify-center">
               <div className="relative bg-[#1E3A5F] rounded-xl shadow-2xl p-6 max-w-md">
-                <div className="absolute -left-4 -top-4 bg-[#22D3EE] rounded-full p-4">
+                <div className="absolute -right-4 -top-4 bg-[#22D3EE] rounded-full p-4">
                   <Check className="h-8 w-8 text-white" />
                 </div>
                 <div className="pb-4 border-b border-[#0A1A2F]">
@@ -282,7 +282,7 @@ export function TechScanLandingPage() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-8" />
+              <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-12" />
             </div>
             <div className="text-sm text-[#D1D5DB]">
               © 2025 TechScan IQ. All rights reserved.
