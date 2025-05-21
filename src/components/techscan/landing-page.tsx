@@ -149,28 +149,48 @@ export function TechScanLandingPage() {
               
               <div className="space-y-6">
                 <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
-                  <h4 className="text-[#22D3EE] mb-2 font-bold">Executive Summary with Confidence Level</h4>
-                  <p className="text-[#D1D5DB]">Clear verdict with confidence metrics based on observed signals. Identifies top concerns and provides actionable next steps.</p>
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Executive Summary with Confidence Index</h4>
+                  <p className="text-[#D1D5DB]">Get the answer fast — with nuance. Clear go/no-go verdict, Tech Health Score (1–10), and a Confidence Index. Highlights top red flags and suggests next steps for validation.</p>
                 </div>
 
                 <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
-                  <h4 className="text-[#22D3EE] mb-2 font-bold">Comprehensive Stack Analysis</h4>
-                  <p className="text-[#D1D5DB]">Complete mapping of frontend, backend, database, hosting infrastructure, and third-party dependencies from observable signals.</p>
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Full-Stack Mapping & Infra Footprint</h4>
+                  <p className="text-[#D1D5DB]">Know exactly what you're investing in. Maps frontend frameworks, backend stack, database tech, hosting layer, CDN, CI/CD signals, and build tools — inferred directly from code and traffic.</p>
                 </div>
 
                 <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
-                  <h4 className="text-[#22D3EE] mb-2 font-bold">Red Flag Detection</h4>
-                  <p className="text-[#D1D5DB]">Identification of critical issues with severity ratings and specific recommendations for remediation or further investigation.</p>
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Red Flag Risk Matrix</h4>
+                  <p className="text-[#D1D5DB]">Silent killers, surfaced. Flags technical fragility, poor DevOps discipline, risky architecture, outdated frameworks, or insecure code patterns — each with severity and suggested investor questions.</p>
                 </div>
 
                 <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
-                  <h4 className="text-[#22D3EE] mb-2 font-bold">Security & Compliance Signals</h4>
-                  <p className="text-[#D1D5DB]">Evaluation of security practices including SSL implementation, header configurations, and vulnerability exposure assessment.</p>
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Security & Vulnerability Profile</h4>
+                  <p className="text-[#D1D5DB]">Catch red flags before they hit your portfolio. Analyzes SSL, security headers, vulnerability exposure, open endpoints, and hardcoded tokens. Flags lack of error tracking or session security.</p>
                 </div>
 
                 <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
-                  <h4 className="text-[#22D3EE] mb-2 font-bold">Technical Velocity Analysis</h4>
-                  <p className="text-[#D1D5DB]">Assessment of development activity, deployment infrastructure, and indicators of engineering team efficiency.</p>
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">DevOps & Technical Velocity Tracker</h4>
+                  <p className="text-[#D1D5DB]">Gauge team speed, reliability, and maturity. Tracks update frequency, deployment pipelines, GitHub/CI tools, and signs of engineering throughput. Reveals whether this team ships like amateurs or pros.</p>
+                </div>
+                
+                <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Vendor Dependencies & SaaS Stack Risk</h4>
+                  <p className="text-[#D1D5DB]">What are they leaning on — and is it stable? Full inventory of third-party services and SDKs: Auth0, Stripe, Segment, Intercom, Sentry, etc. Flags outdated libraries, deprecated scripts, and overreliance on fragile tools.</p>
+                </div>
+                
+                <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">MarTech & Product Analytics Maturity</h4>
+                  <p className="text-[#D1D5DB]">Data-driven or flying blind? Detects analytics frameworks (GA, Segment, Mixpanel), tag managers, event tracking setups, and A/B testing infrastructure. Indicates how well the team measures what matters.</p>
+                </div>
+                
+                <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Product-Led Growth Infrastructure Readiness</h4>
+                  <p className="text-[#D1D5DB]">Is this SaaS built for self-serve scale? Scans for signs of PLG-friendly systems: in-app onboarding, chat support, self-signup, Appcues, Pendo, or Intercom usage. Flags friction or missing pieces.</p>
+                </div>
+                
+                <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Privacy, Compliance & Data Hygiene</h4>
+                  <p className="text-[#D1D5DB]">Can this product handle real scrutiny? Scans for visible PII leaks, non-secure cookies, lack of privacy policy links, and misuse of local storage/session storage. Flags lack of GDPR/CCPA alignment or poor consent management.</p>
                 </div>
               </div>
             </div>
