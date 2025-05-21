@@ -115,7 +115,7 @@ export function ReportExcerptCard() {
       <Accordion 
         type="multiple" 
         value={openSections} 
-        onValueChange={(v) => setAutoExpanding(false)}
+        onValueChange={() => setAutoExpanding(false)}
         className="border-0"
       >
         {sections.map((section) => (

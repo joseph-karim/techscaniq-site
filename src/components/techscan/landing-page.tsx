@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Check, Clock, FileWarning, DollarSign, Scan, Rows as Browser, FileCheck, Shield, Activity, Database, GitBranch } from "lucide-react"
+import { ArrowRight, Check, Clock, FileWarning, DollarSign, Scan, Rows as Browser, FileCheck, Activity, Database, GitBranch } from "lucide-react"
 import { AnimatedBackground } from "./animated-background"
 import { TechHealthDashboard } from "./TechHealthDashboard"
 import { ReportExcerptCard } from "./ReportExcerptCard"

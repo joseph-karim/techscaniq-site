@@ -45,7 +45,7 @@ const defaultRedFlags: RedFlag[] = [
 ];
 
 const defaultStack = ["React", "Node.js", "MongoDB", "Vercel"];
-const defaultCompliance = [
+const defaultCompliance: ComplianceCheck[] = [
   { label: "SSL, HTTPS enforced", status: "pass" },
   { label: "Headers secure (CSP, HSTS present)", status: "pass" },
   { label: "No exposed env vars", status: "warn" }
