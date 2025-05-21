@@ -11,7 +11,7 @@ export function TechScanLandingPage() {
       <header className="sticky top-0 z-50 w-full backdrop-blur-md transition-all">
         <div className="container mx-auto flex items-center justify-between py-6">
           <div className="flex items-center pl-2 md:pl-4">
-            <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-28 md:h-32" />
+            <img src="/techscaniq logo.png" alt="TechScan IQ" className="h-28 md:h-32" />
           </div>
           <Button className="hidden md:inline-flex rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all">
             Get your Tech Health Score
@@ -146,7 +146,7 @@ export function TechScanLandingPage() {
               <p className="text-[#D1D5DB] text-lg mb-8">
                 TechScan IQ delivers thorough, objective assessments that satisfy even the most diligent limited partners. Our reports provide comprehensive technical validation needed for investment confidence and proper due diligence.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
                   <h4 className="text-[#22D3EE] mb-2 font-bold">Executive Summary with Confidence Index</h4>
@@ -172,29 +172,29 @@ export function TechScanLandingPage() {
                   <h4 className="text-[#22D3EE] mb-2 font-bold">DevOps & Technical Velocity Tracker</h4>
                   <p className="text-[#D1D5DB]">Gauge team speed, reliability, and maturity. Tracks update frequency, deployment pipelines, GitHub/CI tools, and signs of engineering throughput. Reveals whether this team ships like amateurs or pros.</p>
                 </div>
-                
+
                 <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
                   <h4 className="text-[#22D3EE] mb-2 font-bold">Vendor Dependencies & SaaS Stack Risk</h4>
                   <p className="text-[#D1D5DB]">What are they leaning on — and is it stable? Full inventory of third-party services and SDKs: Auth0, Stripe, Segment, Intercom, Sentry, etc. Flags outdated libraries, deprecated scripts, and overreliance on fragile tools.</p>
                 </div>
-                
+
                 <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
                   <h4 className="text-[#22D3EE] mb-2 font-bold">MarTech & Product Analytics Maturity</h4>
                   <p className="text-[#D1D5DB]">Data-driven or flying blind? Detects analytics frameworks (GA, Segment, Mixpanel), tag managers, event tracking setups, and A/B testing infrastructure. Indicates how well the team measures what matters.</p>
                 </div>
-                
+
                 <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
                   <h4 className="text-[#22D3EE] mb-2 font-bold">Product-Led Growth Infrastructure Readiness</h4>
                   <p className="text-[#D1D5DB]">Is this SaaS built for self-serve scale? Scans for signs of PLG-friendly systems: in-app onboarding, chat support, self-signup, Appcues, Pendo, or Intercom usage. Flags friction or missing pieces.</p>
                 </div>
-                
+
                 <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
                   <h4 className="text-[#22D3EE] mb-2 font-bold">Privacy, Compliance & Data Hygiene</h4>
                   <p className="text-[#D1D5DB]">Can this product handle real scrutiny? Scans for visible PII leaks, non-secure cookies, lack of privacy policy links, and misuse of local storage/session storage. Flags lack of GDPR/CCPA alignment or poor consent management.</p>
                 </div>
               </div>
             </div>
-            
+
             <ReportExcerptCard />
           </div>
         </div>
@@ -230,7 +230,7 @@ export function TechScanLandingPage() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0 pl-2 md:pl-4">
-              <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-28" />
+              <img src="/techscaniq logo.png" alt="TechScan IQ" className="h-28" />
             </div>
             <div className="text-sm text-[#D1D5DB]">
               © 2025 TechScan IQ. All rights reserved.
