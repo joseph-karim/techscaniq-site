@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Check, Clock, FileWarning, PhoneOff as MoneyOff, Scan, Rows as Browser, FileCheck, Shield, Activity, Database, GitBranch } from "lucide-react"
 import { AnimatedBackground } from "./animated-background"
 import { TechHealthDashboard } from "./TechHealthDashboard"
+import { RiskReversalDetailTab } from "./RiskReversalDetailTab"
 
 export function TechScanLandingPage() {
   return (
@@ -148,17 +149,12 @@ export function TechScanLandingPage() {
               </p>
               
               <div className="space-y-5">
-                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
-                  <div className="flex items-start">
-                    <div className="mr-4 text-[#22D3EE] mt-1">
-                      <Activity className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white">Executive Summary with Confidence Level</h4>
-                      <p className="text-sm text-[#D1D5DB]">Clear verdict with confidence metrics based on observed signals. Identifies top concerns and provides actionable next steps.</p>
-                    </div>
-                  </div>
-                </div>
+                <RiskReversalDetailTab 
+                  title="Scalability & Architecture" 
+                  riskLevel="moderate" 
+                  emoji="⚠️" 
+                  className="hover:shadow-md transition-all hover:shadow-cyan-500/10"
+                />
                 
                 <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
                   <div className="flex items-start">
