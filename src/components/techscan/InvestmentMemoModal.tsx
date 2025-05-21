@@ -1,4 +1,4 @@
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { ArrowRight, Calendar, Building, Activity, Check, Clock, ShieldCheck, BarChart, FileSpreadsheet } from "lucide-react";
 
 type InvestmentMemoModalProps = {
@@ -10,6 +10,7 @@ export function InvestmentMemoModal({ open, onOpenChange }: InvestmentMemoModalP
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-4xl p-0 bg-[#0A1A2F] border border-[#1E3A5F] text-white">
+        <DialogTitle className="sr-only">LP-Ready Technical Investment Memo</DialogTitle>
         <div className="p-6 max-h-[80vh] overflow-y-auto">
           <div className="mb-6 pb-4 border-b border-[#1E3A5F]">
             <h2 className="text-2xl font-bold text-white mb-1">LP-Ready Technical Investment Memo</h2>
