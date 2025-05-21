@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Check, Clock, FileWarning, PhoneOff as MoneyOff, Scan, Rows as Browser, FileCheck } from "lucide-react"
+import { ArrowRight, Check, Clock, FileWarning, PhoneOff as MoneyOff, Scan, Rows as Browser, FileCheck, Shield, Activity, Database, GitBranch } from "lucide-react"
 
 export function TechScanLandingPage() {
   return (
@@ -177,17 +177,70 @@ export function TechScanLandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Engineered for LP scrutiny.</h2>
-              <p className="text-[#D1D5DB] text-lg">
-                TechScan IQ delivers detailed, unbiased assessments that satisfy even the most thorough limited partners. 
-                Our reports provide the technical validation you need to defend investment decisions and demonstrate proper due diligence.
+              <p className="text-[#D1D5DB] text-lg mb-8">
+                TechScan IQ delivers thorough, objective assessments that satisfy even the most diligent limited partners. 
+                Our reports provide comprehensive technical validation needed for investment confidence and proper due diligence.
               </p>
-              <div className="mt-8 flex items-center p-4 bg-[#1E3A5F] rounded-lg">
-                <div className="mr-4 text-[#22D3EE]">
-                  <Check className="h-6 w-6" />
+              
+              <div className="space-y-5">
+                <div className="bg-[#1E3A5F] p-4 rounded-lg">
+                  <div className="flex items-start">
+                    <div className="mr-4 text-[#22D3EE] mt-1">
+                      <Activity className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">Executive Summary with Confidence Level</h4>
+                      <p className="text-sm text-[#D1D5DB]">Clear verdict with confidence metrics based on observed signals. Identifies top concerns and provides actionable next steps.</p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold">Expert-Verified</h4>
-                  <p className="text-sm text-[#D1D5DB]">Every scan is reviewed by a technical advisor</p>
+                
+                <div className="bg-[#1E3A5F] p-4 rounded-lg">
+                  <div className="flex items-start">
+                    <div className="mr-4 text-[#22D3EE] mt-1">
+                      <Database className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">Comprehensive Stack Analysis</h4>
+                      <p className="text-sm text-[#D1D5DB]">Complete mapping of frontend, backend, database, hosting infrastructure, and third-party dependencies from observable signals.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-[#1E3A5F] p-4 rounded-lg">
+                  <div className="flex items-start">
+                    <div className="mr-4 text-[#22D3EE] mt-1">
+                      <FileWarning className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">Red Flag Detection</h4>
+                      <p className="text-sm text-[#D1D5DB]">Identification of critical issues with severity ratings and specific recommendations for remediation or further investigation.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-[#1E3A5F] p-4 rounded-lg">
+                  <div className="flex items-start">
+                    <div className="mr-4 text-[#22D3EE] mt-1">
+                      <Shield className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">Security & Compliance Signals</h4>
+                      <p className="text-sm text-[#D1D5DB]">Evaluation of security practices including SSL implementation, header configurations, and vulnerability exposure assessment.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-[#1E3A5F] p-4 rounded-lg">
+                  <div className="flex items-start">
+                    <div className="mr-4 text-[#22D3EE] mt-1">
+                      <GitBranch className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">Technical Velocity Analysis</h4>
+                      <p className="text-sm text-[#D1D5DB]">Assessment of development activity, deployment infrastructure, and indicators of engineering team efficiency.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -198,12 +251,17 @@ export function TechScanLandingPage() {
                 </div>
                 <div className="pb-4 border-b border-[#0A1D36]">
                   <h3 className="text-xl font-bold">Technology Health Report</h3>
-                  <p className="text-[#D1D5DB] text-sm">FinTech Innovation Inc.</p>
+                  <p className="text-[#D1D5DB] text-sm">SaaSCo</p>
+                  <div className="flex justify-between items-center mt-3">
+                    <div className="text-xs text-[#D1D5DB]">Verdict: <span className="text-green-400">✅ No critical risks</span></div>
+                    <div className="text-xs text-[#D1D5DB]">Confidence: <span className="text-white font-medium">High</span></div>
+                  </div>
                 </div>
+                
                 <div className="py-4">
                   <div className="flex justify-between mb-2">
-                    <span className="text-[#D1D5DB]">Overall Score</span>
-                    <span className="font-bold text-[#22D3EE]">87/100</span>
+                    <span className="text-[#D1D5DB]">Tech Health Score</span>
+                    <span className="font-bold text-[#22D3EE]">7.8/10</span>
                   </div>
                   <div className="mb-6">
                     <div className="flex justify-between text-xs mb-1">
@@ -211,42 +269,49 @@ export function TechScanLandingPage() {
                       <span>Excellent</span>
                     </div>
                     <div className="bg-[#0A1D36] rounded-full h-2">
-                      <div className="bg-[#22D3EE] h-2 rounded-full" style={{ width: "87%" }}></div>
+                      <div className="bg-[#22D3EE] h-2 rounded-full" style={{ width: "78%" }}></div>
                     </div>
                   </div>
                   
-                  <div className="space-y-4">
-                    <div className="flex justify-between">
-                      <span>Scalability</span>
-                      <div className="flex items-center">
-                        <div className="w-16 bg-[#0A1D36] rounded-full h-1.5 mr-2">
-                          <div className="bg-[#22D3EE] h-1.5 rounded-full" style={{ width: "90%" }}></div>
-                        </div>
-                        <span className="font-semibold">90%</span>
-                      </div>
+                  <div className="space-y-3 mb-5">
+                    <div className="text-sm font-medium mb-2">Stack Overview</div>
+                    <div className="flex justify-between text-xs text-[#D1D5DB]">
+                      <span>Frontend:</span>
+                      <span>React 16.8, Bootstrap 4</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Tech Debt</span>
-                      <div className="flex items-center">
-                        <div className="w-16 bg-[#0A1D36] rounded-full h-1.5 mr-2">
-                          <div className="bg-[#22D3EE] h-1.5 rounded-full" style={{ width: "78%" }}></div>
-                        </div>
-                        <span className="font-semibold">78%</span>
-                      </div>
+                    <div className="flex justify-between text-xs text-[#D1D5DB]">
+                      <span>Backend:</span>
+                      <span>Node.js, Express</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Security</span>
-                      <div className="flex items-center">
-                        <div className="w-16 bg-[#0A1D36] rounded-full h-1.5 mr-2">
-                          <div className="bg-[#22D3EE] h-1.5 rounded-full" style={{ width: "92%" }}></div>
-                        </div>
-                        <span className="font-semibold">92%</span>
-                      </div>
+                    <div className="flex justify-between text-xs text-[#D1D5DB]">
+                      <span>Database:</span>
+                      <span>MongoDB</span>
+                    </div>
+                    <div className="flex justify-between text-xs text-[#D1D5DB]">
+                      <span>Hosting:</span>
+                      <span>Vercel + Cloudflare</span>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="text-sm font-medium mb-2">Top Concerns</div>
+                    <div className="bg-[#0A1D36]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start">
+                      <span className="text-amber-400 mr-2">⚠️</span>
+                      <span>Monolithic architecture may limit scaling</span>
+                    </div>
+                    <div className="bg-[#0A1D36]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start">
+                      <span className="text-amber-400 mr-2">⚠️</span>
+                      <span>Outdated React version (16.8 vs current 18.2)</span>
+                    </div>
+                    <div className="bg-[#0A1D36]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start">
+                      <span className="text-amber-400 mr-2">⚠️</span>
+                      <span>No continuous deployment evidence</span>
                     </div>
                   </div>
                 </div>
+                
                 <div className="bg-[#0A1D36]/50 p-3 rounded-lg mt-4 text-xs text-center text-[#D1D5DB]">
-                  Reviewed by Senior Technical Advisor on 06/15/2025
+                  Reviewed by Senior Technical Advisor on 05/15/2025
                 </div>
               </div>
             </div>
