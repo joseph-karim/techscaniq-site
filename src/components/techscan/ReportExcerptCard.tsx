@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export function ReportExcerptCard() {
@@ -11,56 +10,64 @@ export function ReportExcerptCard() {
     {
       id: "summary",
       title: "Summary Verdict",
-      content: "⚠️ Moderate risk — suitable for current traction, but limited for scale.",
+      content: "⚠️ Scalable to MVP-stage traction, but re-architecture likely needed for Series A+.",
+      score: "6.1 / 10",
       isWarning: true
     },
     {
-      id: "structure",
-      title: "🧱 Code Structure & Modularity",
+      id: "architecture",
+      title: "🧱 Architecture Type",
       items: [
-        "Monolithic architecture (single JS bundle)",
-        "No microservices or containerization",
-        "Limited ability to scale features independently"
+        "Current product is deployed as a monolith, evidenced by a single large JavaScript bundle, tightly coupled routes, and lack of lazy-loading or dynamic module imports.",
+        "No evidence of microservices or service-oriented architecture. API endpoints appear to be routed through a centralized controller.",
+        "Implication: Monoliths are fast to build but often brittle at scale — changes to one feature can risk breaking others, and performance bottlenecks become hard to isolate."
       ]
     },
     {
       id: "api",
-      title: "🕸 API Design & Documentation",
+      title: "🔌 API & Integration Design",
       items: [
-        "RESTful endpoints inferred",
-        "Lacks visible documentation",
-        "Risk of failure in auth/billing paths"
+        "RESTful API endpoints inferred from data layer and fetch/XHR requests.",
+        "URL patterns suggest predictable routing, but no visible API versioning, rate-limiting headers, or auth token expiry controls.",
+        "No GraphQL observed. No API documentation publicly accessible or inferred from requests.",
+        "Implication: Current API layer is fine for early traction, but lacks enterprise-readiness. Absence of versioning and rate-limiting raises maintainability concerns."
       ]
     },
     {
       id: "devops",
-      title: "⚙️ DevOps & Deployment",
+      title: "⚙️ DevOps & Deployment Pipeline",
       items: [
-        "Only GitHub Actions CI detected",
-        "Manual deploy inferred",
-        "No rollout strategies observed"
+        "Deployment appears to be manual or semi-automated. Last deploy timestamp suggests human-triggered pushes.",
+        "GitHub Actions detected, but no signs of test coverage enforcement or staged build processes.",
+        "No evidence of blue/green or canary deployment strategies.",
+        "Rollback mechanisms not detected.",
+        "Implication: Teams deploying this way are vulnerable to introducing bugs directly into production. Without proper CI/CD discipline, shipping velocity becomes risky beyond a small team."
       ]
     },
     {
       id: "infrastructure",
-      title: "🔧 Infrastructure Flexibility",
+      title: "🖥 Hosting & Infrastructure",
       items: [
-        "Hosted on Vercel (speed > control)",
-        "No autoscaling/container orchestration"
+        "Hosted on Vercel, indicating ease of frontend deployment but constrained backend flexibility.",
+        "No Kubernetes, Docker Swarm, or serverless orchestration detected.",
+        "CDN in use via Cloudflare; good for static content performance.",
+        "Implication: Hosting choice supports fast prototyping but lacks the control needed for performance tuning or cost optimization at scale."
       ]
     },
     {
-      id: "techdebt",
-      title: "📊 Tech Debt Warning",
+      id: "codebase",
+      title: "📏 Modularity & Codebase Hygiene",
       items: [
-        "Bootstrap 4 in use (legacy)",
-        "No automated test coverage"
+        "Use of Bootstrap 4 and older React (v16.8) suggests a codebase that hasn't seen recent modernization.",
+        "No evidence of component abstraction libraries, atomic design, or style isolation patterns.",
+        "Heavily minified JS with little evidence of tree-shaking or bundle optimization.",
+        "Implication: Frontend likely suffers from tight coupling and duplication. Future team scaling or feature branching will be slow unless major refactors are done."
       ]
     },
     {
       id: "commentary",
-      title: "🗣 Analyst Commentary",
-      quote: '"The team has clearly optimized for speed and iteration — but future-proofing is limited..."'
+      title: "💬 Analyst Notes & Recommendations",
+      quote: "\"This codebase was clearly built by a lean team optimizing for speed. That's normal and expected in early-stage SaaS. But from an investment standpoint, there are signs of technical debt that will need to be repaid soon — especially if traction increases rapidly. I'd advise asking the founder about their scaling plan, expected infra upgrades, and code ownership model before Series A.\""
     }
   ];
 
@@ -100,6 +107,11 @@ export function ReportExcerptCard() {
         Scalability & Architecture
       </h3>
       
+      <div className="mb-4 flex items-center">
+        <div className="font-bold text-white mr-2">Tech Scalability Score:</div>
+        <div className="bg-[#0A1A2F]/60 p-1 px-2 rounded text-yellow-400 font-medium">{sections[0].score}</div>
+      </div>
+      
       <Accordion 
         type="multiple" 
         value={openSections} 
@@ -122,24 +134,33 @@ export function ReportExcerptCard() {
                   <span className="font-medium">{section.content}</span>
                 </div>
               ) : (
-                <span className={section.id === "summary" ? "text-yellow-400" : "text-yellow-400"}>{section.title}</span>
+                <span className="text-[#22D3EE]">{section.title}</span>
               )}
             </AccordionTrigger>
             
             <AccordionContent className="pt-3 px-2">
               {section.items && (
-                <ul className="space-y-1 text-gray-300 pl-5">
+                <ul className="space-y-3 text-gray-300 pl-2">
                   {section.items.map((item, index) => (
-                    <li key={index} className="list-none flex">
-                      <span className="mr-2">-</span>
-                      <span>{item}</span>
+                    <li key={index} className="list-none">
+                      {item.startsWith("Implication:") ? (
+                        <div className="mt-2">
+                          <span className="text-yellow-400 font-semibold">Implication: </span>
+                          <span>{item.substring(12)}</span>
+                        </div>
+                      ) : (
+                        <div className="flex">
+                          <span className="mr-2 text-[#22D3EE]">•</span>
+                          <span>{item}</span>
+                        </div>
+                      )}
                     </li>
                   ))}
                 </ul>
               )}
               
               {section.quote && (
-                <p className="text-gray-300 italic pl-2 border-l-2 border-[#1E3A5F]">
+                <p className="text-gray-300 italic pl-4 border-l-2 border-[#1E3A5F] py-2">
                   {section.quote}
                 </p>
               )}
