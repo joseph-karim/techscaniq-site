@@ -137,147 +137,79 @@ export function TechScanLandingPage() {
       </section>
 
       {/* Risk Reversal Section */}
-      <section className="bg-[#12263A] py-16 md:py-24">
+      <section className="bg-[#0A1A2F] py-16 md:py-24">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Engineered for LP scrutiny.</h2>
               <p className="text-[#D1D5DB] text-lg mb-8">
-                TechScan IQ delivers thorough, objective assessments that satisfy even the most diligent limited partners. 
-                Our reports provide comprehensive technical validation needed for investment confidence and proper due diligence.
+                CodeScan IQ reports are reviewed by technical advisors and formatted for investor-grade clarity — not just AI analysis. Below is a real excerpt from the Scalability & Architecture section.
               </p>
+            </div>
+            
+            <div className="bg-[#12263A] p-6 rounded-xl border border-[#1E3A5F] shadow-lg transition-all hover:shadow-cyan-500/10 font-mono">
+              <h3 className="text-xl font-bold mb-6 flex items-center">
+                <span className="text-yellow-400 mr-2">🔍</span> 
+                Scalability & Architecture
+              </h3>
               
-              <div className="space-y-5">
-                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
-                  <div className="flex items-start">
-                    <div className="mr-4 text-[#22D3EE] mt-1">
-                      <Activity className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white">Executive Summary with Confidence Level</h4>
-                      <p className="text-sm text-[#D1D5DB]">Clear verdict with confidence metrics based on observed signals. Identifies top concerns and provides actionable next steps.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
-                  <div className="flex items-start">
-                    <div className="mr-4 text-[#22D3EE] mt-1">
-                      <Database className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white">Comprehensive Stack Analysis</h4>
-                      <p className="text-sm text-[#D1D5DB]">Complete mapping of frontend, backend, database, hosting infrastructure, and third-party dependencies from observable signals.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
-                  <div className="flex items-start">
-                    <div className="mr-4 text-[#22D3EE] mt-1">
-                      <FileWarning className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white">Red Flag Detection</h4>
-                      <p className="text-sm text-[#D1D5DB]">Identification of critical issues with severity ratings and specific recommendations for remediation or further investigation.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
-                  <div className="flex items-start">
-                    <div className="mr-4 text-[#22D3EE] mt-1">
-                      <Shield className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white">Security & Compliance Signals</h4>
-                      <p className="text-sm text-[#D1D5DB]">Evaluation of security practices including SSL implementation, header configurations, and vulnerability exposure assessment.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
-                  <div className="flex items-start">
-                    <div className="mr-4 text-[#22D3EE] mt-1">
-                      <GitBranch className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white">Technical Velocity Analysis</h4>
-                      <p className="text-sm text-[#D1D5DB]">Assessment of development activity, deployment infrastructure, and indicators of engineering team efficiency.</p>
-                    </div>
-                  </div>
+              <div className="mb-6">
+                <div className="bg-[#0A1A2F]/60 p-3 rounded flex items-center">
+                  <span className="text-yellow-400 mr-2">⚠️</span>
+                  <span className="font-medium">Moderate risk — suitable for current traction, but limited for scale.</span>
                 </div>
               </div>
-            </div>
-            <div className="relative flex justify-center">
-              <div className="relative bg-[#1E3A5F] rounded-xl shadow-2xl p-6 max-w-md transform transition-all hover:translate-y-[-5px] hover:shadow-cyan-500/20">
-                <div className="absolute -right-4 -top-4 bg-[#22D3EE] rounded-full p-4">
-                  <Check className="h-8 w-8 text-white" />
-                </div>
-                <div className="pb-4 border-b border-[#00142c]">
-                  <h3 className="text-xl font-bold">Technology Health Report</h3>
-                  <p className="text-[#D1D5DB] text-sm">SaaSCo</p>
-                  <div className="flex justify-between items-center mt-3">
-                    <div className="text-xs text-[#D1D5DB]">Verdict: <span className="text-green-400">✅ No critical risks</span></div>
-                    <div className="text-xs text-[#D1D5DB]">Confidence: <span className="text-white font-medium">High</span></div>
-                  </div>
+              
+              <div className="space-y-4 text-sm">
+                <div>
+                  <h4 className="text-yellow-400 mb-2">🧱 Code Structure & Modularity</h4>
+                  <ul className="space-y-1 text-gray-300 pl-5">
+                    <li>- Monolithic architecture (single JS bundle)</li>
+                    <li>- No microservices or containerization</li>
+                    <li>- Limited ability to scale features independently</li>
+                  </ul>
                 </div>
                 
-                <div className="py-4">
-                  <div className="flex justify-between mb-2">
-                    <span className="text-[#D1D5DB]">Tech Health Score</span>
-                    <span className="font-bold text-[#22D3EE]">7.8/10</span>
-                  </div>
-                  <div className="mb-6">
-                    <div className="flex justify-between text-xs mb-1">
-                      <span>Poor</span>
-                      <span>Excellent</span>
-                    </div>
-                    <div className="bg-[#00142c] rounded-full h-2">
-                      <div className="bg-gradient-to-r from-[#22D3EE] to-[#0891B2] h-2 rounded-full" style={{ width: "78%" }}></div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3 mb-5">
-                    <div className="text-sm font-medium mb-2">Stack Overview</div>
-                    <div className="flex justify-between text-xs text-[#D1D5DB]">
-                      <span>Frontend:</span>
-                      <span>React 16.8, Bootstrap 4</span>
-                    </div>
-                    <div className="flex justify-between text-xs text-[#D1D5DB]">
-                      <span>Backend:</span>
-                      <span>Node.js, Express</span>
-                    </div>
-                    <div className="flex justify-between text-xs text-[#D1D5DB]">
-                      <span>Database:</span>
-                      <span>MongoDB</span>
-                    </div>
-                    <div className="flex justify-between text-xs text-[#D1D5DB]">
-                      <span>Hosting:</span>
-                      <span>Vercel + Cloudflare</span>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <div className="text-sm font-medium mb-2">Top Concerns</div>
-                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start hover:bg-[#00142c]">
-                      <span className="text-amber-400 mr-2">⚠️</span>
-                      <span>Monolithic architecture may limit scaling</span>
-                    </div>
-                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start hover:bg-[#00142c]">
-                      <span className="text-amber-400 mr-2">⚠️</span>
-                      <span>Outdated React version (16.8 vs current 18.2)</span>
-                    </div>
-                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start hover:bg-[#00142c]">
-                      <span className="text-amber-400 mr-2">⚠️</span>
-                      <span>No continuous deployment evidence</span>
-                    </div>
-                  </div>
+                <div>
+                  <h4 className="text-yellow-400 mb-2">🕸 API Design & Documentation</h4>
+                  <ul className="space-y-1 text-gray-300 pl-5">
+                    <li>- RESTful endpoints inferred</li>
+                    <li>- Lacks visible documentation</li>
+                    <li>- Risk of failure in auth/billing paths</li>
+                  </ul>
                 </div>
                 
-                <div className="bg-[#00142c]/50 p-3 rounded-lg mt-4 text-xs text-center text-[#D1D5DB]">
-                  Reviewed by Senior Technical Advisor on 05/15/2025
+                <div>
+                  <h4 className="text-yellow-400 mb-2">⚙️ DevOps & Deployment</h4>
+                  <ul className="space-y-1 text-gray-300 pl-5">
+                    <li>- Only GitHub Actions CI detected</li>
+                    <li>- Manual deploy inferred</li>
+                    <li>- No rollout strategies observed</li>
+                  </ul>
                 </div>
+                
+                <div>
+                  <h4 className="text-yellow-400 mb-2">🔧 Infrastructure Flexibility</h4>
+                  <ul className="space-y-1 text-gray-300 pl-5">
+                    <li>- Hosted on Vercel (speed > control)</li>
+                    <li>- No autoscaling/container orchestration</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-yellow-400 mb-2">📊 Tech Debt Warning</h4>
+                  <ul className="space-y-1 text-gray-300 pl-5">
+                    <li>- Bootstrap 4 in use (legacy)</li>
+                    <li>- No automated test coverage</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-8 pt-4 border-t border-[#1E3A5F]">
+                <h4 className="text-sm font-medium mb-2">🗣 Analyst Commentary:</h4>
+                <p className="text-gray-300 italic">
+                  "The team has clearly optimized for speed and iteration — but future-proofing is limited..."
+                </p>
               </div>
             </div>
           </div>
