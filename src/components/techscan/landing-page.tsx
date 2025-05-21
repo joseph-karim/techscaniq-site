@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Check, Clock, FileWarning, PhoneOff as MoneyOff, Scan, Rows as Browser, FileCheck, Shield, Activity, Database, GitBranch } from "lucide-react"
+import { ArrowRight, Check, Clock, FileWarning, DollarSign, Scan, Rows as Browser, FileCheck, Shield, Activity, Database, GitBranch } from "lucide-react"
 import { AnimatedBackground } from "./animated-background"
 import { TechHealthDashboard } from "./TechHealthDashboard"
 import { ReportExcerptCard } from "./ReportExcerptCard"
@@ -71,7 +71,7 @@ export function TechScanLandingPage() {
             </div>
             <div className="bg-[#1E3A5F] p-8 rounded-xl transition-transform hover:transform hover:scale-105">
               <div className="bg-[#00142c] w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <MoneyOff className="h-8 w-8 text-[#22D3EE]" />
+                <DollarSign className="h-8 w-8 text-[#22D3EE]" />
               </div>
               <h3 className="text-xl font-bold mb-3">Expensive</h3>
               <p className="text-[#D1D5DB]">
