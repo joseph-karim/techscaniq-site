@@ -127,22 +127,34 @@ export function TechHealthDashboard({
             <h2 className="text-2xl font-bold">Tech Health Score</h2>
             
             <div className="flex items-center">
-              <div className="w-32 h-32">
-                <CircularProgressbar
-                  value={animatedScore * 10}
-                  maxValue={10}
-                  text={`${animatedScore.toFixed(1)}`}
-                  circleRatio={0.75}
-                  styles={buildStyles({
-                    rotation: 0.625,
-                    strokeLinecap: 'round',
-                    textSize: '24px',
-                    pathTransitionDuration: 0.5,
-                    pathColor: `#22D3EE`,
-                    textColor: '#ffffff',
-                    trailColor: '#1E3A5F',
-                  })}
-                />
+              <div className="w-32 h-32 relative">
+                <div className="absolute inset-0">
+                  <CircularProgressbar
+                    value={animatedScore * 10}
+                    maxValue={10}
+                    text={`${animatedScore.toFixed(1)}`}
+                    circleRatio={0.75}
+                    styles={buildStyles({
+                      rotation: 0.625,
+                      strokeLinecap: 'round',
+                      textSize: '24px',
+                      pathTransitionDuration: 0.5,
+                      pathColor: `url(#scoreGradient)`,
+                      textColor: '#ffffff',
+                      trailColor: '#1E3A5F',
+                    })}
+                  />
+                </div>
+                {/* SVG Filter for gradient - overlaid on top of CircularProgressbar */}
+                <svg style={{ height: 0, width: 0, position: 'absolute' }}>
+                  <defs>
+                    <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#FF4500" />
+                      <stop offset="50%" stopColor="#FFBA08" />
+                      <stop offset="100%" stopColor="#22D3EE" />
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
               <div className="ml-4">
                 <p className="text-lg text-gray-300">Tech 1/10</p>
