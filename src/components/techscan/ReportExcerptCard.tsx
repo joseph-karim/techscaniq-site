@@ -60,7 +60,7 @@ export function ReportExcerptCard() {
     {
       id: "commentary",
       title: "🗣 Analyst Commentary",
-      quote: ""The team has clearly optimized for speed and iteration — but future-proofing is limited...""
+      quote: '"The team has clearly optimized for speed and iteration — but future-proofing is limited..."'
     }
   ];
 
