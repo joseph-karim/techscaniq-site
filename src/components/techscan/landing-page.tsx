@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Check, Clock, FileWarning, PhoneOff as MoneyOff, Scan, Rows as Browser, FileCheck, Shield, Activity, Database, GitBranch } from "lucide-react"
 import { AnimatedBackground } from "./animated-background"
+import { TechHealthDashboard } from "./TechHealthDashboard"
 
 export function TechScanLandingPage() {
   return (
@@ -45,46 +46,7 @@ export function TechScanLandingPage() {
               </div>
             </div>
             <div className="relative flex justify-center">
-              <div className="relative bg-[#12263A]/90 backdrop-blur rounded-xl shadow-2xl p-6 w-full max-w-md border border-[#1E3A5F] transform transition-all hover:scale-[1.02] hover:shadow-cyan-500/20">
-                <div className="absolute -right-4 -top-4 bg-[#22D3EE] rounded-full w-24 h-24 flex items-center justify-center animate-pulse">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">87</div>
-                    <div className="text-xs">Tech Score</div>
-                  </div>
-                </div>
-                <div className="space-y-4 pt-8">
-                  <h3 className="text-xl font-bold">Health Report</h3>
-                  <div className="space-y-2">
-                    <div className="bg-[#1E3A5F] rounded-lg p-3">
-                      <div className="flex justify-between">
-                        <span>Code Quality</span>
-                        <span className="font-semibold text-[#22D3EE]">92%</span>
-                      </div>
-                      <div className="mt-1 bg-[#00142c] rounded-full h-2">
-                        <div className="bg-gradient-to-r from-[#22D3EE] to-[#0891B2] h-2 rounded-full" style={{ width: "92%" }}></div>
-                      </div>
-                    </div>
-                    <div className="bg-[#1E3A5F] rounded-lg p-3">
-                      <div className="flex justify-between">
-                        <span>Technical Debt</span>
-                        <span className="font-semibold text-[#22D3EE]">78%</span>
-                      </div>
-                      <div className="mt-1 bg-[#00142c] rounded-full h-2">
-                        <div className="bg-gradient-to-r from-[#22D3EE] to-[#0891B2] h-2 rounded-full" style={{ width: "78%" }}></div>
-                      </div>
-                    </div>
-                    <div className="bg-[#1E3A5F] rounded-lg p-3">
-                      <div className="flex justify-between">
-                        <span>Scalability</span>
-                        <span className="font-semibold text-[#22D3EE]">85%</span>
-                      </div>
-                      <div className="mt-1 bg-[#00142c] rounded-full h-2">
-                        <div className="bg-gradient-to-r from-[#22D3EE] to-[#0891B2] h-2 rounded-full" style={{ width: "85%" }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <TechHealthDashboard />
             </div>
           </div>
         </section>
