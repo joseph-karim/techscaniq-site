@@ -3,7 +3,7 @@ import { ArrowRight, Check, Clock, FileWarning, PhoneOff as MoneyOff, Scan, Rows
 
 export function TechScanLandingPage() {
   return (
-    <div className="relative min-h-screen bg-[#0A1A2F] font-sans text-white">
+    <div className="relative min-h-screen bg-black font-sans text-white">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full backdrop-blur-sm transition-all">
         <div className="container mx-auto flex items-center justify-between py-6">
@@ -58,7 +58,7 @@ export function TechScanLandingPage() {
                       <span>Code Quality</span>
                       <span className="font-semibold text-[#22D3EE]">92%</span>
                     </div>
-                    <div className="mt-1 bg-[#0A1A2F] rounded-full h-2">
+                    <div className="mt-1 bg-black rounded-full h-2">
                       <div className="bg-[#22D3EE] h-2 rounded-full" style={{ width: "92%" }}></div>
                     </div>
                   </div>
@@ -67,7 +67,7 @@ export function TechScanLandingPage() {
                       <span>Technical Debt</span>
                       <span className="font-semibold text-[#22D3EE]">78%</span>
                     </div>
-                    <div className="mt-1 bg-[#0A1A2F] rounded-full h-2">
+                    <div className="mt-1 bg-black rounded-full h-2">
                       <div className="bg-[#22D3EE] h-2 rounded-full" style={{ width: "78%" }}></div>
                     </div>
                   </div>
@@ -76,7 +76,7 @@ export function TechScanLandingPage() {
                       <span>Scalability</span>
                       <span className="font-semibold text-[#22D3EE]">85%</span>
                     </div>
-                    <div className="mt-1 bg-[#0A1A2F] rounded-full h-2">
+                    <div className="mt-1 bg-black rounded-full h-2">
                       <div className="bg-[#22D3EE] h-2 rounded-full" style={{ width: "85%" }}></div>
                     </div>
                   </div>
@@ -95,7 +95,7 @@ export function TechScanLandingPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             <div className="bg-[#1E3A5F] p-8 rounded-xl">
-              <div className="bg-[#0A1A2F] w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <div className="bg-black w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <Clock className="h-8 w-8 text-[#22D3EE]" />
               </div>
               <h3 className="text-xl font-bold mb-3">Time Intensive</h3>
@@ -104,7 +104,7 @@ export function TechScanLandingPage() {
               </p>
             </div>
             <div className="bg-[#1E3A5F] p-8 rounded-xl">
-              <div className="bg-[#0A1A2F] w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <div className="bg-black w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <MoneyOff className="h-8 w-8 text-[#22D3EE]" />
               </div>
               <h3 className="text-xl font-bold mb-3">Expensive</h3>
@@ -113,7 +113,7 @@ export function TechScanLandingPage() {
               </p>
             </div>
             <div className="bg-[#1E3A5F] p-8 rounded-xl">
-              <div className="bg-[#0A1A2F] w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <div className="bg-black w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <FileWarning className="h-8 w-8 text-[#22D3EE]" />
               </div>
               <h3 className="text-xl font-bold mb-3">High Stress</h3>
@@ -126,7 +126,7 @@ export function TechScanLandingPage() {
       </section>
 
       {/* Solution Section */}
-      <section className="py-16 md:py-24 bg-[#0A1A2F]">
+      <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             From blind spots to bulletproof insights — in 4 simple steps.
@@ -196,7 +196,7 @@ export function TechScanLandingPage() {
                 <div className="absolute -right-4 -top-4 bg-[#22D3EE] rounded-full p-4">
                   <Check className="h-8 w-8 text-white" />
                 </div>
-                <div className="pb-4 border-b border-[#0A1A2F]">
+                <div className="pb-4 border-b border-black">
                   <h3 className="text-xl font-bold">Technology Health Report</h3>
                   <p className="text-[#D1D5DB] text-sm">FinTech Innovation Inc.</p>
                 </div>
@@ -210,7 +210,7 @@ export function TechScanLandingPage() {
                       <span>Poor</span>
                       <span>Excellent</span>
                     </div>
-                    <div className="bg-[#0A1A2F] rounded-full h-2">
+                    <div className="bg-black rounded-full h-2">
                       <div className="bg-[#22D3EE] h-2 rounded-full" style={{ width: "87%" }}></div>
                     </div>
                   </div>
@@ -219,7 +219,7 @@ export function TechScanLandingPage() {
                     <div className="flex justify-between">
                       <span>Scalability</span>
                       <div className="flex items-center">
-                        <div className="w-16 bg-[#0A1A2F] rounded-full h-1.5 mr-2">
+                        <div className="w-16 bg-black rounded-full h-1.5 mr-2">
                           <div className="bg-[#22D3EE] h-1.5 rounded-full" style={{ width: "90%" }}></div>
                         </div>
                         <span className="font-semibold">90%</span>
@@ -228,7 +228,7 @@ export function TechScanLandingPage() {
                     <div className="flex justify-between">
                       <span>Tech Debt</span>
                       <div className="flex items-center">
-                        <div className="w-16 bg-[#0A1A2F] rounded-full h-1.5 mr-2">
+                        <div className="w-16 bg-black rounded-full h-1.5 mr-2">
                           <div className="bg-[#22D3EE] h-1.5 rounded-full" style={{ width: "78%" }}></div>
                         </div>
                         <span className="font-semibold">78%</span>
@@ -237,7 +237,7 @@ export function TechScanLandingPage() {
                     <div className="flex justify-between">
                       <span>Security</span>
                       <div className="flex items-center">
-                        <div className="w-16 bg-[#0A1A2F] rounded-full h-1.5 mr-2">
+                        <div className="w-16 bg-black rounded-full h-1.5 mr-2">
                           <div className="bg-[#22D3EE] h-1.5 rounded-full" style={{ width: "92%" }}></div>
                         </div>
                         <span className="font-semibold">92%</span>
@@ -245,7 +245,7 @@ export function TechScanLandingPage() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#0A1A2F]/50 p-3 rounded-lg mt-4 text-xs text-center text-[#D1D5DB]">
+                <div className="bg-black/50 p-3 rounded-lg mt-4 text-xs text-center text-[#D1D5DB]">
                   Reviewed by Senior Technical Advisor on 06/15/2025
                 </div>
               </div>
@@ -255,7 +255,7 @@ export function TechScanLandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-[#0A1A2F]">
+      <section className="py-16 md:py-20 bg-black">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Have a tech deal on your radar?
@@ -278,7 +278,7 @@ export function TechScanLandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0A1A2F] border-t border-[#1E3A5F] py-8">
+      <footer className="bg-black border-t border-[#1E3A5F] py-8">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0 pl-2 md:pl-4">
