@@ -3,6 +3,7 @@ import { ArrowRight, Check, Clock, FileWarning, DollarSign, Scan, Rows as Browse
 import { AnimatedBackground } from "./animated-background"
 import { TechHealthDashboard } from "./TechHealthDashboard"
 import { ReportExcerptCard } from "./ReportExcerptCard"
+import techscaniqLogo from "@/assets/techscaniq_logo.png"
 
 export function TechScanLandingPage() {
   return (
@@ -11,7 +12,7 @@ export function TechScanLandingPage() {
       <header className="sticky top-0 z-50 w-full backdrop-blur-md transition-all">
         <div className="container mx-auto flex items-center justify-between py-6">
           <div className="flex items-center pl-2 md:pl-4">
-            <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-28 md:h-32" />
+            <img src={techscaniqLogo} alt="TechScan IQ" className="h-28 md:h-32" />
           </div>
           <Button className="hidden md:inline-flex rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all">
             Get your Tech Health Score
@@ -230,7 +231,7 @@ export function TechScanLandingPage() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0 pl-2 md:pl-4">
-              <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-28" />
+              <img src={techscaniqLogo} alt="TechScan IQ" className="h-28" />
             </div>
             <div className="text-sm text-[#D1D5DB]">
               © 2025 TechScan IQ. All rights reserved.
