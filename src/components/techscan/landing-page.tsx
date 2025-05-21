@@ -2,8 +2,6 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Check, Clock, FileWarning, PhoneOff as MoneyOff, Scan, Rows as Browser, FileCheck, Shield, Activity, Database, GitBranch } from "lucide-react"
 import { AnimatedBackground } from "./animated-background"
 import { TechHealthDashboard } from "./TechHealthDashboard"
-import { RiskReversalDetailTab } from "./RiskReversalDetailTab"
-import { TechnologyHealthReport } from "./TechnologyHealthReport"
 
 export function TechScanLandingPage() {
   return (
@@ -150,12 +148,17 @@ export function TechScanLandingPage() {
               </p>
               
               <div className="space-y-5">
-                <RiskReversalDetailTab 
-                  title="Scalability & Architecture" 
-                  riskLevel="moderate" 
-                  emoji="⚠️" 
-                  className="hover:shadow-md transition-all hover:shadow-cyan-500/10"
-                />
+                <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
+                  <div className="flex items-start">
+                    <div className="mr-4 text-[#22D3EE] mt-1">
+                      <Activity className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">Executive Summary with Confidence Level</h4>
+                      <p className="text-sm text-[#D1D5DB]">Clear verdict with confidence metrics based on observed signals. Identifies top concerns and provides actionable next steps.</p>
+                    </div>
+                  </div>
+                </div>
                 
                 <div className="bg-[#1E3A5F] p-4 rounded-lg hover:shadow-md transition-all hover:shadow-cyan-500/10">
                   <div className="flex items-start">
@@ -207,7 +210,75 @@ export function TechScanLandingPage() {
               </div>
             </div>
             <div className="relative flex justify-center">
-              <TechnologyHealthReport className="transform transition-all hover:translate-y-[-5px] hover:shadow-cyan-500/20" />
+              <div className="relative bg-[#1E3A5F] rounded-xl shadow-2xl p-6 max-w-md transform transition-all hover:translate-y-[-5px] hover:shadow-cyan-500/20">
+                <div className="absolute -right-4 -top-4 bg-[#22D3EE] rounded-full p-4">
+                  <Check className="h-8 w-8 text-white" />
+                </div>
+                <div className="pb-4 border-b border-[#00142c]">
+                  <h3 className="text-xl font-bold">Technology Health Report</h3>
+                  <p className="text-[#D1D5DB] text-sm">SaaSCo</p>
+                  <div className="flex justify-between items-center mt-3">
+                    <div className="text-xs text-[#D1D5DB]">Verdict: <span className="text-green-400">✅ No critical risks</span></div>
+                    <div className="text-xs text-[#D1D5DB]">Confidence: <span className="text-white font-medium">High</span></div>
+                  </div>
+                </div>
+                
+                <div className="py-4">
+                  <div className="flex justify-between mb-2">
+                    <span className="text-[#D1D5DB]">Tech Health Score</span>
+                    <span className="font-bold text-[#22D3EE]">7.8/10</span>
+                  </div>
+                  <div className="mb-6">
+                    <div className="flex justify-between text-xs mb-1">
+                      <span>Poor</span>
+                      <span>Excellent</span>
+                    </div>
+                    <div className="bg-[#00142c] rounded-full h-2">
+                      <div className="bg-gradient-to-r from-[#22D3EE] to-[#0891B2] h-2 rounded-full" style={{ width: "78%" }}></div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3 mb-5">
+                    <div className="text-sm font-medium mb-2">Stack Overview</div>
+                    <div className="flex justify-between text-xs text-[#D1D5DB]">
+                      <span>Frontend:</span>
+                      <span>React 16.8, Bootstrap 4</span>
+                    </div>
+                    <div className="flex justify-between text-xs text-[#D1D5DB]">
+                      <span>Backend:</span>
+                      <span>Node.js, Express</span>
+                    </div>
+                    <div className="flex justify-between text-xs text-[#D1D5DB]">
+                      <span>Database:</span>
+                      <span>MongoDB</span>
+                    </div>
+                    <div className="flex justify-between text-xs text-[#D1D5DB]">
+                      <span>Hosting:</span>
+                      <span>Vercel + Cloudflare</span>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="text-sm font-medium mb-2">Top Concerns</div>
+                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start hover:bg-[#00142c]">
+                      <span className="text-amber-400 mr-2">⚠️</span>
+                      <span>Monolithic architecture may limit scaling</span>
+                    </div>
+                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start hover:bg-[#00142c]">
+                      <span className="text-amber-400 mr-2">⚠️</span>
+                      <span>Outdated React version (16.8 vs current 18.2)</span>
+                    </div>
+                    <div className="bg-[#00142c]/80 p-2 rounded text-xs text-[#D1D5DB] flex items-start hover:bg-[#00142c]">
+                      <span className="text-amber-400 mr-2">⚠️</span>
+                      <span>No continuous deployment evidence</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-[#00142c]/50 p-3 rounded-lg mt-4 text-xs text-center text-[#D1D5DB]">
+                  Reviewed by Senior Technical Advisor on 05/15/2025
+                </div>
+              </div>
             </div>
           </div>
         </div>
