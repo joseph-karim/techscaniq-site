@@ -140,12 +140,39 @@ export function TechScanLandingPage() {
       {/* Risk Reversal Section */}
       <section className="bg-[#0A1A2F] py-16 md:py-24">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Engineered for LP scrutiny.</h2>
               <p className="text-[#D1D5DB] text-lg mb-8">
-                CodeScan IQ reports are reviewed by technical advisors and formatted for investor-grade clarity — not just AI analysis. Below is a real excerpt from the Scalability & Architecture section.
+                TechScan IQ delivers thorough, objective assessments that satisfy even the most diligent limited partners. Our reports provide comprehensive technical validation needed for investment confidence and proper due diligence.
               </p>
+              
+              <div className="space-y-6">
+                <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Executive Summary with Confidence Level</h4>
+                  <p className="text-[#D1D5DB]">Clear verdict with confidence metrics based on observed signals. Identifies top concerns and provides actionable next steps.</p>
+                </div>
+
+                <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Comprehensive Stack Analysis</h4>
+                  <p className="text-[#D1D5DB]">Complete mapping of frontend, backend, database, hosting infrastructure, and third-party dependencies from observable signals.</p>
+                </div>
+
+                <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Red Flag Detection</h4>
+                  <p className="text-[#D1D5DB]">Identification of critical issues with severity ratings and specific recommendations for remediation or further investigation.</p>
+                </div>
+
+                <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Security & Compliance Signals</h4>
+                  <p className="text-[#D1D5DB]">Evaluation of security practices including SSL implementation, header configurations, and vulnerability exposure assessment.</p>
+                </div>
+
+                <div className="bg-[#12263A] p-5 rounded-lg border border-[#1E3A5F] hover:border-[#22D3EE] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+                  <h4 className="text-[#22D3EE] mb-2 font-bold">Technical Velocity Analysis</h4>
+                  <p className="text-[#D1D5DB]">Assessment of development activity, deployment infrastructure, and indicators of engineering team efficiency.</p>
+                </div>
+              </div>
             </div>
             
             <ReportExcerptCard />
