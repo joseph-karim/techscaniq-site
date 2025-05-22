@@ -9,13 +9,18 @@ export function TechScanLandingPage() {
     <div className="relative min-h-screen bg-[#00142c] font-sans text-white">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full backdrop-blur-md transition-all">
-        <div className="container mx-auto flex items-center justify-between py-6">
+        <div className="container mx-auto flex items-center justify-between py-4 md:py-6">
           <div className="flex items-center pl-2 md:pl-4">
-            <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-28 md:h-32" />
+            <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-16 sm:h-20 md:h-32" />
           </div>
-          <Button className="hidden md:inline-flex rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all">
-            Get your Tech Health Score
-          </Button>
+          <div className="flex items-center">
+            <Button className="hidden md:inline-flex rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all">
+              Get your Tech Health Score
+            </Button>
+            <Button className="md:hidden rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all p-2">
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -31,10 +36,10 @@ export function TechScanLandingPage() {
                 TechScan IQ delivers investor-grade assessments for any tech deal. Get clear insights without disrupting your teams or draining engineering resources.
               </p>
               <div className="pt-4">
-                <Button className="rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all text-lg px-8 py-6">
+                <Button className="rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
                   Get your Tech Health Score <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <div className="flex gap-4 mt-6">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-4 sm:mt-6">
                   <div className="flex items-center text-sm text-white">
                     <Check className="mr-2 h-4 w-4 text-[#22D3EE]" />
                     <span>Reviewed by Technical Advisor</span>
@@ -202,21 +207,21 @@ export function TechScanLandingPage() {
 
       {/* CTA Section */}
       <AnimatedBackground className="overflow-hidden">
-        <section className="py-16 md:py-20">
-          <div className="container mx-auto text-center max-w-3xl backdrop-blur-sm bg-[#00142c]/30 p-10 rounded-xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+        <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
+          <div className="container mx-auto text-center max-w-3xl backdrop-blur-sm bg-[#00142c]/30 p-6 sm:p-8 md:p-10 rounded-xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-white">
               Have a tech deal on your radar?
             </h2>
-            <p className="text-xl text-white mb-8">
+            <p className="text-lg sm:text-xl text-white mb-6 sm:mb-8">
               Don't make the call without a red flag scan. Your first scan is free.
             </p>
-            <Button className="rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all text-lg px-8 py-6 w-full md:w-auto">
+            <Button className="rounded-full bg-[#22D3EE] text-white hover:bg-[#0891B2] hover:shadow-md transition-all text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 w-full md:w-auto">
               Get your Tech Health Score <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <p className="text-sm text-white mt-4">
               No code access. No delays. Results in 2 hours.
             </p>
-            <div className="flex flex-col md:flex-row justify-center gap-8 mt-12">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mt-8 sm:mt-12">
               <div className="text-sm text-white bg-[#1E3A5F]/50 px-4 py-2 rounded-full backdrop-blur-sm">Trusted by VC scouts</div>
               <div className="text-sm text-white bg-[#1E3A5F]/50 px-4 py-2 rounded-full backdrop-blur-sm">PE-backed</div>
               <div className="text-sm text-white bg-[#1E3A5F]/50 px-4 py-2 rounded-full backdrop-blur-sm">M&A approved</div>
@@ -226,13 +231,13 @@ export function TechScanLandingPage() {
       </AnimatedBackground>
 
       {/* Footer */}
-      <footer className="bg-[#00142c] border-t border-[#1E3A5F] py-8">
+      <footer className="bg-[#00142c] border-t border-[#1E3A5F] py-6 md:py-8">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0 pl-2 md:pl-4">
-              <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-28" />
+              <img src="/techscaniq_logo.png" alt="TechScan IQ" className="h-16 sm:h-20 md:h-28" />
             </div>
-            <div className="text-sm text-[#D1D5DB]">
+            <div className="text-sm text-[#D1D5DB] px-4 md:px-0 text-center md:text-left">
               © 2025 TechScan IQ. All rights reserved.
             </div>
           </div>
