@@ -32,6 +32,7 @@ type AuthContextType = {
     error: Error | null
     data: { user: MockUser | null }
   }>
+  switchRole: (role: 'investor' | 'admin') => void
 }
 
 // Create a mock investor user
@@ -65,8 +66,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [session, setSession] = useState<MockSession | null>(user ? { user } : null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
+  // Function to switch between roles (investor and admin)
+  const switchRole = (role: 'investor' | 'admin') => {
+    const newUser = role === 'admin' ? mockAdminUser : mockInvestorUser
+    setUser(newUser)
+    setSession({ user: newUser })
+  }
+
   // Mock sign in that accepts any credentials in dev mode
-  const signIn = async (email: string, password: string) => {
+  const signIn = async (email: string, _password: string) => {
     setIsLoading(true)
     
     await new Promise(resolve => setTimeout(resolve, 500)) // Fake delay
@@ -99,7 +107,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  const signUp = async (email: string, password: string, name: string, workspaceName: string) => {
+  const signUp = async (email: string, _password: string, name: string, workspaceName: string) => {
     setIsLoading(true)
     
     await new Promise(resolve => setTimeout(resolve, 800)) // Fake delay
@@ -142,7 +150,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setSession(null)
   }
 
-  const resetPassword = async (email: string) => {
+  const resetPassword = async (_: string) => {
     await new Promise(resolve => setTimeout(resolve, 500)) // Fake delay
     
     return {
@@ -158,7 +166,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     signIn,
     signUp,
     signOut,
-    resetPassword
+    resetPassword,
+    switchRole
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

@@ -38,7 +38,7 @@ const mockUser = {
     role: 'investor',
   },
   app_metadata: {},
-} as User
+} as unknown as User
 
 // Auth provider component
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
@@ -54,13 +54,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
       // Check active sessions and subscribe to auth changes
       supabaseClient.auth.getSession().then(({ data: { session } }) => {
-        setUser(session?.user || null)
+        setUser(session?.user ?? null)
         setLoading(false)
       })
 
       const { data: { subscription } } = supabaseClient.auth.onAuthStateChange(
         (_event, session) => {
-          setUser(session?.user || null)
+          setUser(session?.user ?? null)
         }
       )
 
