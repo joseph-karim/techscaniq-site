@@ -4,12 +4,24 @@ export default {
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
+  		fontFamily: {
+  			'space': ['Space Grotesk', 'sans-serif'],
+  			'ibm': ['IBM Plex Sans', 'sans-serif'],
+  			'mono': ['IBM Plex Mono', 'monospace'],
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+  			// TechScanIQ Brand Colors
+  			'brand': {
+  				'black': '#000000',
+  				'white': '#FFFFFF',
+  				'teal': '#00C2B2',
+  				'gunmetal': '#2C2C2E',
+  			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
