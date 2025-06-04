@@ -4,9 +4,9 @@ import { TechHealthDashboard } from "./TechHealthDashboard"
 
 export function TechScanLandingPage() {
   return (
-    <div className="relative min-h-screen bg-brand-gunmetal font-ibm text-brand-white">
+    <div className="relative min-h-screen bg-brand-black font-ibm text-brand-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full bg-brand-gunmetal/95 backdrop-blur-sm border-b border-gray-700">
+      <header className="sticky top-0 z-50 w-full bg-brand-black/95 backdrop-blur-sm border-b border-gray-700">
         <div className="container mx-auto flex items-center justify-between py-6 px-6">
           <div className="flex items-center">
             <img src="/techscaniq_logo.png" alt="TechScanIQ" className="h-10 md:h-12" />
@@ -65,7 +65,7 @@ export function TechScanLandingPage() {
       </section>
 
       {/* Problem Comparison Section */}
-      <section className="bg-brand-black py-20 md:py-32">
+      <section className="py-20 md:py-32">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-white mb-6">
@@ -136,7 +136,7 @@ export function TechScanLandingPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-brand-black p-8 rounded-lg border border-gray-600 group hover:border-brand-teal transition-all duration-300">
+            <div className="bg-brand-gunmetal p-8 rounded-lg border border-gray-600 group hover:border-brand-teal transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="bg-brand-teal/10 group-hover:bg-brand-teal text-brand-teal group-hover:text-brand-white w-10 h-10 rounded-full flex items-center justify-center font-space font-medium mr-4 transition-all duration-300">
                   1
@@ -151,7 +151,7 @@ export function TechScanLandingPage() {
               </p>
             </div>
             
-            <div className="bg-brand-black p-8 rounded-lg border border-gray-600 group hover:border-brand-teal transition-all duration-300">
+            <div className="bg-brand-gunmetal p-8 rounded-lg border border-gray-600 group hover:border-brand-teal transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="bg-brand-teal/10 group-hover:bg-brand-teal text-brand-teal group-hover:text-brand-white w-10 h-10 rounded-full flex items-center justify-center font-space font-medium mr-4 transition-all duration-300">
                   2
@@ -166,7 +166,7 @@ export function TechScanLandingPage() {
               </p>
             </div>
             
-            <div className="bg-brand-black p-8 rounded-lg border border-gray-600 group hover:border-brand-teal transition-all duration-300">
+            <div className="bg-brand-gunmetal p-8 rounded-lg border border-gray-600 group hover:border-brand-teal transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="bg-brand-teal/10 group-hover:bg-brand-teal text-brand-teal group-hover:text-brand-white w-10 h-10 rounded-full flex items-center justify-center font-space font-medium mr-4 transition-all duration-300">
                   3
@@ -185,7 +185,7 @@ export function TechScanLandingPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-brand-black py-20 md:py-32">
+      <section className="py-20 md:py-32">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-white mb-6">
@@ -253,7 +253,7 @@ export function TechScanLandingPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-brand-black p-8 rounded-lg border border-gray-600 hover:border-brand-teal transition-all duration-300">
+            <div className="bg-brand-gunmetal p-8 rounded-lg border border-gray-600 hover:border-brand-teal transition-all duration-300">
               <div className="mb-6">
                 <h3 className="text-2xl font-space font-medium text-brand-white mb-2">Public Scan</h3>
                 <p className="font-ibm text-gray-300 mb-4">Early-stage evaluation</p>
@@ -279,7 +279,7 @@ export function TechScanLandingPage() {
               </Button>
             </div>
 
-            <div className="bg-brand-black p-8 rounded-lg border-2 border-brand-teal relative">
+            <div className="bg-brand-gunmetal p-8 rounded-lg border-2 border-brand-teal relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <span className="bg-brand-teal text-brand-white px-4 py-1 rounded-full text-sm font-space font-medium">
                   Most Popular
@@ -314,7 +314,7 @@ export function TechScanLandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-brand-black py-20 md:py-32">
+      <section className="py-20 md:py-32">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-white">
@@ -334,7 +334,7 @@ export function TechScanLandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-black border-t border-gray-700 py-12">
+      <footer className="border-t border-gray-700 py-12">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="flex items-center">
