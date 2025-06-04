@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Check, Clock, FileWarning, DollarSign, Scan, Rows as Browser, FileCheck, Shield, Users, Target } from "lucide-react"
+import { ArrowRight, Check, Scan, FileCheck, Shield, Users, Target } from "lucide-react"
 import { TechHealthDashboard } from "./TechHealthDashboard"
-import { ReportExcerptCard } from "./ReportExcerptCard"
 
 export function TechScanLandingPage() {
   return (
