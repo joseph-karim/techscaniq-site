@@ -815,107 +815,171 @@ export function TechScanLandingPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl font-space font-medium text-brand-black mb-6">
+            <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-black mb-6">
               FROM ACQUISITION TO GROWTH: THE FULL INTELLIGENCE CYCLE
             </h2>
             <p className="text-xl font-ibm text-brand-gunmetal">
-              Smart investors don't just buy companies—they grow them.
+              Smart PE firms use technical intelligence twice—first to buy right, then to grow fast.
             </p>
           </motion.div>
 
-          {/* Timeline Visualization */}
-          <div className="max-w-6xl mx-auto">
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 -translate-y-1/2" />
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                {/* Month 1-3: Acquisition */}
-                <motion.div
-                  className="relative bg-white rounded-2xl p-8 shadow-lg border-2 border-brand-teal"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="absolute -top-4 left-8 bg-brand-teal text-white px-4 py-1 rounded-full font-space font-medium">
-                    MONTH 1-3
-                  </div>
-                  
-                  <h3 className="text-2xl font-space font-medium text-brand-black mb-4 mt-2">
-                    ACQUISITION
-                  </h3>
-                  
-                  <div className="flex items-center mb-4">
-                    <TrendingUp className="h-6 w-6 text-brand-teal mr-3" />
-                    <p className="font-space font-medium">Use Technical DD to buy right</p>
-                  </div>
-                  
-                  <p className="font-ibm text-gray-700">
-                    Identify undervalued assets with fixable technical issues
-                  </p>
-                </motion.div>
-
-                {/* Month 4-24: Growth */}
-                <motion.div
-                  className="relative bg-white rounded-2xl p-8 shadow-lg border-2 border-brand-teal"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="absolute -top-4 left-8 bg-brand-teal text-white px-4 py-1 rounded-full font-space font-medium">
-                    MONTH 4-24
-                  </div>
-                  
-                  <h3 className="text-2xl font-space font-medium text-brand-black mb-4 mt-2">
-                    GROWTH
-                  </h3>
-                  
-                  <div className="flex items-center mb-4">
-                    <Target className="h-6 w-6 text-brand-teal mr-3" />
-                    <p className="font-space font-medium">Use Sales Intelligence to expand</p>
-                  </div>
-                  
-                  <p className="font-ibm text-gray-700">
-                    Find enterprise customers whose problems match your new capabilities
-                  </p>
-                </motion.div>
-              </div>
-
-              {/* Arrow */}
-              <div className="flex justify-center mt-8">
-                <ArrowRight className="h-8 w-8 text-brand-teal" />
-              </div>
-            </div>
-
-            {/* Result */}
+          <div className="max-w-6xl mx-auto space-y-12">
+            {/* Phase 1: Acquisition */}
             <motion.div
-              className="text-center mt-12 bg-gradient-to-br from-brand-teal/10 to-brand-teal/5 rounded-2xl p-8 border border-brand-teal"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <p className="text-2xl font-space font-medium text-brand-black mb-4">
-                Create 3-5x returns by knowing exactly what you're buying AND how to sell it
-              </p>
-            </motion.div>
-
-            {/* Case Study */}
-            <motion.div
-              className="mt-12 bg-gray-900 text-white rounded-2xl p-8"
+              className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <p className="font-space font-medium text-brand-teal mb-4">Case Study:</p>
-              <p className="font-ibm text-gray-300 leading-relaxed">
-                Vista Equity used both reports to acquire DevTools Inc. for $45M,
-                then landed 3 Fortune 500 accounts in 6 months by knowing exactly which
-                technical capabilities to highlight. Exit at $180M in 18 months.
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-brand-teal text-white px-4 py-2 rounded-full font-space font-medium">
+                  PHASE 1: ACQUISITION (Months 1-3)
+                </div>
+              </div>
+              
+              <p className="font-ibm text-lg text-brand-gunmetal mb-6">
+                Use Technical DD to negotiate and structure better deals
               </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-space text-lg mb-4 text-brand-black">What we uncover:</h4>
+                  <ul className="space-y-3 font-ibm text-gray-700">
+                    <li>• Monolithic architecture at capacity</li>
+                    <li>• $15M technical debt hidden in codebase</li>
+                    <li>• 3 key engineers planning to leave</li>
+                    <li>• No API strategy limiting partnerships</li>
+                    <li>• Database can't scale past 100K users</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-space text-lg mb-4 text-brand-black">How you use it:</h4>
+                  <ul className="space-y-3 font-ibm text-gray-700">
+                    <li>→ Negotiate 30% lower valuation</li>
+                    <li>→ Structure earnout milestones</li>
+                    <li>→ Add retention bonuses to deal</li>
+                    <li>→ Budget for platform rebuild</li>
+                    <li>→ Plan infrastructure investment</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-8 bg-gray-50 rounded-lg p-6 border border-gray-200">
+                <p className="font-space text-sm mb-2 text-brand-teal">Example:</p>
+                <p className="font-ibm text-gray-700 mb-2">
+                  PE firm discovered target's "AI-powered" features were actually rule-based.
+                </p>
+                <p className="font-space text-gray-900">
+                  Result: Reduced offer from $120M to $78M, allocated $20M for real AI development.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Phase 2: Value Creation */}
+            <motion.div
+              className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-brand-teal text-white px-4 py-2 rounded-full font-space font-medium">
+                  PHASE 2: VALUE CREATION (Months 4-24)
+                </div>
+              </div>
+              
+              <p className="font-ibm text-lg text-brand-gunmetal mb-6">
+                Use Sales Intelligence to accelerate portfolio company growth
+              </p>
+              
+              <div className="mb-6">
+                <h4 className="font-space text-lg mb-4 text-brand-black">Technical reality becomes sales advantage:</h4>
+                <div className="space-y-3 font-ibm text-gray-700">
+                  <div className="flex items-start gap-2">
+                    <span className="font-medium">• That API limitation?</span>
+                    <span className="text-brand-teal">→</span>
+                    <span>Target companies needing simple integrations</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="font-medium">• That database bottleneck?</span>
+                    <span className="text-brand-teal">→</span>
+                    <span>Sell to mid-market, not enterprise (yet)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="font-medium">• That security debt?</span>
+                    <span className="text-brand-teal">→</span>
+                    <span>After fixing, lead with compliance wins</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="font-medium">• That legacy architecture?</span>
+                    <span className="text-brand-teal">→</span>
+                    <span>Find customers with similar tech empathy</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="font-medium">• Those missing features?</span>
+                    <span className="text-brand-teal">→</span>
+                    <span>Target competitors' frustrated customers</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                <p className="font-space text-sm mb-2 text-brand-teal">Example:</p>
+                <p className="font-ibm text-gray-700 mb-2">
+                  Portfolio company had weak real-time features but strong batch processing.
+                  Sales Intelligence found 12 financial services prospects struggling with overnight
+                  processing windows.
+                </p>
+                <p className="font-space text-gray-900">
+                  Closed 4 deals in 6 months = $8M new ARR.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* The Multiplier Effect */}
+            <motion.div
+              className="bg-gradient-to-br from-brand-teal to-teal-600 text-white rounded-2xl p-8 shadow-xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-space font-medium mb-6 text-center">
+                THE MULTIPLIER EFFECT
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div>
+                  <h4 className="font-space text-lg mb-2">Buy Low:</h4>
+                  <p className="font-ibm text-white/90 text-sm">
+                    Technical DD reveals $30M in hidden issues → Acquire at $70M not $100M
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="font-space text-lg mb-2">Fix Smart:</h4>
+                  <p className="font-ibm text-white/90 text-sm">
+                    Focus on issues that unlock specific customer segments
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="font-space text-lg mb-2">Sell High:</h4>
+                  <p className="font-ibm text-white/90 text-sm">
+                    Sales Intelligence identifies 50 perfect-fit enterprises
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="font-space text-lg mb-2">Exit Strong:</h4>
+                  <p className="font-ibm text-white/90 text-sm">
+                    3x multiple on expanded revenue base = $300M exit
+                  </p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
