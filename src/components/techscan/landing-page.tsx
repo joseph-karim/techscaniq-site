@@ -21,31 +21,7 @@ export function TechScanLandingPage() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <div className="flex items-center gap-1">
-              <span className="font-space text-2xl font-medium text-brand-black">TechScan I</span>
-              <svg 
-                width="24" 
-                height="24" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                className="mb-1"
-              >
-                <circle 
-                  cx="11" 
-                  cy="11" 
-                  r="8" 
-                  stroke="#00C2B2" 
-                  strokeWidth="2.5"
-                />
-                <path 
-                  d="M16.5 16.5L21 21" 
-                  stroke="#00C2B2" 
-                  strokeWidth="2.5" 
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
+            <img src="/Tesch_Scan_IQ_Logo_Transparent.png" alt="TechScan IQ" className="h-12" />
           </motion.div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#platform" className="font-ibm text-brand-gunmetal hover:text-brand-black transition-colors">Platform</a>

@@ -34,7 +34,7 @@ export function IntralinksPartnershipPortal() {
         {/* Logos */}
         <div className="space-y-6">
           <div className="flex items-center justify-center gap-8">
-            <img src="/techscaniq_logo.png" alt="TechScanIQ" className="h-12" />
+            <img src="/Tesch_Scan_IQ_Logo_Transparent.png" alt="TechScan IQ" className="h-12" />
             <div className="text-brand-gunmetal text-2xl font-light">×</div>
             <div className="text-brand-gunmetal font-space text-xl font-medium">INTRALINKS</div>
           </div>
