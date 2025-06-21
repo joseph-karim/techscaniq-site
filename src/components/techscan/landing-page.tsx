@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Check, ChevronDown, TrendingUp, Building2, AlertCircle, FileCode, Target } from "lucide-react"
+import { ArrowRight, Check, ChevronDown, TrendingUp, Building2, AlertCircle, FileCode, Target, Brain, Sparkles } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 export function TechScanLandingPage() {
@@ -122,7 +122,7 @@ export function TechScanLandingPage() {
               TECHNICAL INTELLIGENCE THAT DRIVES BILLION-DOLLAR DECISIONS
             </h2>
             <p className="text-xl font-ibm text-brand-gunmetal max-w-4xl mx-auto mb-4">
-              We analyze any B2B software company from the inside out—revealing the hidden<br />
+              We analyze any company's website and software from the inside out—revealing the hidden<br />
               technical realities and market opportunities that determine true value.
             </p>
           </motion.div>
@@ -135,28 +135,64 @@ export function TechScanLandingPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="font-space text-xl mb-6 text-brand-black">Our AI research system examines:</h3>
-              <div className="space-y-3">
-                {[
-                  "Code architecture and scalability limits",
-                  "Security vulnerabilities and technical debt",
-                  "Market position and customer concentration",
-                  "Team capabilities and velocity",
-                  "Integration complexity and opportunities"
-                ].map((item, index) => (
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Left side - List */}
+                <div className="p-8">
+                  <h3 className="font-space text-xl mb-6 text-brand-black">Our AI research system examines:</h3>
+                  <div className="space-y-3">
+                    {[
+                      "Code architecture and scalability limits",
+                      "Security vulnerabilities and technical debt",
+                      "Market position and customer concentration",
+                      "Team capabilities and velocity",
+                      "Integration complexity and opportunities"
+                    ].map((item, index) => (
+                      <motion.div
+                        key={index}
+                        className="flex items-center gap-3"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                      >
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0" />
+                        <span className="font-ibm text-brand-gunmetal">{item}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Right side - AI Visual */}
+                <div className="bg-gradient-to-br from-brand-teal/10 to-brand-teal/5 p-8 flex items-center justify-center">
                   <motion.div
-                    key={index}
-                    className="flex items-center gap-3"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="relative"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
                     viewport={{ once: true }}
                   >
-                    <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0" />
-                    <span className="font-ibm text-brand-gunmetal">{item}</span>
+                    <motion.div
+                      className="bg-gradient-to-br from-brand-teal to-teal-600 rounded-2xl p-8 shadow-2xl"
+                      animate={{
+                        boxShadow: [
+                          "0 20px 50px rgba(0,194,178,0.3)",
+                          "0 30px 70px rgba(0,194,178,0.5)",
+                          "0 20px 50px rgba(0,194,178,0.3)"
+                        ]
+                      }}
+                      transition={{ duration: 3, repeat: Infinity }}
+                    >
+                      <div className="flex items-center justify-center">
+                        <Brain className="h-16 w-16 text-white" />
+                        <Sparkles className="h-8 w-8 text-white/60 ml-2" />
+                      </div>
+                      <p className="text-white font-space font-medium mt-4 text-center text-sm">
+                        AI INTELLIGENCE<br />ENGINE
+                      </p>
+                    </motion.div>
                   </motion.div>
-                ))}
+                </div>
               </div>
             </div>
           </motion.div>
