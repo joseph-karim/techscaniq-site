@@ -1,361 +1,573 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Check, Scan, FileCheck, Shield, Users, Target } from "lucide-react"
-import { TechHealthDashboard } from "./TechHealthDashboard"
+import { ArrowRight, Check, ChevronDown, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react"
+import { useState } from "react"
 
 export function TechScanLandingPage() {
+  const [activeUseCase, setActiveUseCase] = useState(0)
+
+  const useCases = [
+    {
+      title: "FOR PE/VC",
+      icon: "📊",
+      discover: "Hidden debt",
+      action: "Better valuations"
+    },
+    {
+      title: "FOR SALES LEADERS",
+      icon: "🎯",
+      discover: "Weak spots",
+      action: "Win deals faster"
+    },
+    {
+      title: "FOR CORP DEV",
+      icon: "🏢",
+      discover: "True value",
+      action: "Smart structure"
+    }
+  ]
+
   return (
-    <div className="relative min-h-screen bg-brand-black font-ibm text-brand-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full bg-brand-black/95 backdrop-blur-sm border-b border-gray-700">
-        <div className="container mx-auto flex items-center justify-between py-6 px-6">
+    <div className="min-h-screen bg-brand-white text-brand-black">
+      {/* Navigation Bar - Fixed */}
+      <header className="fixed top-0 z-50 w-full bg-brand-white/95 backdrop-blur-sm border-b border-gray-200">
+        <div className="container mx-auto flex items-center justify-between h-20 px-6">
           <div className="flex items-center">
-            <img src="/techscaniq_logo.png" alt="TechScanIQ" className="h-10 md:h-12" />
+            <img src="/techscaniq_logo.png" alt="TechScanIQ" className="h-10" />
           </div>
-          <div className="flex items-center gap-4">
-            <Button variant="outline" className="hidden md:inline-flex rounded-full border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-brand-white font-space font-medium transition-all">
-              See How We Score
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="#" className="font-ibm text-brand-gunmetal hover:text-brand-black transition-colors">Technical DD</a>
+            <a href="#" className="font-ibm text-brand-gunmetal hover:text-brand-black transition-colors">Market Intel</a>
+            <a href="#" className="font-ibm text-brand-gunmetal hover:text-brand-black transition-colors">Pricing</a>
+            <Button className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium">
+              Start Scan <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button className="rounded-full bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium transition-all">
-              Run a Sample Scan <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
+          </nav>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="container mx-auto py-20 md:py-32 px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl font-space font-medium leading-tight text-brand-white">
-                Diligence, Decoded.
-              </h1>
-              <h2 className="text-2xl md:text-3xl font-space font-normal text-gray-300 leading-relaxed">
-                See if the tech fits your thesis in 48 hours, not weeks.
-              </h2>
-              <p className="text-xl font-ibm text-gray-300 leading-relaxed">
-                Every software deal hides a truth: the code either accelerates your returns or kills them. TechScanIQ reveals which with a thesis-weighted score, senior engineer verification, and evidence you can defend to any IC.
-              </p>
-            </div>
-            <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="rounded-full bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium text-lg px-8 py-4 transition-all">
-                  Run a Sample Scan <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button variant="outline" className="rounded-full border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-brand-white font-space font-medium text-lg px-8 py-4 transition-all">
-                  See How We Score
-                </Button>
+      {/* Hero Section - Full Screen */}
+      <section className="min-h-screen flex flex-col justify-center items-center px-6 pt-20">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h1 className="text-5xl md:text-[56px] font-space font-medium leading-tight text-brand-black">
+            SEE WHAT OTHERS CAN'T. IN 48 HOURS.
+          </h1>
+          <p className="text-2xl font-ibm text-brand-gunmetal">
+            Technical truth + Market reality = Decisions that win.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="outline" className="border-2 border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-white font-space font-medium text-lg px-8 py-6">
+              View Sample Report
+            </Button>
+            <Button className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium text-lg px-10 py-6">
+              Start Intelligence Scan <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Visual: Split-Screen Animation */}
+        <div className="w-full max-w-6xl mx-auto mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-2 border-brand-black rounded-lg overflow-hidden shadow-2xl">
+            <div className="bg-brand-gunmetal p-8 border-r border-brand-black">
+              <h3 className="font-space font-medium text-brand-white mb-4">TECHNICAL INTELLIGENCE</h3>
+              <div className="bg-brand-black/20 rounded p-4 font-mono text-sm text-brand-teal">
+                <div className="space-y-2">
+                  <div className="flex items-center">
+                    <span className="text-red-400">●</span>
+                    <span className="ml-2 text-gray-300">Database at 89% capacity</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-green-400">●</span>
+                    <span className="ml-2 text-gray-300">Clean architecture patterns</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-yellow-400">●</span>
+                    <span className="ml-2 text-gray-300">Legacy dependencies detected</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex items-center text-sm font-ibm text-gray-300">
-                  <Check className="mr-2 h-4 w-4 text-brand-teal" />
-                  <span>Senior Engineer Verification</span>
+            </div>
+            <div className="bg-brand-gunmetal p-8">
+              <h3 className="font-space font-medium text-brand-white mb-4">MARKET INTELLIGENCE</h3>
+              <div className="bg-brand-black/20 rounded p-4">
+                <div className="flex justify-center items-center h-32">
+                  <div className="relative">
+                    <div className="w-20 h-20 bg-brand-teal/20 rounded-full flex items-center justify-center">
+                      <span className="text-brand-teal font-space">67%</span>
+                    </div>
+                    <div className="absolute -top-4 -right-4 w-12 h-12 bg-red-400/20 rounded-full animate-pulse"></div>
+                    <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-yellow-400/20 rounded-full animate-pulse delay-150"></div>
+                  </div>
                 </div>
-                <div className="flex items-center text-sm font-ibm text-gray-300">
-                  <Check className="mr-2 h-4 w-4 text-brand-teal" />
-                  <span>48-Hour Turnaround</span>
-                </div>
+                <p className="text-center text-gray-300 text-sm mt-4">Revenue concentration risk</p>
               </div>
             </div>
           </div>
-          <div className="relative flex justify-center">
-            <TechHealthDashboard />
+        </div>
+
+        {/* Scroll Indicator */}
+        <ChevronDown className="animate-bounce text-brand-gunmetal mt-8" size={32} />
+      </section>
+
+      {/* Problem/Solution Section */}
+      <section className="min-h-screen flex items-center py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+            <div className="lg:col-span-3 space-y-8">
+              <h2 className="text-4xl font-space font-medium text-brand-black">
+                THE PROBLEM WE SOLVE
+              </h2>
+              
+              <div className="space-y-6">
+                <p className="text-xl font-ibm text-brand-gunmetal">
+                  Every deal has two sides:<br />
+                  What's under the hood + Who's buying it.
+                </p>
+                
+                <div className="bg-gray-100 p-6 rounded-lg">
+                  <p className="font-ibm text-lg text-brand-gunmetal mb-4">
+                    You see: <span className="font-medium text-brand-black">"AI-powered platform"</span>
+                  </p>
+                  <p className="font-space font-medium text-lg text-brand-black mb-3">We reveal:</p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <span className="text-brand-teal mr-2">□</span>
+                      <span className="font-ibm text-brand-gunmetal">Regex wrapped in marketing</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-brand-teal mr-2">□</span>
+                      <span className="font-ibm text-brand-gunmetal">Architecture at 80% capacity</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-brand-teal mr-2">□</span>
+                      <span className="font-ibm text-brand-gunmetal">67% revenue from one customer</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-brand-teal mr-2">□</span>
+                      <span className="font-ibm text-brand-gunmetal">Losing deals to CompetitorX</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <Button className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium text-lg px-8 py-6">
+                  Start 48-Hour Scan <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+
+            <div className="lg:col-span-2 flex justify-center">
+              <div className="relative">
+                <svg viewBox="0 0 300 400" className="w-full max-w-sm">
+                  {/* Iceberg */}
+                  <polygon points="150,50 100,150 200,150" fill="#f3f4f6" stroke="#2C2C2E" strokeWidth="2"/>
+                  <polygon points="100,150 50,350 250,350 200,150" fill="#00C2B2" fillOpacity="0.2" stroke="#00C2B2" strokeWidth="2"/>
+                  
+                  {/* Water line */}
+                  <line x1="0" y1="150" x2="300" y2="150" stroke="#00C2B2" strokeWidth="2" strokeDasharray="5,5"/>
+                  
+                  {/* Labels */}
+                  <text x="150" y="100" textAnchor="middle" className="fill-brand-gunmetal font-ibm text-sm">
+                    Pitch deck claims
+                  </text>
+                  <text x="150" y="250" textAnchor="middle" className="fill-brand-teal font-ibm text-sm">
+                    Technical debt,
+                  </text>
+                  <text x="150" y="270" textAnchor="middle" className="fill-brand-teal font-ibm text-sm">
+                    customer churn,
+                  </text>
+                  <text x="150" y="290" textAnchor="middle" className="fill-brand-teal font-ibm text-sm">
+                    team issues
+                  </text>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Problem Comparison Section */}
-      <section className="py-20 md:py-32">
+      {/* Dual Intelligence Dashboard Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-white mb-6">
-              The Problem With Traditional Diligence
-            </h2>
+          <h2 className="text-5xl font-space font-medium text-center text-brand-black mb-16">
+            ONE PLATFORM. COMPLETE INTELLIGENCE.
+          </h2>
+
+          {/* Interactive Dashboard Mock */}
+          <div className="max-w-6xl mx-auto bg-brand-white border-2 border-brand-gunmetal rounded-lg shadow-xl overflow-hidden">
+            <div className="bg-brand-gunmetal p-4 flex justify-between items-center">
+              <h3 className="font-space font-medium text-brand-white">TechScan IQ Report: SampleCo</h3>
+              <Button variant="ghost" className="text-brand-white hover:bg-brand-white/10">
+                Export PDF <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+
+            <div className="p-8">
+              {/* Scores Row */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="text-center">
+                  <h4 className="font-space font-medium text-brand-gunmetal mb-4">TECH HEALTH SCORE</h4>
+                  <div className="relative w-32 h-32 mx-auto">
+                    <svg className="w-32 h-32 transform -rotate-90">
+                      <circle cx="64" cy="64" r="56" stroke="#e5e7eb" strokeWidth="12" fill="none" />
+                      <circle cx="64" cy="64" r="56" stroke="#00C2B2" strokeWidth="12" fill="none"
+                        strokeDasharray={`${67 * 3.51} 351.86`} strokeLinecap="round" />
+                    </svg>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-3xl font-space font-medium">67</span>
+                    </div>
+                  </div>
+                  <p className="font-ibm text-brand-gunmetal mt-2">Fair Tech</p>
+                </div>
+
+                <div className="text-center">
+                  <h4 className="font-space font-medium text-brand-gunmetal mb-4">MARKET POSITION</h4>
+                  <div className="relative w-32 h-32 mx-auto">
+                    <svg className="w-32 h-32 transform -rotate-90">
+                      <circle cx="64" cy="64" r="56" stroke="#e5e7eb" strokeWidth="12" fill="none" />
+                      <circle cx="64" cy="64" r="56" stroke="#ef4444" strokeWidth="12" fill="none"
+                        strokeDasharray={`${42 * 3.51} 351.86`} strokeLinecap="round" />
+                    </svg>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-3xl font-space font-medium">42</span>
+                    </div>
+                  </div>
+                  <p className="font-ibm text-brand-gunmetal mt-2">Weak Position</p>
+                </div>
+
+                <div className="text-center">
+                  <h4 className="font-space font-medium text-brand-gunmetal mb-4">COMBINED RISK</h4>
+                  <div className="bg-red-100 border-2 border-red-400 rounded-lg p-8">
+                    <span className="text-2xl font-space font-medium text-red-600">⚠ HIGH</span>
+                    <p className="font-ibm text-brand-gunmetal mt-2">Proceed with Caution</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Findings Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-space font-medium text-brand-black mb-4">TECHNICAL FINDINGS (4)</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <span className="text-red-500 mr-3">⚫</span>
+                      <span className="font-ibm">Database at 89% capacity</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-yellow-500 mr-3">🟡</span>
+                      <span className="font-ibm">No disaster recovery</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-green-500 mr-3">🟢</span>
+                      <span className="font-ibm">Clean code architecture</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-green-500 mr-3">🟢</span>
+                      <span className="font-ibm">Active development team</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="font-space font-medium text-brand-black mb-4">MARKET INTELLIGENCE (3)</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <span className="text-red-500 mr-3">⚫</span>
+                      <span className="font-ibm">Top customer reviewing RFP</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-yellow-500 mr-3">🟡</span>
+                      <span className="font-ibm">Competitor launched feature</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-green-500 mr-3">🟢</span>
+                      <span className="font-ibm">Strong SMB penetration</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          {/* Desktop Table */}
-          <div className="hidden md:block bg-brand-gunmetal rounded-lg border border-gray-600 overflow-hidden">
-            <table className="w-full">
+
+          <p className="text-center text-brand-gunmetal font-ibm mt-8">
+            [Hover for live interaction]
+          </p>
+        </div>
+      </section>
+
+      {/* Evidence Deep-Dive Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-space font-medium text-center text-brand-black mb-16">
+            EVERY CLAIM. FULLY CITED. ZERO FLUFF.
+          </h2>
+
+          <div className="max-w-4xl mx-auto bg-brand-white border-2 border-brand-gunmetal rounded-lg overflow-hidden">
+            <div className="bg-red-100 p-4 border-b-2 border-brand-gunmetal">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-space font-medium text-brand-black">FINDING: Authentication Vulnerability</h3>
+                  <p className="font-ibm text-brand-gunmetal mt-1">Risk: <span className="text-red-600 font-medium">⚫ HIGH</span> | Impact: User takeover possible</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6">
+              <div className="bg-gray-100 p-4 rounded-lg font-mono text-sm mb-6">
+                <div className="text-gray-600 mb-2">// File: /api/v2/auth/token.js:142-156</div>
+                <div className="space-y-1">
+                  <div>function validateToken(token) {"{"}</div>
+                  <div className="pl-4">
+                    <span className="text-red-600">return token.length {">"} 0;</span>
+                    <span className="text-red-600 ml-4">// ← VULNERABILITY HERE</span>
+                  </div>
+                  <div>{"}"}</div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <span className="font-ibm text-brand-gunmetal">EVIDENCE:</span>
+                <a href="#" className="text-brand-teal hover:underline font-ibm">[View full code]</a>
+                <a href="#" className="text-brand-teal hover:underline font-ibm">[Security scan]</a>
+                <a href="#" className="text-brand-teal hover:underline font-ibm">[OWASP reference]</a>
+              </div>
+              <p className="font-ibm text-brand-gunmetal mt-4">
+                ENGINEER NOTE: "Critical fix needed before enterprise deals"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Carousel Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-space font-medium text-center text-brand-black mb-16">
+            ONE PLATFORM. MULTIPLE WINS.
+          </h2>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <div className="overflow-hidden">
+                <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${activeUseCase * 100}%)` }}>
+                  {useCases.map((useCase, index) => (
+                    <div key={index} className="w-full flex-shrink-0 px-4">
+                      <div className="bg-brand-white border-2 border-brand-gunmetal rounded-lg p-8 text-center">
+                        <h3 className="font-space font-medium text-2xl text-brand-black mb-4">{useCase.title}</h3>
+                        <div className="text-6xl mb-6">{useCase.icon}</div>
+                        <div className="space-y-4">
+                          <div>
+                            <p className="font-ibm text-brand-gunmetal">Discover:</p>
+                            <p className="font-space font-medium text-xl text-brand-black">{useCase.discover}</p>
+                          </div>
+                          <div>
+                            <p className="font-ibm text-brand-gunmetal">Action:</p>
+                            <p className="font-space font-medium text-xl text-brand-black">{useCase.action}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Navigation */}
+              <button
+                onClick={() => setActiveUseCase(Math.max(0, activeUseCase - 1))}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-brand-white border-2 border-brand-gunmetal rounded-full p-2 hover:bg-gray-100"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+              <button
+                onClick={() => setActiveUseCase(Math.min(useCases.length - 1, activeUseCase + 1))}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-brand-white border-2 border-brand-gunmetal rounded-full p-2 hover:bg-gray-100"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+            </div>
+
+            <p className="text-center font-ibm text-brand-gunmetal mt-8">
+              ← Swipe or click to explore →
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-space font-medium text-center text-brand-black mb-16">
+            THE TECHSCAN IQ DIFFERENCE
+          </h2>
+
+          <div className="max-w-4xl mx-auto overflow-x-auto">
+            <table className="w-full border-2 border-brand-gunmetal">
               <thead>
-                <tr className="border-b border-gray-600">
-                  <th className="text-left py-6 px-8 font-space font-medium text-brand-white">The Old Way</th>
-                  <th className="text-left py-6 px-8 font-space font-medium text-brand-teal">TechScanIQ</th>
+                <tr className="bg-gray-100">
+                  <th className="border border-brand-gunmetal p-4 text-left font-space font-medium"></th>
+                  <th className="border border-brand-gunmetal p-4 text-center font-space font-medium">Traditional DD</th>
+                  <th className="border border-brand-gunmetal p-4 text-center font-space font-medium">Market Research Firm</th>
+                  <th className="border border-brand-gunmetal p-4 text-center font-space font-medium bg-brand-teal/10">TechScan IQ</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-gray-700">
-                  <td className="py-4 px-8 font-ibm text-gray-300">3-week consultant engagement at $25K+</td>
-                  <td className="py-4 px-8 font-ibm text-brand-white">48-hour flat-fee report</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="py-4 px-8 font-ibm text-gray-300">Generic technical checklist</td>
-                  <td className="py-4 px-8 font-ibm text-brand-white">Thesis-weighted scoring</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="py-4 px-8 font-ibm text-gray-300">Black-box findings you can't verify</td>
-                  <td className="py-4 px-8 font-ibm text-brand-white">Every risk linked to source evidence</td>
+                <tr>
+                  <td className="border border-brand-gunmetal p-4 font-ibm font-medium">Time</td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm">2-4 weeks</td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm">1-2 weeks</td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm bg-brand-teal/10">
+                    <span className="text-brand-teal font-medium">✓</span> 48 hours
+                  </td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-8 font-ibm text-gray-300">Junior analyst guesswork</td>
-                  <td className="py-4 px-8 font-ibm text-brand-white">Senior engineer sign-off</td>
+                  <td className="border border-brand-gunmetal p-4 font-ibm font-medium">Cost</td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm">$50K+</td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm">$25K+</td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm bg-brand-teal/10">
+                    <span className="text-brand-teal font-medium">✓</span> $7,900
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-brand-gunmetal p-4 font-ibm font-medium">Technical Depth</td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm">
+                    <span className="text-brand-teal font-medium">✓</span> Deep
+                  </td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm">
+                    <span className="text-red-500">✗</span> Surface
+                  </td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm bg-brand-teal/10">
+                    <span className="text-brand-teal font-medium">✓</span> Code-level
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-brand-gunmetal p-4 font-ibm font-medium">Market Intel</td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm">
+                    <span className="text-red-500">✗</span> Limited
+                  </td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm">
+                    <span className="text-brand-teal font-medium">✓</span> Broad
+                  </td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm bg-brand-teal/10">
+                    <span className="text-brand-teal font-medium">✓</span> Targeted
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-brand-gunmetal p-4 font-ibm font-medium">Evidence Links</td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm">
+                    <span className="text-red-500">✗</span> PDF only
+                  </td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm">
+                    <span className="text-red-500">✗</span> Generic
+                  </td>
+                  <td className="border border-brand-gunmetal p-4 text-center font-ibm bg-brand-teal/10">
+                    <span className="text-brand-teal font-medium">✓</span> Every claim
+                  </td>
                 </tr>
               </tbody>
             </table>
-          </div>
-
-          {/* Mobile Cards */}
-          <div className="md:hidden space-y-8">
-            <div className="bg-brand-gunmetal p-6 rounded-lg border border-gray-600">
-              <h3 className="font-space font-medium text-brand-white mb-4">The Old Way</h3>
-              <ul className="space-y-3 font-ibm text-gray-300">
-                <li>• 3-week consultant engagement at $25K+</li>
-                <li>• Generic technical checklist</li>
-                <li>• Black-box findings you can't verify</li>
-                <li>• Junior analyst guesswork</li>
-              </ul>
-            </div>
-            <div className="bg-brand-gunmetal p-6 rounded-lg border border-brand-teal">
-              <h3 className="font-space font-medium text-brand-teal mb-4">TechScanIQ</h3>
-              <ul className="space-y-3 font-ibm text-brand-white">
-                <li>• 48-hour flat-fee report</li>
-                <li>• Thesis-weighted scoring</li>
-                <li>• Every risk linked to source evidence</li>
-                <li>• Senior engineer sign-off</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-white mb-6">
-              Your Diligence Journey, Simplified
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-brand-gunmetal p-8 rounded-lg border border-gray-600 group hover:border-brand-teal transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="bg-brand-teal/10 group-hover:bg-brand-teal text-brand-teal group-hover:text-brand-white w-10 h-10 rounded-full flex items-center justify-center font-space font-medium mr-4 transition-all duration-300">
-                  1
-                </div>
-                <div className="bg-brand-teal/10 p-2 rounded-lg group-hover:bg-brand-teal/20 transition-all">
-                  <Target className="h-8 w-8 text-brand-teal" />
-                </div>
-              </div>
-              <h3 className="text-xl font-space font-medium text-brand-white mb-3">Define Your Thesis</h3>
-              <p className="font-ibm text-gray-300 leading-relaxed">
-                Select Growth or Efficiency focus. Our algorithm adjusts risk weights to match your investment strategy.
-              </p>
-            </div>
-            
-            <div className="bg-brand-gunmetal p-8 rounded-lg border border-gray-600 group hover:border-brand-teal transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="bg-brand-teal/10 group-hover:bg-brand-teal text-brand-teal group-hover:text-brand-white w-10 h-10 rounded-full flex items-center justify-center font-space font-medium mr-4 transition-all duration-300">
-                  2
-                </div>
-                <div className="bg-brand-teal/10 p-2 rounded-lg group-hover:bg-brand-teal/20 transition-all">
-                  <Shield className="h-8 w-8 text-brand-teal" />
-                </div>
-              </div>
-              <h3 className="text-xl font-space font-medium text-brand-white mb-3">Upload Securely</h3>
-              <p className="font-ibm text-gray-300 leading-relaxed">
-                Drop your repo ZIP, data room link, or public URL. AES-256 encryption. NDA included. Auto-purge after 30 days.
-              </p>
-            </div>
-            
-            <div className="bg-brand-gunmetal p-8 rounded-lg border border-gray-600 group hover:border-brand-teal transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="bg-brand-teal/10 group-hover:bg-brand-teal text-brand-teal group-hover:text-brand-white w-10 h-10 rounded-full flex items-center justify-center font-space font-medium mr-4 transition-all duration-300">
-                  3
-                </div>
-                <div className="bg-brand-teal/10 p-2 rounded-lg group-hover:bg-brand-teal/20 transition-all">
-                  <FileCheck className="h-8 w-8 text-brand-teal" />
-                </div>
-              </div>
-              <h3 className="text-xl font-space font-medium text-brand-white mb-3">Get Actionable Intelligence</h3>
-              <p className="font-ibm text-gray-300 leading-relaxed">
-                Receive your Tech Health Score, ranked risks with evidence links, and export-ready documentation for your IC.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-white mb-6">
-              Built for Investment Committee Scrutiny
-            </h2>
-            <p className="text-xl font-ibm text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              A defensible technical assessment that stands up to partner questions and lender requirements.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-brand-gunmetal p-6 rounded-lg border border-gray-600 hover:border-brand-teal transition-all duration-300">
-              <div className="bg-brand-teal/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="h-6 w-6 text-brand-teal" />
-              </div>
-              <h4 className="font-space font-medium text-brand-white mb-3">Secure Handling</h4>
-              <p className="font-ibm text-gray-300 leading-relaxed">Single-tenant containers. Encrypted transit and storage. Automatic data deletion.</p>
-            </div>
-
-            <div className="bg-brand-gunmetal p-6 rounded-lg border border-gray-600 hover:border-brand-teal transition-all duration-300">
-              <div className="bg-brand-teal/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-brand-teal" />
-              </div>
-              <h4 className="font-space font-medium text-brand-white mb-3">AI + Human Verification</h4>
-              <p className="font-ibm text-gray-300 leading-relaxed">200+ automated checks validated by senior engineers who stake their reputation on every report.</p>
-            </div>
-
-            <div className="bg-brand-gunmetal p-6 rounded-lg border border-gray-600 hover:border-brand-teal transition-all duration-300">
-              <div className="bg-brand-teal/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Target className="h-6 w-6 text-brand-teal" />
-              </div>
-              <h4 className="font-space font-medium text-brand-white mb-3">Thesis Alignment</h4>
-              <p className="font-ibm text-gray-300 leading-relaxed">Your growth vs. efficiency priorities drive our scoring algorithm, not generic best practices.</p>
-            </div>
-
-            <div className="bg-brand-gunmetal p-6 rounded-lg border border-gray-600 hover:border-brand-teal transition-all duration-300">
-              <div className="bg-brand-teal/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Scan className="h-6 w-6 text-brand-teal" />
-              </div>
-              <h4 className="font-space font-medium text-brand-white mb-3">Evidence Trail</h4>
-              <p className="font-ibm text-gray-300 leading-relaxed">Click any finding to see the exact code line, dependency conflict, or architectural issue.</p>
-            </div>
-
-            <div className="bg-brand-gunmetal p-6 rounded-lg border border-gray-600 hover:border-brand-teal transition-all duration-300 md:col-span-2 lg:col-span-1">
-              <div className="bg-brand-teal/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <FileCheck className="h-6 w-6 text-brand-teal" />
-              </div>
-              <h4 className="font-space font-medium text-brand-white mb-3">Professional Documentation</h4>
-              <p className="font-ibm text-gray-300 leading-relaxed">Timestamped PDF and XLSX exports. API integration with DealRoom and other platforms.</p>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 md:py-32">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-white mb-6">
-              Choose Your Depth
-            </h2>
-            <p className="text-xl font-ibm text-gray-300">
-              Both deliver thesis-weighted scoring and expert verification.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-brand-gunmetal p-8 rounded-lg border border-gray-600 hover:border-brand-teal transition-all duration-300">
-              <div className="mb-6">
-                <h3 className="text-2xl font-space font-medium text-brand-white mb-2">Public Scan</h3>
-                <p className="font-ibm text-gray-300 mb-4">Early-stage evaluation</p>
-                <div className="text-3xl font-space font-medium text-brand-white mb-2">$499</div>
-                <p className="font-ibm text-gray-300 text-sm">24 hours</p>
-              </div>
-              <ul className="space-y-3 font-ibm text-gray-300 mb-8">
+          <h2 className="text-4xl font-space font-medium text-center text-brand-black mb-16">
+            SIMPLE. TRANSPARENT. FAST.
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="bg-brand-white border-2 border-brand-gunmetal rounded-lg p-8">
+              <h3 className="font-space font-medium text-2xl text-brand-black mb-2">TECHNICAL ONLY</h3>
+              <div className="text-3xl font-space font-medium text-brand-black mb-6">$4,900</div>
+              <ul className="space-y-3 font-ibm text-brand-gunmetal mb-8">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                  Open-source risks
+                  Code analysis
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                  CVE analysis
+                  Architecture
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                  Architecture signals
+                  Team velocity
                 </li>
               </ul>
-              <Button className="w-full rounded-full bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium">
-                Start Public Scan
+              <Button variant="outline" className="w-full border-2 border-brand-gunmetal text-brand-black hover:bg-brand-gunmetal hover:text-brand-white font-space font-medium">
+                Select Plan
               </Button>
             </div>
 
-            <div className="bg-brand-gunmetal p-8 rounded-lg border-2 border-brand-teal relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-brand-teal text-brand-white px-4 py-1 rounded-full text-sm font-space font-medium">
-                  Most Popular
-                </span>
-              </div>
-              <div className="mb-6">
-                <h3 className="text-2xl font-space font-medium text-brand-white mb-2">Deep Scan</h3>
-                <p className="font-ibm text-gray-300 mb-4">Final diligence with repo access</p>
-                <div className="text-3xl font-space font-medium text-brand-white mb-2">Custom Quote</div>
-                <p className="font-ibm text-gray-300 text-sm">48 hours</p>
-              </div>
-              <ul className="space-y-3 font-ibm text-gray-300 mb-8">
+            <div className="bg-brand-white border-2 border-brand-gunmetal rounded-lg p-8">
+              <h3 className="font-space font-medium text-2xl text-brand-black mb-2">MARKET ONLY</h3>
+              <div className="text-3xl font-space font-medium text-brand-black mb-6">$3,900</div>
+              <ul className="space-y-3 font-ibm text-brand-gunmetal mb-8">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                  Full code quality analysis
+                  Customer map
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                  Scalability assessment
+                  Competitor
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                  Complete security audit
+                  Triggers
                 </li>
               </ul>
-              <Button className="w-full rounded-full bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium">
-                Get Custom Quote
+              <Button variant="outline" className="w-full border-2 border-brand-gunmetal text-brand-black hover:bg-brand-gunmetal hover:text-brand-white font-space font-medium">
+                Select Plan
+              </Button>
+            </div>
+
+            <div className="bg-brand-teal border-2 border-brand-teal rounded-lg p-8 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-white px-4 py-1 rounded-full border-2 border-brand-teal">
+                <span className="font-space font-medium text-sm">Save $900</span>
+              </div>
+              <h3 className="font-space font-medium text-2xl text-brand-white mb-2">COMBINED INTEL PKG</h3>
+              <div className="text-3xl font-space font-medium text-brand-white mb-6">$7,900</div>
+              <ul className="space-y-3 font-ibm text-brand-white mb-8">
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-brand-white mr-2 mt-0.5 flex-shrink-0" />
+                  Everything
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-brand-white mr-2 mt-0.5 flex-shrink-0" />
+                  Priority
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-brand-white mr-2 mt-0.5 flex-shrink-0" />
+                  48-hour SLA
+                </li>
+              </ul>
+              <Button className="w-full bg-brand-white text-brand-teal hover:bg-brand-white/90 font-space font-medium">
+                Select Plan
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-32">
+      {/* Footer CTA Section */}
+      <section className="py-20 bg-brand-black text-brand-white">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-white">
-              Ready to decode your next investment?
+            <h2 className="text-5xl font-space font-medium">
+              YOUR NEXT MOVE MATTERS.
             </h2>
-            <p className="text-xl font-ibm text-gray-300 leading-relaxed">
-              Stop betting on black-box code. Get the evidence you need to defend your decisions.
+            <p className="text-xl font-ibm text-gray-300">
+              Tomorrow, your competition makes decisions on partial data.<br />
+              You won't.
             </p>
-            <div className="space-y-4">
-              <Button className="rounded-full bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium text-lg px-8 py-4 transition-all">
-                Start Your First Scan <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <p className="text-sm font-ibm text-gray-400">Thesis-weighted scoring • Expert verification • 48-hour delivery</p>
+            <Button className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium text-xl px-12 py-6">
+              Start 48-Hour Intelligence Scan
+            </Button>
+            <div className="space-y-2 font-ibm text-gray-300">
+              <p>Questions? hello@techscaniq.com</p>
+              <p>1-800-TECH-DUE</p>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-gray-700 py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div className="flex items-center">
-              <img src="/techscaniq_logo.png" alt="TechScanIQ" className="h-8" />
-            </div>
-            <div>
-              <h5 className="font-space font-medium text-brand-white mb-3">Resources</h5>
-              <ul className="space-y-2 font-ibm text-gray-300 text-sm">
-                <li><a href="#" className="hover:text-brand-teal transition-colors">Scoring Methodology</a></li>
-                <li><a href="#" className="hover:text-brand-teal transition-colors">Thesis Templates</a></li>
-                <li><a href="#" className="hover:text-brand-teal transition-colors">Security & Compliance</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-700">
-            <p className="font-ibm text-gray-300 text-sm">
-              © 2025 TechScanIQ. Diligence, Decoded.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
