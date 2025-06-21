@@ -1,21 +1,10 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Check, ChevronDown, ExternalLink, TrendingUp, Building2, AlertCircle, FileCode, Target, Search, UserCheck, AlertTriangle, CheckCircle, XCircle, Brain, Sparkles } from "lucide-react"
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion"
+import { ArrowRight, Check, ChevronDown, TrendingUp, Building2, AlertCircle, FileCode, Target } from "lucide-react"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 export function TechScanLandingPage() {
-  const [activeStep, setActiveStep] = useState(0)
-  const [dataFlowActive] = useState(true)
   const { scrollYProgress } = useScroll()
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
-
-  // Auto-advance process steps
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % 3)
-    }, 4000)
-    return () => clearInterval(interval)
-  }, [])
 
   return (
     <div className="min-h-screen bg-brand-white text-brand-black overflow-x-hidden">
@@ -32,7 +21,31 @@ export function TechScanLandingPage() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <img src="/techscaniq_logo.png" alt="TechScanIQ" className="h-10" />
+            <div className="flex items-center gap-1">
+              <span className="font-space text-2xl font-medium text-brand-black">TechScan I</span>
+              <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                className="mb-1"
+              >
+                <circle 
+                  cx="11" 
+                  cy="11" 
+                  r="8" 
+                  stroke="#00C2B2" 
+                  strokeWidth="2.5"
+                />
+                <path 
+                  d="M16.5 16.5L21 21" 
+                  stroke="#00C2B2" 
+                  strokeWidth="2.5" 
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
           </motion.div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#platform" className="font-ibm text-brand-gunmetal hover:text-brand-black transition-colors">Platform</a>
@@ -65,7 +78,7 @@ export function TechScanLandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            SEE WHAT OTHERS CAN'T.
+            DEEP TECH INTELLIGENCE
             <br />
             <span className="text-brand-teal">IN 48 HOURS.</span>
           </motion.h1>
@@ -76,8 +89,17 @@ export function TechScanLandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            The world's first AI research platform that understands<br />
-            the true value of code—for buying companies or winning deals.
+            See what code is really worth.
+          </motion.p>
+          
+          <motion.p 
+            className="text-lg font-ibm text-brand-gunmetal max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            AI-powered research system that analyzes technical infrastructure<br />
+            and market position for PE investors and enterprise sales teams.
           </motion.p>
           
           <motion.div 
@@ -90,7 +112,7 @@ export function TechScanLandingPage() {
               variant="outline" 
               className="border-2 border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-white font-space font-medium text-lg px-10 py-6 group"
             >
-              View Sample Analysis
+              View Sample Report
               <FileCode className="ml-2 h-5 w-5 group-hover:rotate-3 transition-transform" />
             </Button>
             <Button className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium text-lg px-10 py-6 shadow-lg hover:shadow-xl transition-shadow group">
@@ -110,7 +132,7 @@ export function TechScanLandingPage() {
         </motion.div>
       </section>
 
-      {/* The Platform Section */}
+      {/* What We Do Section */}
       <section className="py-32 bg-gray-50" id="platform">
         <div className="container mx-auto px-6">
           <motion.div
@@ -120,142 +142,89 @@ export function TechScanLandingPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl font-space font-medium text-brand-black mb-6">
-              ONE REVOLUTIONARY ENGINE. TWO GAME-CHANGING APPLICATIONS.
+            <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-black mb-6">
+              TECHNICAL INTELLIGENCE THAT DRIVES BILLION-DOLLAR DECISIONS
             </h2>
-            <p className="text-xl font-ibm text-brand-gunmetal max-w-4xl mx-auto">
-              Our AI research agents don't just scan code—they understand what it's worth.
-              By analyzing millions of signals across code, infrastructure, markets, and competitors,
-              we reveal the hidden value that drives billion-dollar decisions.
+            <p className="text-xl font-ibm text-brand-gunmetal max-w-4xl mx-auto mb-4">
+              We analyze any B2B software company from the inside out—revealing the hidden<br />
+              technical realities and market opportunities that determine true value.
             </p>
           </motion.div>
-
-          {/* Animated Data Flow Diagram */}
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="relative h-[600px] flex items-center justify-center"
+          
+          {/* What We Analyze */}
+          <motion.div
+            className="max-w-4xl mx-auto mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+              <h3 className="font-space text-xl mb-6 text-brand-black">Our AI research system examines:</h3>
+              <div className="space-y-3">
+                {[
+                  "Code architecture and scalability limits",
+                  "Security vulnerabilities and technical debt",
+                  "Market position and customer concentration",
+                  "Team capabilities and velocity",
+                  "Integration complexity and opportunities"
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center gap-3"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0" />
+                    <span className="font-ibm text-brand-gunmetal">{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+          
+          {/* Two Intelligence Products */}
+          <motion.div
+            className="max-w-5xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-8 shadow-xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <TrendingUp className="h-8 w-8 text-brand-teal" />
+                  <h3 className="font-space text-xl">PE Technical Due Diligence</h3>
+                </div>
+                <p className="font-ibm text-gray-300">Buy companies at the right price</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-8 shadow-xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <Target className="h-8 w-8 text-brand-teal" />
+                  <h3 className="font-space text-xl">Sales Intelligence</h3>
+                </div>
+                <p className="font-ibm text-gray-300">Win enterprise deals others can't</p>
+              </div>
+            </div>
+            
+            <motion.p
+              className="text-center text-xl font-space text-brand-black mt-12"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              {/* Central AI Engine */}
-              <motion.div
-                className="absolute z-20 bg-gradient-to-br from-brand-teal to-teal-600 rounded-2xl p-8 shadow-2xl"
-                animate={{
-                  scale: dataFlowActive ? [1, 1.05, 1] : 1,
-                  boxShadow: dataFlowActive 
-                    ? ["0 20px 50px rgba(0,194,178,0.3)", "0 30px 70px rgba(0,194,178,0.5)", "0 20px 50px rgba(0,194,178,0.3)"]
-                    : "0 20px 50px rgba(0,194,178,0.3)"
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <div className="flex items-center justify-center">
-                  <Brain className="h-16 w-16 text-white" />
-                  <Sparkles className="h-8 w-8 text-white/60 ml-2" />
-                </div>
-                <p className="text-white font-space font-medium mt-4 text-center">
-                  AI INTELLIGENCE ENGINE
-                </p>
-              </motion.div>
-
-              {/* Data Sources - Left */}
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 space-y-4">
-                <motion.div
-                  className="bg-white rounded-lg p-4 shadow-lg border border-gray-200"
-                  animate={dataFlowActive ? { x: [0, 10, 0] } : {}}
-                  transition={{ duration: 3, repeat: Infinity, delay: 0 }}
-                >
-                  <h4 className="font-space font-medium text-sm mb-2">DEEP TECHNICAL ANALYSIS</h4>
-                  <ul className="space-y-1 text-xs font-ibm text-gray-600">
-                    <li>• Line-by-line code inspection</li>
-                    <li>• Architecture pattern recognition</li>
-                    <li>• Security vulnerability detection</li>
-                    <li>• Performance bottleneck analysis</li>
-                    <li>• Technical debt quantification</li>
-                  </ul>
-                </motion.div>
-              </div>
-
-              {/* Data Sources - Right */}
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 space-y-4">
-                <motion.div
-                  className="bg-white rounded-lg p-4 shadow-lg border border-gray-200"
-                  animate={dataFlowActive ? { x: [0, -10, 0] } : {}}
-                  transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                >
-                  <h4 className="font-space font-medium text-sm mb-2">MARKET & COMPETITIVE INTEL</h4>
-                  <ul className="space-y-1 text-xs font-ibm text-gray-600">
-                    <li>• Customer concentration mapping</li>
-                    <li>• Competitor capability tracking</li>
-                    <li>• Industry trend analysis</li>
-                    <li>• Pricing and contract intelligence</li>
-                    <li>• Win/loss pattern recognition</li>
-                  </ul>
-                </motion.div>
-              </div>
-
-              {/* Output Products - Bottom */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-8">
-                <motion.div
-                  className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-lg p-6 shadow-xl"
-                  animate={dataFlowActive ? { y: [0, -10, 0] } : {}}
-                  transition={{ duration: 3, repeat: Infinity, delay: 2 }}
-                >
-                  <TrendingUp className="h-8 w-8 mb-2 text-brand-teal" />
-                  <h4 className="font-space font-medium mb-1">TECHNICAL DUE DILIGENCE</h4>
-                  <p className="text-sm font-ibm text-gray-300">For Investment Decisions</p>
-                </motion.div>
-
-                <motion.div
-                  className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-lg p-6 shadow-xl"
-                  animate={dataFlowActive ? { y: [0, -10, 0] } : {}}
-                  transition={{ duration: 3, repeat: Infinity, delay: 2.5 }}
-                >
-                  <Target className="h-8 w-8 mb-2 text-brand-teal" />
-                  <h4 className="font-space font-medium mb-1">SALES INTELLIGENCE</h4>
-                  <p className="text-sm font-ibm text-gray-300">For Enterprise Deals</p>
-                </motion.div>
-              </div>
-
-              {/* Animated Data Flow Lines */}
-              <svg className="absolute inset-0 pointer-events-none" style={{ width: '100%', height: '100%' }}>
-                <defs>
-                  <linearGradient id="flow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#00C2B2" stopOpacity="0" />
-                    <stop offset="50%" stopColor="#00C2B2" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="#00C2B2" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-                {dataFlowActive && (
-                  <>
-                    <motion.path
-                      d="M 150 300 Q 350 300 400 300"
-                      stroke="url(#flow-gradient)"
-                      strokeWidth="2"
-                      fill="none"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    />
-                    <motion.path
-                      d="M 650 300 Q 450 300 400 300"
-                      stroke="url(#flow-gradient)"
-                      strokeWidth="2"
-                      fill="none"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                    />
-                  </>
-                )}
-              </svg>
-            </motion.div>
-          </div>
+              Because understanding code isn't just technical—it's strategic.
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
-      {/* The Value Story Section */}
+      {/* The Problem Section */}
       <section className="py-32">
         <div className="container mx-auto px-6">
           <motion.div
@@ -265,213 +234,405 @@ export function TechScanLandingPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl font-space font-medium text-brand-black mb-6">
-              UNDERSTANDING CODE VALUE CHANGES EVERYTHING
+            <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-black mb-6">
+              HOW TECHNICAL ANALYSIS WORKS TODAY
             </h2>
-            <p className="text-xl font-ibm text-brand-gunmetal">
-              Traditional analysis sees code as cost.<br />
-              We see code as strategic advantage.
-            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* For Private Equity */}
-            <motion.div
-              className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-xl transition-shadow"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="mb-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-teal/10 mb-4">
-                  <TrendingUp className="h-6 w-6 text-brand-teal" />
-                </div>
-                <h3 className="text-2xl font-space font-medium text-brand-black">
-                  FOR PRIVATE EQUITY:
-                </h3>
-              </div>
-              
-              <div className="bg-brand-black/5 rounded-lg p-6 border border-brand-black/10">
-                <p className="text-lg font-ibm text-brand-black italic">
-                  "This codebase is worth $50M less than claimed due to architectural limits"
-                </p>
-              </div>
-            </motion.div>
-
-            {/* For Enterprise Sales */}
-            <motion.div
-              className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-xl transition-shadow"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="mb-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-teal/10 mb-4">
-                  <Target className="h-6 w-6 text-brand-teal" />
-                </div>
-                <h3 className="text-2xl font-space font-medium text-brand-black">
-                  FOR ENTERPRISE SALES:
-                </h3>
-              </div>
-              
-              <div className="bg-brand-black/5 rounded-lg p-6 border border-brand-black/10">
-                <p className="text-lg font-ibm text-brand-black italic">
-                  "This capability solves their $10M problem—here's how to position it and who to convince"
-                </p>
-              </div>
-            </motion.div>
-          </div>
-
+          {/* Comparison Table */}
           <motion.div
-            className="max-w-4xl mx-auto text-center mt-12"
+            className="max-w-6xl mx-auto overflow-x-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <p className="text-lg font-ibm text-brand-gunmetal leading-relaxed">
-              The same AI that spots a monolithic architecture blocking growth
-              can identify the exact pain points that make enterprises buy.
-            </p>
-            <p className="text-xl font-space font-medium text-brand-black mt-4">
-              Because code isn't just technical—it's business value waiting to be unlocked.
-            </p>
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="border-b-2 border-gray-300">
+                  <th className="text-left p-4 font-space text-lg">Traditional DD Firm</th>
+                  <th className="text-left p-4 font-space text-lg">Market Research Firm</th>
+                  <th className="text-left p-4 font-space text-lg bg-brand-teal/10 border-2 border-brand-teal">TechScan IQ</th>
+                </tr>
+              </thead>
+              <tbody className="font-ibm">
+                <tr className="border-b border-gray-200">
+                  <td className="p-4 text-gray-600">2-4 weeks</td>
+                  <td className="p-4 text-gray-600">1-2 weeks</td>
+                  <td className="p-4 font-medium bg-brand-teal/5 border-x-2 border-brand-teal">48 hours</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="p-4 text-gray-600">$50-75K</td>
+                  <td className="p-4 text-gray-600">$25-40K</td>
+                  <td className="p-4 font-medium bg-brand-teal/5 border-x-2 border-brand-teal">$7,900</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="p-4 text-gray-600">Surface-level findings</td>
+                  <td className="p-4 text-gray-600">Generic insights</td>
+                  <td className="p-4 font-medium bg-brand-teal/5 border-x-2 border-brand-teal">Deep technical reality</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="p-4 text-gray-600">Partner glimpse</td>
+                  <td className="p-4 text-gray-600">Database queries</td>
+                  <td className="p-4 font-medium bg-brand-teal/5 border-x-2 border-brand-teal">1,000+ sources analyzed</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="p-4 text-gray-600">PDF summary</td>
+                  <td className="p-4 text-gray-600">Market overview</td>
+                  <td className="p-4 font-medium bg-brand-teal/5 border-x-2 border-brand-teal">Every claim verified</td>
+                </tr>
+                <tr className="border-b-2 border-gray-300">
+                  <td className="p-4 text-gray-600">Manual process</td>
+                  <td className="p-4 text-gray-600">Template reports</td>
+                  <td className="p-4 font-medium bg-brand-teal/5 border-x-2 border-b-2 border-brand-teal">AI + expert review</td>
+                </tr>
+              </tbody>
+            </table>
+          </motion.div>
+
+          {/* What Others Miss */}
+          <motion.div
+            className="max-w-4xl mx-auto mt-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-8 shadow-xl">
+              <h3 className="font-space text-2xl mb-6">What others miss, we find:</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="h-5 w-5 text-red-400 flex-shrink-0 mt-1" />
+                  <p className="font-ibm">Database at 89% capacity = Growth ceiling hit</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="h-5 w-5 text-orange-400 flex-shrink-0 mt-1" />
+                  <p className="font-ibm">Legacy architecture = $12M modernization cost</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-1" />
+                  <p className="font-ibm">No disaster recovery = Enterprise deal blocker</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="h-5 w-5 text-red-400 flex-shrink-0 mt-1" />
+                  <p className="font-ibm">67% customer concentration = Valuation risk</p>
+                </div>
+              </div>
+              
+              <div className="mt-8 text-center">
+                <Button 
+                  variant="outline" 
+                  className="border-2 border-white text-white hover:bg-white hover:text-brand-black font-space font-medium"
+                >
+                  See Full Analysis Sample
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-32 bg-gray-50" id="how-it-works">
+      {/* Specific Capabilities Section */}
+      <section className="py-32 bg-gray-50">
         <div className="container mx-auto px-6">
-          <motion.h2
-            className="text-5xl font-space font-medium text-center text-brand-black mb-16"
+          <motion.div
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            THE INTELLIGENCE ENGINE BEHIND EVERY INSIGHT
+            <h2 className="text-4xl md:text-5xl font-space font-medium text-brand-black mb-6">
+              INTELLIGENCE THAT CHANGES OUTCOMES
+            </h2>
+          </motion.div>
+
+          {/* Split Screen Capabilities */}
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* PE Technical DD Column */}
+              <motion.div
+                className="bg-white rounded-2xl p-8 shadow-lg border-2 border-brand-teal"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <TrendingUp className="h-8 w-8 text-brand-teal" />
+                  <h3 className="font-space text-2xl text-brand-black">FOR PE TECHNICAL DUE DILIGENCE</h3>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-space text-lg mb-3 text-brand-black">What we uncover:</h4>
+                    <div className="space-y-2">
+                      {[
+                        "Real architecture (not marketing claims)",
+                        "Actual scalability limits",
+                        "Hidden technical debt costs",
+                        "Security risks quantified",
+                        "Team strength and flight risk"
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <Check className="h-5 w-5 text-brand-teal flex-shrink-0 mt-0.5" />
+                          <span className="font-ibm text-gray-700">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-space text-lg mb-3 text-brand-black">How it impacts deals:</h4>
+                    <div className="space-y-2">
+                      {[
+                        "Negotiate 30-40% better valuations",
+                        "Avoid $10M+ surprise costs",
+                        "Structure earnouts properly",
+                        "Plan integration accurately"
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                          <span className="font-ibm text-gray-700">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-brand-teal/10 rounded-lg p-4 border border-brand-teal/20">
+                    <p className="font-space text-sm mb-1">Real outcomes:</p>
+                    <p className="font-ibm text-gray-700">"Found $47M in hidden technical debt"</p>
+                    <p className="font-ibm text-gray-700">"Reduced offer by 35% based on findings"</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Sales Intelligence Column */}
+              <motion.div
+                className="bg-white rounded-2xl p-8 shadow-lg border-2 border-brand-teal"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <Target className="h-8 w-8 text-brand-teal" />
+                  <h3 className="font-space text-2xl text-brand-black">FOR SALES INTELLIGENCE</h3>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-space text-lg mb-3 text-brand-black">What we reveal:</h4>
+                    <div className="space-y-2">
+                      {[
+                        "Technical pain points they can't solve",
+                        "Failed modernization attempts",
+                        "Gaps your solution fills perfectly",
+                        "Budget allocated for your category",
+                        "Decision makers and their priorities"
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <Check className="h-5 w-5 text-brand-teal flex-shrink-0 mt-0.5" />
+                          <span className="font-ibm text-gray-700">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-space text-lg mb-3 text-brand-black">How it wins deals:</h4>
+                    <div className="space-y-2">
+                      {[
+                        "Skip 3 months of discovery",
+                        "Lead with their exact problems",
+                        "Know their evaluation criteria",
+                        "Bypass generic RFP process"
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                          <span className="font-ibm text-gray-700">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-brand-teal/10 rounded-lg p-4 border border-brand-teal/20">
+                    <p className="font-space text-sm mb-1">Real outcomes:</p>
+                    <p className="font-ibm text-gray-700">"Won $2.5M deal in 6 weeks"</p>
+                    <p className="font-ibm text-gray-700">"Displaced 10-year incumbent"</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-32" id="how-it-works">
+        <div className="container mx-auto px-6">
+          <motion.h2
+            className="text-4xl md:text-5xl font-space font-medium text-center text-brand-black mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            FROM QUESTION TO INTELLIGENCE: OUR PROCESS
           </motion.h2>
 
-          {/* Interactive Process Visualization */}
+          {/* Process Steps */}
           <div className="max-w-5xl mx-auto">
-            <div className="relative">
-              {/* Progress Bar */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gray-200 rounded-full">
-                <motion.div
-                  className="h-full bg-brand-teal rounded-full"
-                  animate={{ width: `${((activeStep + 1) / 3) * 100}%` }}
-                  transition={{ duration: 0.5 }}
-                />
-              </div>
+            <div className="space-y-12">
+              {/* Step 1 */}
+              <motion.div
+                className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="md:col-span-1">
+                  <div className="w-12 h-12 rounded-full bg-brand-teal text-white flex items-center justify-center font-space text-xl font-medium">
+                    1
+                  </div>
+                </div>
+                <div className="md:col-span-11">
+                  <h3 className="font-space text-2xl mb-2 text-brand-black">YOU PROVIDE THE TARGET</h3>
+                  <p className="font-ibm text-gray-700">
+                    Company name, website, and your strategic focus<br />
+                    (growth play vs. efficiency play vs. market expansion)
+                  </p>
+                </div>
+              </motion.div>
 
-              {/* Steps */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-                {[
-                  {
-                    step: 1,
-                    title: "MULTI-DIMENSIONAL SCANNING",
-                    icon: <Search className="h-8 w-8" />,
-                    description: "Our agents simultaneously analyze:",
-                    items: [
-                      "Public codebases and technical signals",
-                      "Engineering job posts and team changes",
-                      "Customer reviews and support forums",
-                      "Competitor movements and capabilities",
-                      "Patent filings and technical documentation"
-                    ]
-                  },
-                  {
-                    step: 2,
-                    title: "PATTERN RECOGNITION & SYNTHESIS",
-                    icon: <Brain className="h-8 w-8" />,
-                    description: "AI models trained on 10,000+ deals identify:",
-                    items: [
-                      "Hidden technical risks and opportunities",
-                      "Market position vulnerabilities",
-                      "Competitive advantages in code",
-                      "Business impact of technical choices"
-                    ]
-                  },
-                  {
-                    step: 3,
-                    title: "HUMAN EXPERT VALIDATION",
-                    icon: <UserCheck className="h-8 w-8" />,
-                    description: "Senior engineers and deal experts verify:",
-                    items: [
-                      "Technical findings accuracy",
-                      "Business impact assessment",
-                      "Strategic recommendations"
-                    ]
-                  }
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className={`relative bg-white rounded-2xl p-8 shadow-lg border-2 transition-all cursor-pointer ${
-                      activeStep === index
-                        ? "border-brand-teal shadow-xl scale-105"
-                        : "border-gray-200 hover:border-gray-300"
-                    }`}
-                    onClick={() => setActiveStep(index)}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 ${
-                      activeStep === index ? "bg-brand-teal text-white" : "bg-gray-100 text-gray-600"
-                    }`}>
-                      {item.icon}
-                    </div>
-                    
-                    <h3 className="text-xl font-space font-medium text-brand-black mb-4">
-                      {item.step}. {item.title}
-                    </h3>
-                    
-                    <p className="font-ibm text-gray-700 mb-4">{item.description}</p>
-                    
-                    <AnimatePresence>
-                      {activeStep === index && (
-                        <motion.ul
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          className="space-y-2"
-                        >
-                          {item.items.map((subItem, subIndex) => (
-                            <motion.li
-                              key={subIndex}
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: subIndex * 0.1 }}
-                              className="flex items-start"
-                            >
-                              <div className="w-1.5 h-1.5 bg-brand-teal rounded-full mt-2 mr-2 flex-shrink-0" />
-                              <span className="text-sm font-ibm text-gray-600">{subItem}</span>
-                            </motion.li>
-                          ))}
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                ))}
-              </div>
+              {/* Step 2 */}
+              <motion.div
+                className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="md:col-span-1">
+                  <div className="w-12 h-12 rounded-full bg-brand-teal text-white flex items-center justify-center font-space text-xl font-medium">
+                    2
+                  </div>
+                </div>
+                <div className="md:col-span-11">
+                  <h3 className="font-space text-2xl mb-2 text-brand-black">AI RESEARCH ENGINE ACTIVATES</h3>
+                  <div className="bg-gray-50 rounded-lg p-6 mt-4">
+                    <ul className="space-y-2 font-ibm text-gray-700">
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Analyzes 1,000+ sources across the web</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Examines code repositories and technical documentation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Maps competitive landscape and market position</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Identifies customer concentration and risks</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Quantifies technical debt and opportunities</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 3 */}
+              <motion.div
+                className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="md:col-span-1">
+                  <div className="w-12 h-12 rounded-full bg-brand-teal text-white flex items-center justify-center font-space text-xl font-medium">
+                    3
+                  </div>
+                </div>
+                <div className="md:col-span-11">
+                  <h3 className="font-space text-2xl mb-2 text-brand-black">EXPERT VALIDATION</h3>
+                  <p className="font-ibm text-gray-700">
+                    Senior engineers review every finding<br />
+                    Verify technical claims and business impact<br />
+                    Add strategic context and recommendations
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Step 4 */}
+              <motion.div
+                className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="md:col-span-1">
+                  <div className="w-12 h-12 rounded-full bg-brand-teal text-white flex items-center justify-center font-space text-xl font-medium">
+                    4
+                  </div>
+                </div>
+                <div className="md:col-span-11">
+                  <h3 className="font-space text-2xl mb-2 text-brand-black">COMPREHENSIVE REPORT DELIVERY</h3>
+                  <div className="bg-gray-50 rounded-lg p-6 mt-4">
+                    <ul className="space-y-2 font-ibm text-gray-700">
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Executive summary with key risks/opportunities</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Detailed technical findings with evidence</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Strategic recommendations aligned to your thesis</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Every claim linked to verifiable sources</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
             </div>
 
+            {/* Timeline */}
             <motion.div
-              className="text-center mt-12 bg-brand-teal/10 rounded-2xl p-8 border border-brand-teal"
+              className="mt-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <p className="text-xl font-space font-medium text-brand-black">
-                Result: Intelligence no human team could gather in months—delivered in 48 hours.
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <p className="font-space text-2xl mb-2">~2 hours</p>
+                  <p className="font-ibm text-gray-300">Automated analysis</p>
+                </div>
+                <div>
+                  <p className="font-space text-2xl mb-2">24-48 hours</p>
+                  <p className="font-ibm text-gray-300">Expert review and synthesis</p>
+                </div>
+                <div>
+                  <p className="font-space text-2xl mb-2 text-brand-teal">48 hours guaranteed</p>
+                  <p className="font-ibm text-gray-300">Total turnaround</p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -491,118 +652,142 @@ export function TechScanLandingPage() {
           </motion.h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-            {/* Scenario 1: Buying Companies */}
+            {/* Scenario 1: Evaluating an Acquisition */}
             <motion.div
-              className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden shadow-2xl"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="p-8 text-white">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-space font-medium">SCENARIO 1: BUYING COMPANIES</h3>
-                  <Building2 className="h-8 w-8 text-brand-teal" />
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 text-white">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-space font-medium">SCENARIO: EVALUATING AN ACQUISITION</h3>
+                  <Building2 className="h-6 w-6 text-brand-teal" />
                 </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-xl font-space font-medium text-brand-teal mb-2">
-                    PE TECHNICAL DUE DILIGENCE
-                  </h4>
-                  <p className="font-ibm text-gray-300">
-                    You're evaluating a $100M SaaS acquisition target
+                <p className="font-ibm text-gray-300 mt-2">
+                  PE firm considering $100M SaaS target
+                </p>
+              </div>
+              
+              <div className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div>
+                    <h4 className="font-space text-lg mb-3 text-red-600">Without TechScan IQ:</h4>
+                    <ul className="space-y-2 font-ibm text-gray-600">
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0 mt-2" />
+                        <span>Trust seller's tech claims</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0 mt-2" />
+                        <span>Find problems post-close</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0 mt-2" />
+                        <span>Overpay by millions</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-space text-lg mb-3 text-brand-teal">With TechScan IQ:</h4>
+                    <ul className="space-y-2 font-ibm text-gray-600">
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Know their real architecture</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Quantify modernization costs</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Identify growth bottlenecks</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Negotiate from strength</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-brand-teal/10 rounded-lg p-4 border border-brand-teal">
+                  <p className="font-space text-lg text-brand-black">
+                    Result: Better price, fewer surprises
                   </p>
                 </div>
 
-                <div className="bg-gray-700/30 rounded-lg p-6 mb-6">
-                  <p className="font-space font-medium mb-4">We reveal:</p>
-                  <ul className="space-y-3 font-ibm text-gray-300">
-                    <li className="flex items-start">
-                      <XCircle className="h-5 w-5 text-red-400 mt-0.5 mr-3 flex-shrink-0" />
-                      Database can't scale past current 100K users without $5M rewrite
-                    </li>
-                    <li className="flex items-start">
-                      <AlertTriangle className="h-5 w-5 text-yellow-400 mt-0.5 mr-3 flex-shrink-0" />
-                      67% revenue from one customer who's building in-house solution
-                    </li>
-                    <li className="flex items-start">
-                      <AlertCircle className="h-5 w-5 text-orange-400 mt-0.5 mr-3 flex-shrink-0" />
-                      Talented team but architecture decisions limit growth
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-green-500/20 rounded-lg p-4 border border-green-500">
-                  <p className="font-space font-medium text-green-400 mb-1">
-                    Outcome: Negotiate 40% lower price
-                  </p>
-                  <p className="font-ibm text-sm text-green-300">
-                    and budget for technical fixes
-                  </p>
-                </div>
-
-                <Button className="w-full mt-6 bg-brand-teal text-white hover:bg-brand-teal/90 font-space font-medium">
-                  View PE Report Sample
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
               </div>
             </motion.div>
 
-            {/* Scenario 2: Winning Deals */}
+            {/* Scenario 2: Pursuing Enterprise Deal */}
             <motion.div
-              className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden shadow-2xl"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="p-8 text-white">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-space font-medium">SCENARIO 2: WINNING DEALS</h3>
-                  <Target className="h-8 w-8 text-brand-teal" />
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 text-white">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-space font-medium">SCENARIO: PURSUING ENTERPRISE DEAL</h3>
+                  <Target className="h-6 w-6 text-brand-teal" />
                 </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-xl font-space font-medium text-brand-teal mb-2">
-                    SALES INTELLIGENCE
-                  </h4>
-                  <p className="font-ibm text-gray-300">
-                    You're selling to a Fortune 500 that needs digital transformation
-                  </p>
-                </div>
-
-                <div className="bg-gray-700/30 rounded-lg p-6 mb-6">
-                  <p className="font-space font-medium mb-4">We reveal:</p>
-                  <ul className="space-y-3 font-ibm text-gray-300">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-400 mt-0.5 mr-3 flex-shrink-0" />
-                      Their current vendor's system crashes during peak hours
-                    </li>
-                    <li className="flex items-start">
-                      <AlertTriangle className="h-5 w-5 text-yellow-400 mt-0.5 mr-3 flex-shrink-0" />
-                      CTO has budget but security team has killed 3 deals
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-400 mt-0.5 mr-3 flex-shrink-0" />
-                      Your microservices solve their exact scaling problem
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-green-500/20 rounded-lg p-4 border border-green-500">
-                  <p className="font-space font-medium text-green-400 mb-1">
-                    Outcome: Win $2M deal in 45 days
-                  </p>
-                  <p className="font-ibm text-sm text-green-300">
-                    by leading with architecture
-                  </p>
-                </div>
-
-                <Button className="w-full mt-6 bg-brand-teal text-white hover:bg-brand-teal/90 font-space font-medium">
-                  View Sales Intel Sample
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
+                <p className="font-ibm text-gray-300 mt-2">
+                  Tech vendor selling to Fortune 500
+                </p>
               </div>
+              
+              <div className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div>
+                    <h4 className="font-space text-lg mb-3 text-red-600">Without TechScan IQ:</h4>
+                    <ul className="space-y-2 font-ibm text-gray-600">
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0 mt-2" />
+                        <span>Generic demos and pitch decks</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0 mt-2" />
+                        <span>6-month sales cycles</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0 mt-2" />
+                        <span>Lose to "better fit" competitors</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-space text-lg mb-3 text-brand-teal">With TechScan IQ:</h4>
+                    <ul className="space-y-2 font-ibm text-gray-600">
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Map their technical pain points</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Find integration opportunities</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Understand decision process</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2" />
+                        <span>Lead with specific solutions</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-brand-teal/10 rounded-lg p-4 border border-brand-teal">
+                  <p className="font-space text-lg text-brand-black">
+                    Result: Faster close, higher win rate
+                  </p>
+                </div>              </div>
             </motion.div>
           </div>
         </div>
