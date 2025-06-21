@@ -334,7 +334,7 @@ export function TechScanLandingPage() {
               <div className="mt-8 text-center">
                 <Button 
                   variant="outline" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-brand-black font-space font-medium"
+                  className="border-2 border-white text-brand-black bg-white hover:bg-white/90 font-space font-medium"
                 >
                   See Full Analysis Sample
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -1031,14 +1031,14 @@ export function TechScanLandingPage() {
 
             {/* Growth Package */}
             <motion.div
-              className="bg-gradient-to-br from-brand-teal to-teal-600 rounded-2xl shadow-xl overflow-hidden text-white relative"
+              className="bg-gradient-to-br from-brand-teal to-teal-600 rounded-2xl shadow-xl text-white relative"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(0, 194, 178, 0.5)" }}
             >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-black text-white px-6 py-2 rounded-full font-space font-medium text-sm">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-black text-white px-6 py-2 rounded-full font-space font-medium text-sm z-10">
                 BEST VALUE
               </div>
               
