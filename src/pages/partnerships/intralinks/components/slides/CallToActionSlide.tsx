@@ -70,9 +70,9 @@ export function CallToActionSlide(): JSX.Element {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h3 className="font-space text-2xl text-center">Three Paths Forward</h3>
+          <h3 className="font-space text-2xl text-center">Two Paths Forward</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <Card className="p-6 text-center hover:border-brand-teal transition-colors cursor-pointer">
               <h4 className="font-space text-lg mb-2">Pilot Program</h4>
               <p className="font-ibm text-sm mb-4">
@@ -84,25 +84,14 @@ export function CallToActionSlide(): JSX.Element {
               </Button>
             </Card>
 
-            <Card className="p-6 text-center hover:border-brand-teal transition-colors cursor-pointer">
+            <Card className="p-6 text-center border-2 border-brand-teal bg-brand-teal/5">
               <h4 className="font-space text-lg mb-2">Strategic Partnership</h4>
               <p className="font-ibm text-sm mb-4">
                 Full integration<br />
                 Revenue share model
               </p>
-              <Button variant="outline" className="w-full">
-                Explore Terms
-              </Button>
-            </Card>
-
-            <Card className="p-6 text-center border-2 border-brand-teal bg-brand-teal/5">
-              <h4 className="font-space text-lg mb-2">Acquisition</h4>
-              <p className="font-ibm text-sm mb-4">
-                Own the technology<br />
-                Lead the market
-              </p>
               <Button className="w-full bg-brand-teal text-white">
-                Discuss M&A
+                Explore Terms
               </Button>
             </Card>
           </div>

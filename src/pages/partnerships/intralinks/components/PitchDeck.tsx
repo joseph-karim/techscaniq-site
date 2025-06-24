@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Import slide components
+import { StatusQuoSlide } from './slides/StatusQuo';
+import { BreakthroughSlide } from './slides/Breakthrough';
+import { IntroducingTechScanSlide } from './slides/IntroducingTechScan';
 import { TransformationSlide } from './slides/TransformationSlide';
 import { IntelligenceGapSlide } from './slides/IntelligenceGapSlide';
 import { AIRevolutionSlide } from './slides/AIRevolutionSlide';
@@ -12,12 +15,10 @@ import { BusinessModelSlide } from './slides/BusinessModelSlide';
 import { StrategicVisionSlide } from './slides/StrategicVisionSlide';
 import { CallToActionSlide } from './slides/CallToActionSlide';
 
-export interface SlideProps {
-  onNext?: () => void;
-  onPrev?: () => void;
-}
-
 const slides = [
+  StatusQuoSlide,
+  BreakthroughSlide,
+  IntroducingTechScanSlide,
   TransformationSlide,
   IntelligenceGapSlide,
   AIRevolutionSlide,
@@ -28,6 +29,9 @@ const slides = [
 ];
 
 const slideNames = [
+  'Status Quo',
+  'Breakthrough',
+  'Introducing TechScan',
   'The Transformation',
   'Intelligence Gap',
   'AI Revolution',

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { SlideProps } from '../PitchDeck';
+import { SlideProps } from '../../types';
 
 export function TransformationSlide({ onNext }: SlideProps) {
   return (

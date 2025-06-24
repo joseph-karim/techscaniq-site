@@ -8,7 +8,7 @@ export function LiveDemoSlide(): JSX.Element {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-8 pt-20">
-      <div className="max-w-6xl w-full">
+      <div className="max-w-7xl w-full">
         <motion.div 
           className="text-center mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -46,85 +46,81 @@ export function LiveDemoSlide(): JSX.Element {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
+          className="relative"
         >
           {activeTab === 'before' ? (
-            <Card className="p-8 border-2 border-gray-300">
-              <div className="bg-gray-100 p-4 rounded-t-lg border-b">
-                <div className="flex gap-4 text-sm font-ibm">
-                  <span className="border-b-2 border-brand-gunmetal pb-2">Documents</span>
-                  <span>Q&A</span>
-                  <span>Reports</span>
-                  <span>Analytics</span>
-                </div>
+            <div className="space-y-6">
+              <Card className="overflow-hidden border-2 border-gray-300">
+                <img 
+                  src="/intralinks_diligence_overview.png.webp" 
+                  alt="Intralinks Diligence Overview" 
+                  className="w-full"
+                />
+              </Card>
+              <div className="text-center">
+                <p className="font-ibm text-lg text-brand-gunmetal">
+                  Document management and basic analytics
+                </p>
+                <p className="font-ibm text-sm text-gray-500 mt-2">
+                  Technical assessment requires external consultants
+                </p>
               </div>
-              <div className="p-6">
-                <h3 className="font-space text-xl mb-4">Project TechCo Acquisition</h3>
-                <div className="space-y-4">
-                  <div className="bg-gray-50 p-4 rounded">
-                    <p className="font-ibm text-sm text-gray-600">Latest Activity</p>
-                    <p className="font-ibm">147 documents uploaded</p>
-                    <p className="font-ibm">23 Q&A items pending</p>
-                  </div>
-                  <div className="text-center py-8 text-gray-400">
-                    <p className="font-ibm">Technical assessment happens elsewhere...</p>
-                  </div>
-                </div>
-              </div>
-            </Card>
+            </div>
           ) : (
-            <Card className="p-8 border-2 border-brand-teal">
-              <div className="bg-gray-100 p-4 rounded-t-lg border-b">
-                <div className="flex gap-4 text-sm font-ibm">
-                  <span>Documents</span>
-                  <span>Q&A</span>
-                  <span>Reports</span>
-                  <span>Analytics</span>
-                  <span className="border-b-2 border-brand-teal pb-2 text-brand-teal">
-                    ✨ Tech Intelligence
-                  </span>
+            <div className="space-y-6">
+              <Card className="overflow-hidden border-2 border-brand-teal relative">
+                <img 
+                  src="/intralinks_diligence_overview.png.webp" 
+                  alt="Intralinks with TechScan IQ" 
+                  className="w-full"
+                />
+                {/* Overlay showing TechScan IQ integration */}
+                <div className="absolute top-4 right-4 bg-brand-teal text-white px-4 py-2 rounded-lg shadow-lg">
+                  <span className="font-space text-sm">✨ TechScan IQ Enabled</span>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="font-space text-xl mb-4">Project TechCo Acquisition</h3>
                 
-                <div className="bg-brand-teal/5 border border-brand-teal p-6 rounded-lg mb-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h4 className="font-space text-lg">AI-Powered Technical Analysis</h4>
-                      <p className="font-ibm text-sm text-brand-gunmetal">
-                        Generated in 48 hours • No seller input required
-                      </p>
+                {/* Enhanced intelligence panel overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                  <div className="bg-white/95 backdrop-blur rounded-lg p-4 shadow-xl">
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <h4 className="font-space text-lg text-brand-black">AI Technical Intelligence</h4>
+                        <p className="font-ibm text-sm text-brand-gunmetal">
+                          1,000+ sources analyzed • Updated in real-time
+                        </p>
+                      </div>
+                      <Button size="sm" className="bg-brand-teal text-white">
+                        View Full Report
+                      </Button>
                     </div>
-                    <a href="/reports/demo/intralinks-pe-dd" className="text-brand-teal hover:underline">
-                      View Full Report →
-                    </a>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p className="font-ibm text-sm text-brand-gunmetal mb-1">Technical Score</p>
-                      <p className="font-space text-2xl">67/100 🟡</p>
+                    
+                    <div className="grid grid-cols-3 gap-4 text-sm">
+                      <div className="bg-red-50 p-2 rounded">
+                        <p className="font-ibm text-red-700">⚠️ High Risk</p>
+                        <p className="font-space text-xs">Scalability Issues</p>
+                      </div>
+                      <div className="bg-yellow-50 p-2 rounded">
+                        <p className="font-ibm text-yellow-700">⚡ Medium Risk</p>
+                        <p className="font-space text-xs">Integration: $4.7M</p>
+                      </div>
+                      <div className="bg-green-50 p-2 rounded">
+                        <p className="font-ibm text-green-700">✓ Low Risk</p>
+                        <p className="font-space text-xs">Team Stability</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-ibm text-sm text-brand-gunmetal mb-1">Integration Cost</p>
-                      <p className="font-space text-2xl">$4.7M</p>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-4 space-y-2">
-                    <p className="font-ibm text-sm">⚫ Critical: Database architecture limits scale</p>
-                    <p className="font-ibm text-sm">🟡 Medium: 67% customer concentration risk</p>
-                    <p className="font-ibm text-sm">🟢 Low: Strong engineering team in place</p>
                   </div>
                 </div>
-
-                <div className="text-center">
-                  <Button className="bg-brand-teal text-white">
-                    Download Technical DD Report
-                  </Button>
-                </div>
+              </Card>
+              
+              <div className="text-center">
+                <p className="font-ibm text-lg text-brand-gunmetal">
+                  Complete technical intelligence integrated directly
+                </p>
+                <p className="font-ibm text-sm text-brand-teal mt-2">
+                  No external consultants needed • 48-hour turnaround
+                </p>
               </div>
-            </Card>
+            </div>
           )}
         </motion.div>
       </div>
