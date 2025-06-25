@@ -34,7 +34,7 @@ const slideNames = [
   'Status Quo',
   'Introducing TechScan',
   'Intelligence Gap',
-  'Breakthrough',
+  'The Depth Advantage',
   'How It Works',
   'The Transformation',
   'AI Revolution',
