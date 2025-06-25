@@ -8,12 +8,12 @@ import { StatusQuoSlide } from './slides/StatusQuo';
 import { BreakthroughSlide } from './slides/Breakthrough';
 import { IntroducingTechScanSlide } from './slides/IntroducingTechScan';
 import { IntelligenceGapSlide } from './slides/IntelligenceGapSlide';
-import { AIRevolutionSlide } from './slides/AIRevolutionSlide';
+// import { AIRevolutionSlide } from './slides/AIRevolutionSlide';
 import { LiveDemoSlide } from './slides/LiveDemoSlide';
 import { NextStepsSlide } from './slides/NextStepsSlide';
-import { BusinessModelSlide } from './slides/BusinessModelSlide';
-import { StrategicVisionSlide } from './slides/StrategicVisionSlide';
-import { CallToActionSlide } from './slides/CallToActionSlide';
+// import { BusinessModelSlide } from './slides/BusinessModelSlide';
+// import { StrategicVisionSlide } from './slides/StrategicVisionSlide';
+// import { CallToActionSlide } from './slides/CallToActionSlide';
 
 const slides = [
   StatusQuoSlide,
@@ -22,10 +22,10 @@ const slides = [
   BreakthroughSlide,
   LiveDemoSlide,
   NextStepsSlide,
-  AIRevolutionSlide,
-  BusinessModelSlide,
-  StrategicVisionSlide,
-  CallToActionSlide,
+  // AIRevolutionSlide,
+  // BusinessModelSlide,
+  // StrategicVisionSlide,
+  // CallToActionSlide,
 ];
 
 const slideNames = [
@@ -35,10 +35,10 @@ const slideNames = [
   'The Depth Advantage',
   'Live Demo',
   'Next Steps',
-  'Appendix: AI Revolution',
-  'Appendix: Business Model',
-  'Appendix: Strategic Vision',
-  'Appendix: Call to Action',
+  // 'Appendix: AI Revolution',
+  // 'Appendix: Business Model',
+  // 'Appendix: Strategic Vision',
+  // 'Appendix: Call to Action',
 ];
 
 export function PitchDeck() {

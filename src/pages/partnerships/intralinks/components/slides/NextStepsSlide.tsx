@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { SlideProps } from '../../types';
-import { Play, Calendar, FileText, Users } from 'lucide-react';
+import { Play, Calendar } from 'lucide-react';
 
 export function NextStepsSlide({ onNext, onPrev }: SlideProps): JSX.Element {
   return (
@@ -53,40 +53,6 @@ export function NextStepsSlide({ onNext, onPrev }: SlideProps): JSX.Element {
             </Card>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="bg-gradient-to-r from-brand-teal/10 to-blue-50 rounded-lg p-8"
-          >
-            <h3 className="font-space text-2xl mb-4">Additional Resources</h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                variant="ghost" 
-                className="flex items-center gap-2"
-                onClick={onNext}
-              >
-                <FileText className="w-4 h-4" />
-                Technical Details
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="flex items-center gap-2"
-                onClick={onNext}
-              >
-                <Users className="w-4 h-4" />
-                Business Model
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="flex items-center gap-2"
-                onClick={onNext}
-              >
-                <FileText className="w-4 h-4" />
-                Case Studies
-              </Button>
-            </div>
-          </motion.div>
 
           <div className="flex justify-center mt-8">
             <Button 
