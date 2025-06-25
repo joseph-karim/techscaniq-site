@@ -16,12 +16,12 @@ export function IntroducingTechScanSlide({ onNext, onPrev }: SlideProps) {
           <h1 className="font-space text-4xl md:text-5xl text-brand-black mb-6 uppercase">
             TechScanIQ Changes Everything About Technical Due Diligence
           </h1>
-          <p className="font-ibm text-xl text-brand-gunmetal mb-4">
-            What used to take armies of consultants now happens in 48 hours
-          </p>
-          <p className="font-ibm text-lg text-brand-gunmetal max-w-4xl mx-auto">
+          <p className="font-ibm text-lg text-brand-gunmetal max-w-4xl mx-auto mb-4">
             TechScanIQ is an AI-powered intelligence platform that rapidly identifies, analyzes, and benchmarks 
             a company's technology stack across cloud systems, APIs, platforms, back-end and front-end infrastructure.
+          </p>
+          <p className="font-ibm text-xl text-brand-gunmetal font-bold">
+            What used to take armies of consultants now happens in 48 hours
           </p>
         </motion.div>
 

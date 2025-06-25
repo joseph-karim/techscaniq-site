@@ -18,7 +18,7 @@ export function StatusQuoSlide({ onNext }: SlideProps) {
           </h1>
           
           <p className="font-ibm text-xl text-brand-gunmetal mb-16 max-w-4xl mx-auto">
-            Technology drives the value in today's fastest growing acquisitions, but 91% of M&A deals still skip tech diligence and walk straight into disaster
+            Technology drives the value in today's fastest growing acquisitions, but 91% of M&A deals still skip tech diligence taking on significant risk
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -31,20 +31,17 @@ export function StatusQuoSlide({ onNext }: SlideProps) {
               <Card className="p-6 text-center border-2 border-brand-gunmetal bg-gray-50 h-full">
                 <h2 className="font-space text-2xl mb-6 text-brand-black">The Reality: 91% of Acquirers Are Flying Blind</h2>
                 <p className="font-ibm text-base text-gray-700 mb-6 leading-relaxed">
-                  Tech failures kill 30% of M&A deals, yet 91% skip comprehensive DD. Those who do pay face a devil's bargain: $150K for broken assessments or billions in catastrophic surprises.
+                  Tech failures kill 30% of M&A deals, yet 91% skip comprehensive DD.
                 </p>
-                <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex flex-col items-center gap-3">
                   <div className="bg-brand-gunmetal text-white px-3 py-1.5 rounded-md">
                     <div className="font-space text-sm font-bold">91% Skip Tech DD</div>
                   </div>
                   <div className="bg-brand-gunmetal text-white px-3 py-1.5 rounded-md">
-                    <div className="font-space text-sm font-bold">$2B+ Hidden Debt Found</div>
-                  </div>
-                  <div className="bg-brand-gunmetal text-white px-3 py-1.5 rounded-md">
-                    <div className="font-space text-sm font-bold">9-Figure Compliance Bombs</div>
-                  </div>
-                  <div className="bg-brand-gunmetal text-white px-3 py-1.5 rounded-md">
                     <div className="font-space text-sm font-bold">30% Deal Failures</div>
+                  </div>
+                  <div className="bg-brand-gunmetal text-white px-3 py-1.5 rounded-md">
+                    <div className="font-space text-sm font-bold">$500K+ Average Tech Debt Surprise</div>
                   </div>
                 </div>
               </Card>
@@ -57,19 +54,16 @@ export function StatusQuoSlide({ onNext }: SlideProps) {
               transition={{ delay: 0.4 }}
             >
               <Card className="p-6 text-center border-2 border-brand-gunmetal bg-gray-50 h-full">
-                <h2 className="font-space text-2xl mb-6 text-brand-black">The Root Cause: Tech Due Diligence is a 12-Week, $150K Nightmare</h2>
+                <h2 className="font-space text-2xl mb-6 text-brand-black">Why skip DD?<br/>Tech Due Diligence is a 12-Week, $150K Nightmare</h2>
                 <p className="font-ibm text-base text-gray-700 mb-6 leading-relaxed">
-                  Traditional DD is slow, expensive, and still misses everything that matters. It catches only 3% of shadow IT, takes 3 months, yet 76% of tech deals still fail to meet objectives.
+                  It misses crucial details, lacks business context, leading to 76% of M&A deals with Tech DD missing projections.
                 </p>
-                <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex flex-col items-center gap-3">
                   <div className="bg-brand-gunmetal text-white px-3 py-1.5 rounded-md">
                     <div className="font-space text-sm font-bold">12 Weeks Wasted</div>
                   </div>
                   <div className="bg-brand-gunmetal text-white px-3 py-1.5 rounded-md">
                     <div className="font-space text-sm font-bold">$150K Burned</div>
-                  </div>
-                  <div className="bg-brand-gunmetal text-white px-3 py-1.5 rounded-md">
-                    <div className="font-space text-sm font-bold">97% Shadow IT Missed</div>
                   </div>
                   <div className="bg-brand-gunmetal text-white px-3 py-1.5 rounded-md">
                     <div className="font-space text-sm font-bold">$500K+ Post-Close Shocks</div>
@@ -92,7 +86,7 @@ export function StatusQuoSlide({ onNext }: SlideProps) {
                 <p className="font-ibm text-base text-gray-700 mb-6 leading-relaxed">
                   Companies with proper tech DD are 2.8x more likely to succeed. With $3T in dry powder and 91% of deals unprotected, the market is screaming for transformation.
                 </p>
-                <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex flex-col items-center gap-3">
                   <div className="bg-brand-teal text-white px-3 py-1.5 rounded-md">
                     <div className="font-space text-sm font-bold">2.8x Success Rate</div>
                   </div>
