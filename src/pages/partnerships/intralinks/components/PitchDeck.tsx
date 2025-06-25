@@ -18,8 +18,8 @@ import { CallToActionSlide } from './slides/CallToActionSlide';
 
 const slides = [
   StatusQuoSlide,
-  BreakthroughSlide,
   IntroducingTechScanSlide,
+  BreakthroughSlide,
   HowItWorksSlide,
   TransformationSlide,
   IntelligenceGapSlide,
@@ -32,8 +32,8 @@ const slides = [
 
 const slideNames = [
   'Status Quo',
-  'Breakthrough',
   'Introducing TechScan',
+  'Breakthrough',
   'How It Works',
   'The Transformation',
   'Intelligence Gap',
