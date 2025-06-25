@@ -35,7 +35,7 @@ export function HowItWorksSlide({ onNext }: SlideProps) {
           className="text-center mb-8"
         >
           <h2 className="font-space text-4xl text-brand-black mb-2">
-            The Depth Advantage
+            How TechScanIQ Works
           </h2>
         </motion.div>
 
