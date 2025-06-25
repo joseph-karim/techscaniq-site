@@ -7,7 +7,7 @@ export function BusinessModelSlide(): JSX.Element {
   const [selectedModel, setSelectedModel] = useState<'transaction' | 'subscription' | 'hybrid'>('hybrid');
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-8 pt-20">
+    <div className="min-h-screen flex flex-col items-center justify-center px-8 pt-32">
       <div className="max-w-5xl w-full">
         <motion.div 
           className="text-center mb-12"

@@ -8,7 +8,7 @@ export function LiveDemoSlide(): JSX.Element {
   const [activeTab, setActiveTab] = useState<'before' | 'after'>('before');
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-8 pt-20">
+    <div className="min-h-screen flex flex-col items-center justify-center px-8 pt-32">
       <div className="max-w-7xl w-full">
         <motion.div 
           className="text-center mb-8"

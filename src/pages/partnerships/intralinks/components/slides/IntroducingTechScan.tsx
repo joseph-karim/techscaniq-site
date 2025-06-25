@@ -6,7 +6,7 @@ import { Zap, Target, FileCheck, Activity, DollarSign } from 'lucide-react';
 
 export function IntroducingTechScanSlide({ onNext, onPrev }: SlideProps) {
   return (
-    <div className="min-h-screen flex items-center justify-center px-8 pt-20">
+    <div className="min-h-screen flex items-center justify-center px-8 pt-32">
       <div className="max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0 }}

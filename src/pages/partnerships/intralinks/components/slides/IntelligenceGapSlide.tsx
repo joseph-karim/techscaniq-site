@@ -6,7 +6,7 @@ import { CheckCircle, XCircle, Users, Building, TrendingUp, Shield, DollarSign, 
 
 export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Element {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-8 pt-20">
+    <div className="min-h-screen flex flex-col items-center justify-center px-8 pt-32">
       <div className="max-w-7xl w-full">
         <motion.div 
           className="text-center mb-8"
@@ -153,11 +153,122 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
           </div>
         </motion.div>
 
+        {/* Comprehensive Stakeholder Matrix */}
+        <motion.div 
+          className="mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <h2 className="font-space text-2xl text-brand-black text-center mb-8">
+            Intralinks M&A Stakeholder Matrix: Strategic Enablement Through Embedded Tech & AI Intelligence
+          </h2>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white border border-gray-200">
+              <thead>
+                <tr className="bg-brand-gunmetal text-white">
+                  <th className="px-4 py-3 text-left font-space text-sm">Stakeholder</th>
+                  <th className="px-4 py-3 text-left font-space text-sm">Why They Use Intralinks</th>
+                  <th className="px-4 py-3 text-left font-space text-sm">Pre-Deal Enablement</th>
+                  <th className="px-4 py-3 text-left font-space text-sm">During Deal Enablement</th>
+                  <th className="px-4 py-3 text-left font-space text-sm">Post-Deal Enablement</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {/* Investment Bankers */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-4 py-4 font-space text-sm font-medium">Investment Bankers / M&A Advisors</td>
+                  <td className="px-4 py-4 font-ibm text-xs">Manage deal execution, share CIMs, oversee Q&A</td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Strengthen CIMs with verified insights<br/>
+                    • Preempt buyer concerns<br/>
+                    • Position asset credibility
+                  </td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Respond to Q&A with source-linked data<br/>
+                    • Defend valuation using AI evidence<br/>
+                    • Accelerate timelines
+                  </td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Archive infra snapshots<br/>
+                    • Track platform changes<br/>
+                    • Refine positioning
+                  </td>
+                </tr>
+
+                {/* PE & Strategic Buyers */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-4 py-4 font-space text-sm font-medium">Private Equity & Strategic Buyers</td>
+                  <td className="px-4 py-4 font-ibm text-xs">Access diligence materials, assess scalability</td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Evaluate tech stack maturity<br/>
+                    • Identify AI readiness<br/>
+                    • Flag legacy risks early
+                  </td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Benchmark infra against standards<br/>
+                    • Validate synergy assumptions<br/>
+                    • Cross-check seller claims
+                  </td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Monitor infrastructure plans<br/>
+                    • Track ROI on tech transformation<br/>
+                    • Guide bolt-on strategy
+                  </td>
+                </tr>
+
+                {/* Credit Funds */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-4 py-4 font-space text-sm font-medium">Credit Funds / Lenders</td>
+                  <td className="px-4 py-4 font-ibm text-xs">Assess operational stability and digital risk</td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Assess infrastructure resilience<br/>
+                    • Identify digital dependencies<br/>
+                    • Screen for IT vulnerabilities
+                  </td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Validate scalability claims<br/>
+                    • Structure digital covenants<br/>
+                    • Model downside risk
+                  </td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Monitor covenant adherence<br/>
+                    • Detect infrastructure drift<br/>
+                    • Flag digital risk early
+                  </td>
+                </tr>
+
+                {/* Corporate Development */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-4 py-4 font-space text-sm font-medium">Corporate Development Teams</td>
+                  <td className="px-4 py-4 font-ibm text-xs">Evaluate strategic fit and integration lift</td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Assess infrastructure alignment<br/>
+                    • Identify integration blockers<br/>
+                    • Estimate harmonization effort
+                  </td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Align stakeholders with stack maps<br/>
+                    • Validate synergy models<br/>
+                    • Scope integration timeline
+                  </td>
+                  <td className="px-4 py-4 font-ibm text-xs">
+                    • Track IT harmonization<br/>
+                    • Monitor milestones<br/>
+                    • Feed future M&A insights
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="text-center"
+          transition={{ delay: 0.8 }}
+          className="text-center mt-8"
         >
           <Button 
             onClick={onNext}
