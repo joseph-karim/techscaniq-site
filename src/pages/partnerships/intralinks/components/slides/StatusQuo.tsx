@@ -2,6 +2,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { SlideProps } from '../../types';
+import { Clock, DollarSign, AlertTriangle, TrendingDown, XCircle } from 'lucide-react';
 
 export function StatusQuoSlide({ onNext }: SlideProps) {
   return (
@@ -10,85 +11,125 @@ export function StatusQuoSlide({ onNext }: SlideProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-5xl w-full"
+        className="max-w-6xl w-full"
       >
-        <h1 className="font-space text-4xl md:text-5xl text-brand-black mb-8 text-center">
-          How technical due diligence works today
-        </h1>
-        
+        {/* Part 1: The Problem */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="space-y-6"
+          transition={{ delay: 0.2 }}
+          className="mb-12"
         >
-          <Card className="p-8 border-2 border-brand-gunmetal">
-            <h3 className="font-space text-2xl mb-4">The Current Approach</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <h4 className="font-space text-lg mb-2">Week 1-2</h4>
-                <p className="font-ibm text-brand-gunmetal">
-                  PE firm hires consulting team. Initial scoping calls. 
-                  NDA negotiations. Access requests.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-space text-lg mb-2">Week 3-6</h4>
-                <p className="font-ibm text-brand-gunmetal">
-                  Consultants interview CTOs. Review some code. 
-                  Check a few customer references. Draft reports.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-space text-lg mb-2">Week 7-8</h4>
-                <p className="font-ibm text-brand-gunmetal">
-                  Deliver 200-page PDF. High-level findings.
-                  Generic recommendations. $75K invoice.
-                </p>
-              </div>
-            </div>
-          </Card>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="p-6 bg-red-50 border-red-500">
-              <h4 className="font-space text-lg mb-3">What They Miss</h4>
-              <ul className="space-y-2 font-ibm text-sm">
-                <li>• Actual codebase architecture</li>
-                <li>• Real customer sentiment from forums</li>
-                <li>• Technical team flight risk signals</li>
-                <li>• Competitor capability comparisons</li>
-                <li>• Hidden integration limitations</li>
-              </ul>
+          <h2 className="font-space text-3xl md:text-4xl text-brand-black mb-4">
+            The Problem
+          </h2>
+          <p className="font-ibm text-lg text-brand-gunmetal mb-8 max-w-4xl">
+            Traditional tech DD is fundamentally broken—taking 12+ weeks, costing $150K+, yet still missing critical risks. 
+            Despite tech driving 31% of buyouts, 76% of acquisitions fail to meet objectives.
+          </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <Card className="p-6 text-center border-2 border-red-500 bg-red-50">
+              <Clock className="w-8 h-8 text-red-600 mx-auto mb-2" />
+              <div className="font-space text-3xl font-bold text-red-600">12</div>
+              <div className="font-ibm text-sm text-red-700">Weeks Average Timeline</div>
             </Card>
             
-            <Card className="p-6 bg-amber-50 border-amber-500">
-              <h4 className="font-space text-lg mb-3">The Result</h4>
-              <ul className="space-y-2 font-ibm text-sm">
-                <li>• Surprises after closing</li>
-                <li>• Technical debt discovered too late</li>
-                <li>• Integration costs 3x budget</li>
-                <li>• Key engineers leave post-acquisition</li>
-                <li>• Growth plans hit technical walls</li>
-              </ul>
+            <Card className="p-6 text-center border-2 border-red-500 bg-red-50">
+              <DollarSign className="w-8 h-8 text-red-600 mx-auto mb-2" />
+              <div className="font-space text-3xl font-bold text-red-600">$150K+</div>
+              <div className="font-ibm text-sm text-red-700">Upfront Cost</div>
+            </Card>
+            
+            <Card className="p-6 text-center border-2 border-red-500 bg-red-50">
+              <AlertTriangle className="w-8 h-8 text-red-600 mx-auto mb-2" />
+              <div className="font-space text-3xl font-bold text-red-600">97%</div>
+              <div className="font-ibm text-sm text-red-700">Shadow IT Missed</div>
+            </Card>
+            
+            <Card className="p-6 text-center border-2 border-red-500 bg-red-50">
+              <TrendingDown className="w-8 h-8 text-red-600 mx-auto mb-2" />
+              <div className="font-space text-3xl font-bold text-red-600">76%</div>
+              <div className="font-ibm text-sm text-red-700">Deals Fail Objectives</div>
+            </Card>
+            
+            <Card className="p-6 text-center border-2 border-red-500 bg-red-50">
+              <XCircle className="w-8 h-8 text-red-600 mx-auto mb-2" />
+              <div className="font-space text-3xl font-bold text-red-600">$500K+</div>
+              <div className="font-ibm text-sm text-red-700">Post-Close Surprises</div>
             </Card>
           </div>
         </motion.div>
 
+        {/* Part 2: The Dilemma */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="mb-12"
+        >
+          <h2 className="font-space text-3xl md:text-4xl text-brand-black mb-4">
+            The Dilemma
+          </h2>
+          <p className="font-ibm text-lg text-brand-gunmetal mb-8 max-w-4xl">
+            So 91% skip comprehensive tech DD entirely, gambling billions—while the 9% who don't tolerate these failures 
+            as expensive insurance. With technical debt reaching $2B+ and compliance penalties hitting 9-figures, 
+            firms face an impossible choice: pay for broken DD or risk catastrophic surprises.
+          </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Card className="p-6 text-center border-2 border-amber-500 bg-amber-50">
+              <div className="font-space text-4xl font-bold text-amber-600 mb-2">91%</div>
+              <div className="font-ibm text-sm text-amber-700">Skip Comprehensive DD</div>
+            </Card>
+            
+            <Card className="p-6 text-center border-2 border-amber-500 bg-amber-50">
+              <div className="font-space text-4xl font-bold text-amber-600 mb-2">$2B+</div>
+              <div className="font-ibm text-sm text-amber-700">Hidden Tech Debt</div>
+            </Card>
+            
+            <Card className="p-6 text-center border-2 border-amber-500 bg-amber-50">
+              <div className="font-space text-3xl font-bold text-amber-600 mb-2">9-Figure</div>
+              <div className="font-ibm text-sm text-amber-700">Compliance Penalties</div>
+            </Card>
+            
+            <Card className="p-6 text-center border-2 border-amber-500 bg-amber-50">
+              <div className="font-space text-4xl font-bold text-amber-600 mb-2">30%</div>
+              <div className="font-ibm text-sm text-amber-700">Failures from Tech Issues</div>
+            </Card>
+          </div>
+        </motion.div>
+
+        {/* Part 3: The Opportunity */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="mt-8 text-center"
+          className="text-center"
         >
-          <p className="font-ibm text-xl text-brand-gunmetal mb-6">
-            This happens because human consultants can only look at 20-30 sources.
-          </p>
-          <Button 
-            onClick={onNext}
-            className="bg-brand-teal text-white hover:bg-brand-teal/90 px-8 py-6 text-lg"
-          >
-            See the breakthrough →
-          </Button>
+          <Card className="p-12 bg-gradient-to-br from-brand-teal/10 to-blue-50 border-2 border-brand-teal">
+            <h2 className="font-space text-3xl md:text-4xl text-brand-black mb-6">
+              The Opportunity
+            </h2>
+            <div className="space-y-4">
+              <p className="font-space text-xl md:text-2xl text-brand-gunmetal">
+                But what if tech DD could be <span className="text-brand-teal font-bold">fast</span>, 
+                <span className="text-brand-teal font-bold"> affordable</span>, and 
+                <span className="text-brand-teal font-bold"> comprehensive</span>?
+              </p>
+              <p className="font-space text-xl md:text-2xl text-brand-gunmetal">
+                What if <span className="font-bold">every deal</span>—not just 9%—could access 
+                institutional-grade assessment?
+              </p>
+            </div>
+            
+            <Button 
+              onClick={onNext}
+              className="mt-8 bg-brand-teal text-white hover:bg-brand-teal/90 px-10 py-6 text-lg"
+            >
+              See the solution →
+            </Button>
+          </Card>
         </motion.div>
       </motion.div>
     </div>
