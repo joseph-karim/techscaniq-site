@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { SlideProps } from '../../types';
 import { useState } from 'react';
-import { CheckCircle, XCircle, Users, Building, TrendingUp, Shield, DollarSign, Briefcase, Scale, UserCheck, Zap } from 'lucide-react';
+import { CheckCircle, XCircle, Users, Building, TrendingUp, DollarSign, Briefcase, Scale, UserCheck, Zap } from 'lucide-react';
 
 export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Element {
   const [activeStakeholder, setActiveStakeholder] = useState(0);
@@ -12,9 +12,9 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
     {
       name: "Investment Bankers / M&A Advisors",
       icon: Briefcase,
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
-      borderColor: "border-blue-500",
+      color: "text-brand-teal",
+      bgColor: "bg-teal-50",
+      borderColor: "border-brand-teal",
       whyUse: "Manage deal execution, share CIMs, oversee Q&A, and run diligence securely",
       role: "Orchestrate the transaction, control data flow, and maintain buyer engagement",
       preDeal: [
@@ -36,9 +36,9 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
     {
       name: "Private Equity & Strategic Buyers",
       icon: Building,
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-500",
+      color: "text-brand-gunmetal",
+      bgColor: "bg-gray-50",
+      borderColor: "border-brand-gunmetal",
       whyUse: "Access diligence materials, assess scalability, tech risk, and AI-readiness",
       role: "Evaluate platform fit, validate synergies, and drive investment strategy",
       preDeal: [
@@ -60,9 +60,9 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
     {
       name: "Credit Funds / Lenders",
       icon: DollarSign,
-      color: "text-green-600",
-      bgColor: "bg-green-50",
-      borderColor: "border-green-500",
+      color: "text-brand-teal",
+      bgColor: "bg-teal-50",
+      borderColor: "border-brand-teal",
       whyUse: "Assess operational stability, digital risk, and covenant-linked dependencies",
       role: "Evaluate downside risk, set financial covenants, and monitor borrower resilience",
       preDeal: [
@@ -84,9 +84,9 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
     {
       name: "Corporate Development Teams",
       icon: TrendingUp,
-      color: "text-orange-600",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-500",
+      color: "text-brand-gunmetal",
+      bgColor: "bg-gray-50",
+      borderColor: "border-brand-gunmetal",
       whyUse: "Evaluate strategic fit, assess integration lift, and align with enterprise architecture",
       role: "Act as internal buyers driving M&A business cases and integration planning",
       preDeal: [
@@ -108,9 +108,9 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
     {
       name: "Legal & Compliance Counsel",
       icon: Scale,
-      color: "text-red-600",
-      bgColor: "bg-red-50",
-      borderColor: "border-red-500",
+      color: "text-brand-black",
+      bgColor: "bg-gray-100",
+      borderColor: "border-brand-black",
       whyUse: "Review disclosures, validate risk, and ensure legal defensibility of representations",
       role: "Verify accuracy, reduce exposure, and maintain post-close governance integrity",
       preDeal: [
@@ -132,9 +132,9 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
     {
       name: "Consultants & Advisors",
       icon: Users,
-      color: "text-indigo-600",
-      bgColor: "bg-indigo-50",
-      borderColor: "border-indigo-500",
+      color: "text-brand-teal",
+      bgColor: "bg-teal-50",
+      borderColor: "border-brand-teal",
       whyUse: "Conduct technical, commercial, and operational diligence for clients",
       role: "Provide diligence validation, risk analysis, and integration guidance",
       preDeal: [
@@ -156,9 +156,9 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
     {
       name: "Founders / Management Teams",
       icon: UserCheck,
-      color: "text-teal-600",
-      bgColor: "bg-teal-50",
-      borderColor: "border-teal-500",
+      color: "text-brand-gunmetal",
+      bgColor: "bg-gray-50",
+      borderColor: "border-brand-gunmetal",
       whyUse: "Share disclosures, respond to Q&A, and support diligence workflows",
       role: "Provide source data, clarify tech stack, and collaborate with advisors and buyers",
       preDeal: [
@@ -191,6 +191,9 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
+          <h1 className="font-space text-4xl md:text-5xl text-brand-black mb-8">
+            What if Intralinks offered Tech Due Diligence in its M&A Platform?
+          </h1>
           <p className="font-ibm text-xl text-brand-gunmetal mb-4">
             Today, Intralinks powers M&A workflow for 10,000+ clients, but it could do so much more
           </p>
@@ -247,87 +250,16 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
           </Card>
         </motion.div>
 
+        {/* Transition Header */}
         <motion.div 
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h2 className="font-space text-3xl text-brand-black text-center mb-2">
-            What if Intralinks offered Tech Due Diligence in your M&A Platform?
+          <h2 className="font-space text-2xl text-center text-brand-gunmetal mb-8">
+            Embedding TechScan IQ enables greater capabilities for the Intralinks M&A platform stakeholders
           </h2>
-          <p className="font-ibm text-lg text-brand-gunmetal text-center mb-8">
-            Benefits to Stakeholders
-          </p>
-
-          {/* Stakeholder Matrix */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* PE Firms */}
-            <Card className="p-6 border-2 border-brand-teal hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-3 mb-4">
-                <Building className="w-8 h-8 text-brand-teal" />
-                <h3 className="font-space text-xl">PE Firms</h3>
-              </div>
-              <ul className="space-y-3 font-ibm text-sm">
-                <li className="flex items-start gap-2">
-                  <Shield className="w-4 h-4 text-brand-teal mt-0.5 flex-shrink-0" />
-                  <span>De-risk technology investments with AI-powered insights</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <TrendingUp className="w-4 h-4 text-brand-teal mt-0.5 flex-shrink-0" />
-                  <span>Accelerate DD from 12 weeks to 48 hours</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <DollarSign className="w-4 h-4 text-brand-teal mt-0.5 flex-shrink-0" />
-                  <span>Save 95% on technical assessment costs</span>
-                </li>
-              </ul>
-            </Card>
-
-            {/* Corporate Development */}
-            <Card className="p-6 border-2 border-brand-teal hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-3 mb-4">
-                <Briefcase className="w-8 h-8 text-brand-teal" />
-                <h3 className="font-space text-xl">Corporate Development</h3>
-              </div>
-              <ul className="space-y-3 font-ibm text-sm">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-brand-teal mt-0.5 flex-shrink-0" />
-                  <span>Validate integration complexity before closing</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Users className="w-4 h-4 text-brand-teal mt-0.5 flex-shrink-0" />
-                  <span>Assess team capabilities and retention risks</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Shield className="w-4 h-4 text-brand-teal mt-0.5 flex-shrink-0" />
-                  <span>Uncover hidden technical debt and security issues</span>
-                </li>
-              </ul>
-            </Card>
-
-            {/* Intralinks */}
-            <Card className="p-6 border-2 border-brand-gunmetal bg-brand-gunmetal text-white">
-              <div className="flex items-center gap-3 mb-4">
-                <DollarSign className="w-8 h-8 text-white" />
-                <h3 className="font-space text-xl">Intralinks</h3>
-              </div>
-              <ul className="space-y-3 font-ibm text-sm">
-                <li className="flex items-start gap-2">
-                  <TrendingUp className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
-                  <span>New revenue stream and source of growth</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Users className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
-                  <span>Increase platform stickiness and retention</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Building className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
-                  <span>Differentiate from competitors with AI-powered DD</span>
-                </li>
-              </ul>
-            </Card>
-          </div>
         </motion.div>
 
         {/* Interactive Stakeholder Matrix */}
@@ -337,12 +269,6 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <h2 className="font-space text-2xl text-brand-black text-center mb-2">
-            Intralinks M&A Stakeholder Matrix
-          </h2>
-          <p className="font-ibm text-lg text-brand-gunmetal text-center mb-8">
-            Strategic Enablement Through Embedded Tech & AI Intelligence
-          </p>
           
           {/* Stakeholder Navigation */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -395,18 +321,18 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
               {/* Timeline */}
               <div className="relative">
                 <div className="absolute left-0 right-0 top-12 h-1 bg-gray-200">
-                  <div className="absolute inset-y-0 left-0 right-0 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400"></div>
+                  <div className="absolute inset-y-0 left-0 right-0 bg-gradient-to-r from-brand-gunmetal via-brand-teal to-brand-black"></div>
                 </div>
                 
                 <div className="grid grid-cols-3 gap-6">
                   {/* Pre-Deal */}
                   <div className="relative">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mb-4">1</div>
+                    <div className="w-8 h-8 bg-brand-gunmetal rounded-full flex items-center justify-center text-white font-bold mb-4">1</div>
                     <h5 className="font-space text-lg mb-3">Pre-Deal Enablement</h5>
                     <ul className="space-y-2">
                       {currentStakeholder.preDeal.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-brand-gunmetal mt-0.5 flex-shrink-0" />
                           <span className="font-ibm text-sm">{item}</span>
                         </li>
                       ))}
@@ -415,12 +341,12 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
 
                   {/* During Deal */}
                   <div className="relative">
-                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mb-4">2</div>
+                    <div className="w-8 h-8 bg-brand-teal rounded-full flex items-center justify-center text-white font-bold mb-4">2</div>
                     <h5 className="font-space text-lg mb-3">During Deal Enablement</h5>
                     <ul className="space-y-2">
                       {currentStakeholder.duringDeal.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-brand-teal mt-0.5 flex-shrink-0" />
                           <span className="font-ibm text-sm">{item}</span>
                         </li>
                       ))}
@@ -429,12 +355,12 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
 
                   {/* Post-Deal */}
                   <div className="relative">
-                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mb-4">3</div>
+                    <div className="w-8 h-8 bg-brand-black rounded-full flex items-center justify-center text-white font-bold mb-4">3</div>
                     <h5 className="font-space text-lg mb-3">Post-Deal Enablement</h5>
                     <ul className="space-y-2">
                       {currentStakeholder.postDeal.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-brand-black mt-0.5 flex-shrink-0" />
                           <span className="font-ibm text-sm">{item}</span>
                         </li>
                       ))}
@@ -447,7 +373,7 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
               <div className="mt-6 text-center">
                 <div className="inline-flex items-center gap-2 bg-brand-teal text-white px-4 py-2 rounded-full">
                   <Zap className="w-4 h-4" />
-                  <span className="font-ibm text-sm">Enhanced with TechScanIQ Intelligence</span>
+                  <span className="font-ibm text-sm">Enhanced with TechScan IQ Intelligence</span>
                 </div>
               </div>
             </Card>

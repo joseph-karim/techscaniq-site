@@ -17,7 +17,7 @@ export function LiveDemoSlide(): JSX.Element {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-space text-4xl text-brand-black mb-4">
-            SEE THE DIFFERENCE IN YOUR PLATFORM
+            SEE THE POTENTIAL IN THE INTRALINKS M&A PLATFORM
           </h2>
         </motion.div>
 

@@ -14,10 +14,10 @@ export function IntroducingTechScanSlide({ onNext, onPrev }: SlideProps) {
           className="text-center mb-8"
         >
           <h1 className="font-space text-4xl md:text-5xl text-brand-black mb-6 uppercase">
-            TechScanIQ Changes Everything About Technical Due Diligence
+            TechScan IQ Changes Everything About Technical Due Diligence
           </h1>
           <p className="font-ibm text-lg text-brand-gunmetal max-w-4xl mx-auto mb-4">
-            TechScanIQ is an AI-powered intelligence platform that rapidly identifies, analyzes, and benchmarks 
+            TechScan IQ is an AI-powered intelligence platform that rapidly identifies, analyzes, and benchmarks 
             a company's technology stack across cloud systems, APIs, platforms, back-end and front-end infrastructure.
           </p>
           <p className="font-ibm text-xl text-brand-gunmetal font-bold">
@@ -33,7 +33,7 @@ export function IntroducingTechScanSlide({ onNext, onPrev }: SlideProps) {
         >
           <Card className="p-8 border-2 border-brand-teal bg-gradient-to-br from-white to-brand-teal/5">
             <h2 className="font-space text-2xl text-center mb-8">
-              How TechScanIQ's AI Research Engine Works
+              How TechScan IQ's AI Research Engine Works
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">

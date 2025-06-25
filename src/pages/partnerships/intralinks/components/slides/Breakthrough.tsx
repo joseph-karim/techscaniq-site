@@ -22,9 +22,9 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
   const [activeStage, setActiveStage] = useState(0);
 
   const stages = [
-    { icon: Search, label: 'Discover', count: '1,000+', unit: 'sources', color: 'text-blue-500' },
-    { icon: Database, label: 'Research', count: '3,000+', unit: 'citations', color: 'text-purple-500' },
-    { icon: Brain, label: 'Analyze', count: '500+', unit: 'insights', color: 'text-pink-500' },
+    { icon: Search, label: 'Discover', count: '1,000+', unit: 'sources', color: 'text-brand-gunmetal' },
+    { icon: Database, label: 'Research', count: '3,000+', unit: 'citations', color: 'text-brand-teal' },
+    { icon: Brain, label: 'Analyze', count: '500+', unit: 'insights', color: 'text-brand-black' },
     { icon: FileCheck, label: 'Verify', count: '100%', unit: 'claims', color: 'text-brand-teal' }
   ];
 
@@ -37,7 +37,7 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
           className="text-center mb-12"
         >
           <h2 className="font-space text-4xl md:text-5xl text-brand-black mb-4">
-            The Depth Advantage
+            TechScan IQ Offers a Depth Advantage
           </h2>
           <p className="font-ibm text-xl text-brand-gunmetal">
             Not all intelligence is created equal
@@ -78,10 +78,10 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
                 transition={{ delay: 0.4, type: "spring" }}
                 className="flex flex-col items-center"
               >
-                <div className="w-24 h-24 bg-amber-100 rounded-full flex items-center justify-center">
-                  <span className="font-space text-2xl font-bold text-amber-600">100</span>
+                <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center">
+                  <span className="font-space text-2xl font-bold text-gray-600">100</span>
                 </div>
-                <p className="font-ibm text-sm text-amber-600 mt-2">sources</p>
+                <p className="font-ibm text-sm text-gray-600 mt-2">sources</p>
                 <h4 className="font-space text-base font-semibold mt-2">ChatGPT</h4>
                 <p className="font-ibm text-xs text-gray-500 mt-1 text-center">Broad business context</p>
                 <p className="font-ibm text-xs text-gray-400 text-center">Lacks technical depth</p>
@@ -100,7 +100,7 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
                   <span className="font-space text-5xl font-bold text-brand-teal">1000</span>
                 </div>
                 <p className="font-ibm text-lg text-brand-teal mt-3">sources</p>
-                <h4 className="font-space text-lg font-semibold text-brand-teal mt-2">TechScanIQ</h4>
+                <h4 className="font-space text-lg font-semibold text-brand-teal mt-2">TechScan IQ</h4>
                 <p className="font-ibm text-sm text-gray-600 mt-1 text-center">Deep intelligence scan</p>
                 <p className="font-ibm text-xs text-brand-teal text-center">Business + Technical depth</p>
               </motion.div>
@@ -155,7 +155,7 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
                                     transition-colors`}>
                       <Icon className="w-8 h-8" />
                     </div>
-                    <p className="font-space text-sm font-medium">{stage.label}</p>
+                    <p className="font-space text-lg font-medium">{stage.label}</p>
                     <p className={`font-space text-2xl font-bold ${activeStage >= index ? stage.color : 'text-gray-400'}`}>
                       {stage.count}
                     </p>
@@ -180,35 +180,35 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
                   <h3 className="font-space text-xl">Automated Discovery</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
                     <div className="text-center">
-                      <Zap className="w-6 h-6 text-yellow-500 mx-auto mb-1" />
+                      <Zap className="w-6 h-6 text-brand-teal mx-auto mb-1" />
                       <span className="text-xs">Real-time APIs</span>
                     </div>
                     <div className="text-center">
-                      <Code className="w-6 h-6 text-blue-500 mx-auto mb-1" />
+                      <Code className="w-6 h-6 text-brand-gunmetal mx-auto mb-1" />
                       <span className="text-xs">Hidden endpoints</span>
                     </div>
                     <div className="text-center">
-                      <Users className="w-6 h-6 text-green-500 mx-auto mb-1" />
+                      <Users className="w-6 h-6 text-brand-teal mx-auto mb-1" />
                       <span className="text-xs">Customer reviews</span>
                     </div>
                     <div className="text-center">
-                      <Briefcase className="w-6 h-6 text-purple-500 mx-auto mb-1" />
+                      <Briefcase className="w-6 h-6 text-brand-gunmetal mx-auto mb-1" />
                       <span className="text-xs">Employees</span>
                     </div>
                     <div className="text-center">
-                      <Shield className="w-6 h-6 text-red-500 mx-auto mb-1" />
+                      <Shield className="w-6 h-6 text-brand-black mx-auto mb-1" />
                       <span className="text-xs">SSL certificates</span>
                     </div>
                     <div className="text-center">
-                      <Globe className="w-6 h-6 text-indigo-500 mx-auto mb-1" />
+                      <Globe className="w-6 h-6 text-brand-teal mx-auto mb-1" />
                       <span className="text-xs">Network calls</span>
                     </div>
                     <div className="text-center">
-                      <Building className="w-6 h-6 text-orange-500 mx-auto mb-1" />
+                      <Building className="w-6 h-6 text-brand-gunmetal mx-auto mb-1" />
                       <span className="text-xs">Vendors</span>
                     </div>
                     <div className="text-center">
-                      <TrendingUp className="w-6 h-6 text-pink-500 mx-auto mb-1" />
+                      <TrendingUp className="w-6 h-6 text-brand-black mx-auto mb-1" />
                       <span className="text-xs">Competitive positioning</span>
                     </div>
                   </div>
@@ -222,26 +222,26 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
                   <h3 className="font-space text-xl">Deep Domain Research</h3>
                   <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-1">
-                        <Code className="w-6 h-6 text-purple-600" />
+                      <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mx-auto mb-1">
+                        <Code className="w-6 h-6 text-brand-teal" />
                       </div>
                       <p className="text-xs">Tech</p>
                     </div>
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-1">
-                        <TrendingUp className="w-6 h-6 text-purple-600" />
+                      <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mx-auto mb-1">
+                        <TrendingUp className="w-6 h-6 text-brand-teal" />
                       </div>
                       <p className="text-xs">Market</p>
                     </div>
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-1">
-                        <Users className="w-6 h-6 text-purple-600" />
+                      <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mx-auto mb-1">
+                        <Users className="w-6 h-6 text-brand-teal" />
                       </div>
                       <p className="text-xs">Team</p>
                     </div>
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-1">
-                        <Database className="w-6 h-6 text-purple-600" />
+                      <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mx-auto mb-1">
+                        <Database className="w-6 h-6 text-brand-teal" />
                       </div>
                       <p className="text-xs">Data</p>
                     </div>
@@ -252,9 +252,9 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
                 <div className="space-y-4">
                   <h3 className="font-space text-xl">AI Pattern Recognition</h3>
                   <div className="max-w-2xl mx-auto">
-                    <div className="bg-white border-2 border-pink-500 rounded-lg p-4 shadow-lg">
+                    <div className="bg-white border-2 border-brand-black rounded-lg p-4 shadow-lg">
                       <div className="flex items-start gap-3 mb-3">
-                        <Brain className="w-6 h-6 text-pink-500 flex-shrink-0 mt-1" />
+                        <Brain className="w-6 h-6 text-brand-black flex-shrink-0 mt-1" />
                         <div className="flex-1">
                           <h4 className="font-space text-lg text-gray-800">Example Insight</h4>
                           <p className="font-ibm text-sm text-gray-700 mt-2">
@@ -266,15 +266,15 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
                       <div className="grid grid-cols-3 gap-3 text-center border-t pt-3">
                         <div>
                           <p className="font-space text-xs text-gray-500">Reasoning</p>
-                          <p className="font-ibm text-xs text-pink-600">Pattern match across<br/>12,000 deployments</p>
+                          <p className="font-ibm text-xs text-brand-black">Pattern match across<br/>12,000 deployments</p>
                         </div>
                         <div>
                           <p className="font-space text-xs text-gray-500">Sources</p>
-                          <p className="font-ibm text-xs text-blue-600">GitHub, AWS logs,<br/>Employee reviews</p>
+                          <p className="font-ibm text-xs text-brand-gunmetal">GitHub, AWS logs,<br/>Employee reviews</p>
                         </div>
                         <div>
                           <p className="font-space text-xs text-gray-500">Confidence</p>
-                          <p className="font-ibm text-xs text-green-600 font-semibold">94% High</p>
+                          <p className="font-ibm text-xs text-brand-teal font-semibold">94% High</p>
                         </div>
                       </div>
                     </div>

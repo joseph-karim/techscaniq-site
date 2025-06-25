@@ -35,7 +35,7 @@ const slideNames = [
   'Status Quo',
   'Introducing TechScan',
   'Intelligence Gap',
-  'The Depth Advantage',
+  'TechScan IQ Depth Advantage',
   'Live Demo',
   'Next Steps',
   // 'Appendix: AI Revolution',
@@ -72,7 +72,7 @@ export function PitchDeck() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-6">
-              <img src="/Tesch_Scan_IQ_Logo_Transparent.png" alt="TechScan IQ" className="h-8" />
+              <img src="/Tesch_Scan_IQ_Logo_Transparent.png" alt="TechScan IQ" className="h-10" />
               <div className="text-brand-gunmetal text-lg font-light">×</div>
               <div className="text-brand-gunmetal font-space text-lg font-medium">INTRALINKS</div>
             </div>

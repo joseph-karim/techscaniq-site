@@ -44,7 +44,7 @@ export function CoverSlide({ onNext }: SlideProps): JSX.Element {
             transition={{ delay: 0.6 }}
             className="font-ibm text-2xl md:text-3xl text-brand-gunmetal mb-16 max-w-4xl mx-auto"
           >
-            How TechScanIQ can enhance M&A Tech Due Diligence for the Intralinks platform
+            How TechScan IQ can enhance M&A Tech Due Diligence for the Intralinks platform
           </motion.p>
 
           {/* CTA */}

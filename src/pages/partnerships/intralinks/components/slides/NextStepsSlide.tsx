@@ -19,7 +19,7 @@ export function NextStepsSlide({ onNext, onPrev }: SlideProps): JSX.Element {
           </h1>
           
           <p className="font-ibm text-xl text-brand-gunmetal mb-12 max-w-3xl mx-auto">
-            Let's explore how TechScanIQ can transform your deal flow with AI-powered technical due diligence
+            Let's explore how TechScan IQ can transform your deal flow with AI-powered technical due diligence
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -27,7 +27,7 @@ export function NextStepsSlide({ onNext, onPrev }: SlideProps): JSX.Element {
               <Play className="w-12 h-12 text-brand-teal mx-auto mb-4" />
               <h3 className="font-space text-2xl mb-4">See It In Action</h3>
               <p className="font-ibm text-brand-gunmetal mb-6">
-                Experience a live demonstration of TechScanIQ analyzing a real company in your platform
+                Experience a live demonstration of TechScan IQ analyzing a real company in your platform
               </p>
               <Button 
                 onClick={onNext}
