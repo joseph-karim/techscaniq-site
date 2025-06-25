@@ -60,7 +60,7 @@ export function IntroducingTechScanSlide({ onNext, onPrev }: SlideProps) {
                 </div>
                 <h3 className="font-space text-lg mb-2">Value Quantification</h3>
                 <p className="font-ibm text-sm text-brand-gunmetal">
-                  Translates technical findings into business impact and dollars
+                  Translates technical findings into business impact & ROI
                 </p>
               </div>
             </div>
