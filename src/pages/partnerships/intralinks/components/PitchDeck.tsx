@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Import slide components
+import { CoverSlide } from './slides/CoverSlide';
 import { StatusQuoSlide } from './slides/StatusQuo';
 import { BreakthroughSlide } from './slides/Breakthrough';
 import { IntroducingTechScanSlide } from './slides/IntroducingTechScan';
@@ -16,6 +17,7 @@ import { NextStepsSlide } from './slides/NextStepsSlide';
 // import { CallToActionSlide } from './slides/CallToActionSlide';
 
 const slides = [
+  CoverSlide,
   StatusQuoSlide,
   IntroducingTechScanSlide,
   IntelligenceGapSlide,
@@ -29,6 +31,7 @@ const slides = [
 ];
 
 const slideNames = [
+  'Cover',
   'Status Quo',
   'Introducing TechScan',
   'Intelligence Gap',
