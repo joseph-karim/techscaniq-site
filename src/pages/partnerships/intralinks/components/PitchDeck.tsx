@@ -8,10 +8,10 @@ import { StatusQuoSlide } from './slides/StatusQuo';
 import { BreakthroughSlide } from './slides/Breakthrough';
 import { IntroducingTechScanSlide } from './slides/IntroducingTechScan';
 import { HowItWorksSlide } from './slides/HowItWorks';
-import { TransformationSlide } from './slides/TransformationSlide';
 import { IntelligenceGapSlide } from './slides/IntelligenceGapSlide';
 import { AIRevolutionSlide } from './slides/AIRevolutionSlide';
 import { LiveDemoSlide } from './slides/LiveDemoSlide';
+import { NextStepsSlide } from './slides/NextStepsSlide';
 import { BusinessModelSlide } from './slides/BusinessModelSlide';
 import { StrategicVisionSlide } from './slides/StrategicVisionSlide';
 import { CallToActionSlide } from './slides/CallToActionSlide';
@@ -22,8 +22,8 @@ const slides = [
   IntelligenceGapSlide,
   BreakthroughSlide,
   LiveDemoSlide,
+  NextStepsSlide,
   HowItWorksSlide,
-  TransformationSlide,
   AIRevolutionSlide,
   BusinessModelSlide,
   StrategicVisionSlide,
@@ -36,12 +36,12 @@ const slideNames = [
   'Intelligence Gap',
   'The Depth Advantage',
   'Live Demo',
-  'How It Works',
-  'The Transformation',
-  'AI Revolution',
-  'Business Model',
-  'Strategic Vision',
-  'Call to Action',
+  'Next Steps',
+  'Appendix: How It Works',
+  'Appendix: AI Revolution',
+  'Appendix: Business Model',
+  'Appendix: Strategic Vision',
+  'Appendix: Call to Action',
 ];
 
 export function PitchDeck() {
