@@ -7,7 +7,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { StatusQuoSlide } from './slides/StatusQuo';
 import { BreakthroughSlide } from './slides/Breakthrough';
 import { IntroducingTechScanSlide } from './slides/IntroducingTechScan';
-import { HowItWorksSlide } from './slides/HowItWorks';
 import { IntelligenceGapSlide } from './slides/IntelligenceGapSlide';
 import { AIRevolutionSlide } from './slides/AIRevolutionSlide';
 import { LiveDemoSlide } from './slides/LiveDemoSlide';
@@ -23,7 +22,6 @@ const slides = [
   BreakthroughSlide,
   LiveDemoSlide,
   NextStepsSlide,
-  HowItWorksSlide,
   AIRevolutionSlide,
   BusinessModelSlide,
   StrategicVisionSlide,
@@ -37,7 +35,6 @@ const slideNames = [
   'The Depth Advantage',
   'Live Demo',
   'Next Steps',
-  'Appendix: How It Works',
   'Appendix: AI Revolution',
   'Appendix: Business Model',
   'Appendix: Strategic Vision',
