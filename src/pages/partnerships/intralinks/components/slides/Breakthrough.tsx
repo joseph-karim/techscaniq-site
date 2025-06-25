@@ -12,7 +12,10 @@ import {
   TrendingUp,
   Users,
   Zap,
-  ChevronRight
+  ChevronRight,
+  Briefcase,
+  Shield,
+  Building
 } from 'lucide-react';
 
 export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
@@ -50,56 +53,56 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
         >
           <div className="flex justify-center items-center gap-8 md:gap-16">
             {/* Traditional DD - 20 sources */}
-            <div className="text-center">
+            <div className="flex flex-col items-center">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.3, type: "spring" }}
-                className="relative"
+                className="flex flex-col items-center"
               >
                 <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
                   <span className="font-space text-xl font-bold text-gray-600">20</span>
                 </div>
                 <p className="font-ibm text-sm text-gray-600 mt-2">sources</p>
                 <h4 className="font-space text-base font-semibold mt-2">Traditional DD</h4>
-                <p className="font-ibm text-xs text-gray-500 mt-1">Technical info without<br/>business context</p>
-                <p className="font-ibm text-xs text-gray-400">Manual, slow</p>
+                <p className="font-ibm text-xs text-gray-500 mt-1 text-center">Technical info without<br/>business context</p>
+                <p className="font-ibm text-xs text-gray-400 text-center">Manual, slow</p>
               </motion.div>
             </div>
 
             {/* ChatGPT - 100 sources */}
-            <div className="text-center">
+            <div className="flex flex-col items-center">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.4, type: "spring" }}
-                className="relative"
+                className="flex flex-col items-center"
               >
                 <div className="w-24 h-24 bg-amber-100 rounded-full flex items-center justify-center">
                   <span className="font-space text-2xl font-bold text-amber-600">100</span>
                 </div>
                 <p className="font-ibm text-sm text-amber-600 mt-2">sources</p>
                 <h4 className="font-space text-base font-semibold mt-2">ChatGPT</h4>
-                <p className="font-ibm text-xs text-gray-500 mt-1">Broad business context</p>
-                <p className="font-ibm text-xs text-gray-400">Lacks technical depth</p>
+                <p className="font-ibm text-xs text-gray-500 mt-1 text-center">Broad business context</p>
+                <p className="font-ibm text-xs text-gray-400 text-center">Lacks technical depth</p>
               </motion.div>
             </div>
 
             {/* TechScanIQ - 1000 sources */}
-            <div className="text-center">
+            <div className="flex flex-col items-center">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.5, type: "spring" }}
-                className="relative"
+                className="flex flex-col items-center"
               >
                 <div className="w-40 h-40 bg-brand-teal/20 rounded-full flex items-center justify-center border-4 border-brand-teal">
                   <span className="font-space text-5xl font-bold text-brand-teal">1000</span>
                 </div>
                 <p className="font-ibm text-lg text-brand-teal mt-3">sources</p>
                 <h4 className="font-space text-lg font-semibold text-brand-teal mt-2">TechScanIQ</h4>
-                <p className="font-ibm text-sm text-gray-600 mt-1">Deep intelligence scan</p>
-                <p className="font-ibm text-xs text-brand-teal">Business + Technical depth</p>
+                <p className="font-ibm text-sm text-gray-600 mt-1 text-center">Deep intelligence scan</p>
+                <p className="font-ibm text-xs text-brand-teal text-center">Business + Technical depth</p>
               </motion.div>
             </div>
           </div>
@@ -175,20 +178,43 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
               {activeStage === 0 && (
                 <div className="space-y-4">
                   <h3 className="font-space text-xl">Automated Discovery</h3>
-                  <div className="flex justify-center gap-8">
-                    <div className="flex items-center gap-2">
-                      <Zap className="w-5 h-5 text-yellow-500" />
-                      <span className="text-sm">Real-time APIs</span>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                    <div className="text-center">
+                      <Zap className="w-6 h-6 text-yellow-500 mx-auto mb-1" />
+                      <span className="text-xs">Real-time APIs</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Code className="w-5 h-5 text-blue-500" />
-                      <span className="text-sm">Hidden endpoints</span>
+                    <div className="text-center">
+                      <Code className="w-6 h-6 text-blue-500 mx-auto mb-1" />
+                      <span className="text-xs">Hidden endpoints</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Globe className="w-5 h-5 text-green-500" />
-                      <span className="text-sm">Dynamic content</span>
+                    <div className="text-center">
+                      <Users className="w-6 h-6 text-green-500 mx-auto mb-1" />
+                      <span className="text-xs">Customer reviews</span>
+                    </div>
+                    <div className="text-center">
+                      <Briefcase className="w-6 h-6 text-purple-500 mx-auto mb-1" />
+                      <span className="text-xs">Employees</span>
+                    </div>
+                    <div className="text-center">
+                      <Shield className="w-6 h-6 text-red-500 mx-auto mb-1" />
+                      <span className="text-xs">SSL certificates</span>
+                    </div>
+                    <div className="text-center">
+                      <Globe className="w-6 h-6 text-indigo-500 mx-auto mb-1" />
+                      <span className="text-xs">Network calls</span>
+                    </div>
+                    <div className="text-center">
+                      <Building className="w-6 h-6 text-orange-500 mx-auto mb-1" />
+                      <span className="text-xs">Vendors</span>
+                    </div>
+                    <div className="text-center">
+                      <TrendingUp className="w-6 h-6 text-pink-500 mx-auto mb-1" />
+                      <span className="text-xs">Competitive positioning</span>
                     </div>
                   </div>
+                  <p className="font-ibm text-xs text-gray-500 text-center mt-4">
+                    + Financial statements, patents, regulatory filings, and more
+                  </p>
                 </div>
               )}
               {activeStage === 1 && (
@@ -225,32 +251,32 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
               {activeStage === 2 && (
                 <div className="space-y-4">
                   <h3 className="font-space text-xl">AI Pattern Recognition</h3>
-                  <div className="flex justify-center">
-                    <div className="relative w-48 h-48">
-                      {/* Neural network visualization */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <Brain className="w-16 h-16 text-pink-500" />
+                  <div className="max-w-2xl mx-auto">
+                    <div className="bg-white border-2 border-pink-500 rounded-lg p-4 shadow-lg">
+                      <div className="flex items-start gap-3 mb-3">
+                        <Brain className="w-6 h-6 text-pink-500 flex-shrink-0 mt-1" />
+                        <div className="flex-1">
+                          <h4 className="font-space text-lg text-gray-800">Example Insight</h4>
+                          <p className="font-ibm text-sm text-gray-700 mt-2">
+                            "Target company's microservices architecture shows 73% similarity to failed 
+                            Kubernetes migrations in 3 portfolio companies, indicating $2.3M integration risk"
+                          </p>
+                        </div>
                       </div>
-                      {/* Orbiting nodes */}
-                      {[0, 60, 120, 180, 240, 300].map((angle, i) => (
-                        <motion.div
-                          key={i}
-                          className="absolute w-6 h-6 bg-pink-200 rounded-full"
-                          style={{
-                            top: '50%',
-                            left: '50%',
-                            transform: `translate(-50%, -50%) rotate(${angle}deg) translateX(80px)`
-                          }}
-                          animate={{
-                            transform: `translate(-50%, -50%) rotate(${angle + 360}deg) translateX(80px)`
-                          }}
-                          transition={{
-                            duration: 20,
-                            repeat: Infinity,
-                            ease: 'linear'
-                          }}
-                        />
-                      ))}
+                      <div className="grid grid-cols-3 gap-3 text-center border-t pt-3">
+                        <div>
+                          <p className="font-space text-xs text-gray-500">Reasoning</p>
+                          <p className="font-ibm text-xs text-pink-600">Pattern match across<br/>12,000 deployments</p>
+                        </div>
+                        <div>
+                          <p className="font-space text-xs text-gray-500">Sources</p>
+                          <p className="font-ibm text-xs text-blue-600">GitHub, AWS logs,<br/>Employee reviews</p>
+                        </div>
+                        <div>
+                          <p className="font-space text-xs text-gray-500">Confidence</p>
+                          <p className="font-ibm text-xs text-green-600 font-semibold">94% High</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
