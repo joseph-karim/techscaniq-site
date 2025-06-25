@@ -195,7 +195,7 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
             What if Intralinks offered Tech Due Diligence in its M&A Platform?
           </h1>
           <p className="font-ibm text-xl text-brand-gunmetal mb-4">
-            Today, Intralinks powers M&A workflow for 10,000+ clients, but it could do so much more
+            Today, Intralinks powers M&A workflow for 10,000+ deals, but the value add opportunity is so much greater for its stakeholders
           </p>
         </motion.div>
 
