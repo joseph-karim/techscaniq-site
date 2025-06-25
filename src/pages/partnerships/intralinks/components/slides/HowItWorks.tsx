@@ -11,7 +11,6 @@ import {
   Code,
   TrendingUp,
   Users,
-  GitBranch,
   Zap,
   ChevronRight
 } from 'lucide-react';
@@ -32,76 +31,90 @@ export function HowItWorksSlide({ onNext }: SlideProps) {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-center mb-8"
+          className="text-center mb-12"
         >
-          <h2 className="font-space text-4xl text-brand-black mb-2">
-            How TechScanIQ Works
+          <h2 className="font-space text-4xl md:text-5xl text-brand-black mb-4">
+            The Depth Advantage
           </h2>
+          <p className="font-ibm text-xl text-brand-gunmetal">
+            Not all intelligence is created equal
+          </p>
         </motion.div>
 
-        {/* Visual Iceberg */}
+        {/* Source Comparison with Proportional Bubbles */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="relative h-96 mb-12"
+          className="mb-16"
         >
-          {/* Ocean Surface */}
-          <div className="absolute inset-x-0 top-24 h-0.5 bg-blue-400"></div>
-          
-          {/* Surface Level - What Others See */}
-          <motion.div
-            initial={{ y: -20 }}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="absolute top-0 left-1/2 transform -translate-x-1/2"
-          >
-            <div className="bg-blue-100 rounded-lg p-4 text-center border-2 border-blue-300">
-              <p className="font-space text-2xl font-bold text-blue-600">100</p>
-              <p className="font-ibm text-sm text-gray-600">surface sources</p>
+          <div className="flex justify-center items-center gap-8 md:gap-16">
+            {/* Traditional DD - 20 sources */}
+            <div className="text-center">
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.3, type: "spring" }}
+                className="relative"
+              >
+                <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                  <span className="font-space text-xl font-bold text-gray-600">20</span>
+                </div>
+                <p className="font-ibm text-sm text-gray-600 mt-2">Traditional DD</p>
+              </motion.div>
             </div>
-          </motion.div>
 
-          {/* Deep Level - What We Reveal */}
+            {/* ChatGPT - 100 sources */}
+            <div className="text-center">
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.4, type: "spring" }}
+                className="relative"
+              >
+                <div className="w-24 h-24 bg-amber-100 rounded-full flex items-center justify-center">
+                  <span className="font-space text-2xl font-bold text-amber-600">100</span>
+                </div>
+                <p className="font-ibm text-sm text-amber-600 mt-2">ChatGPT</p>
+              </motion.div>
+            </div>
+
+            {/* TechScanIQ - 1000 sources */}
+            <div className="text-center">
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.5, type: "spring" }}
+                className="relative"
+              >
+                <div className="w-40 h-40 bg-brand-teal/20 rounded-full flex items-center justify-center border-4 border-brand-teal">
+                  <span className="font-space text-5xl font-bold text-brand-teal">1000</span>
+                </div>
+                <p className="font-ibm text-lg text-brand-teal mt-3 font-semibold">TechScanIQ</p>
+              </motion.div>
+            </div>
+          </div>
+          
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="absolute top-32 left-1/2 transform -translate-x-1/2"
+            transition={{ delay: 0.7 }}
+            className="text-center mt-8"
           >
-            {/* Iceberg shape using CSS */}
-            <div className="relative">
-              <div className="w-96 h-64 bg-gradient-to-b from-brand-teal/20 to-brand-teal/80 
-                            clip-path-[polygon(50%_0%,10%_100%,90%_100%)]">
-                <div className="absolute inset-0 flex flex-col items-center justify-center pt-8">
-                  <p className="font-space text-5xl font-bold text-white">5,000+</p>
-                  <p className="font-ibm text-white">deep sources</p>
-                  
-                  {/* Depth indicators */}
-                  <div className="absolute left-8 top-16 flex items-center gap-2">
-                    <Globe className="w-5 h-5 text-white/70" />
-                    <Code className="w-5 h-5 text-white/70" />
-                  </div>
-                  <div className="absolute right-8 top-24 flex items-center gap-2">
-                    <GitBranch className="w-5 h-5 text-white/70" />
-                    <Users className="w-5 h-5 text-white/70" />
-                  </div>
-                  <div className="absolute left-12 bottom-8 flex items-center gap-2">
-                    <Database className="w-5 h-5 text-white/70" />
-                    <TrendingUp className="w-5 h-5 text-white/70" />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p className="font-ibm text-brand-gunmetal">Sources analyzed</p>
           </motion.div>
+        </motion.div>
 
-          {/* Depth Labels */}
-          <div className="absolute right-0 top-20 text-right">
-            <p className="font-ibm text-sm text-gray-500">Surface Web</p>
-          </div>
-          <div className="absolute right-0 top-48 text-right">
-            <p className="font-ibm text-sm text-brand-teal">Deep Intelligence</p>
-          </div>
+        {/* How It Works Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          className="mb-8"
+        >
+          <h3 className="font-space text-2xl text-center text-brand-black mb-8">
+            How It Works
+          </h3>
         </motion.div>
 
         {/* Interactive Pipeline */}
@@ -257,46 +270,6 @@ export function HowItWorksSlide({ onNext }: SlideProps) {
           </AnimatePresence>
         </motion.div>
 
-        {/* Visual Comparison */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="grid grid-cols-2 gap-8 mb-12"
-        >
-          {/* Traditional */}
-          <div className="text-center">
-            <h4 className="font-space text-lg text-gray-600 mb-4">Traditional DD</h4>
-            <div className="relative h-32">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center">
-                  <span className="font-space text-2xl text-gray-600">20</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* TechScan IQ */}
-          <div className="text-center">
-            <h4 className="font-space text-lg text-brand-teal mb-4">TechScan IQ</h4>
-            <div className="relative h-32">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                  className="w-32 h-32 bg-brand-teal rounded-full flex items-center justify-center"
-                  animate={{
-                    scale: [1, 1.1, 1],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                  }}
-                >
-                  <span className="font-space text-3xl text-white">5K+</span>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
