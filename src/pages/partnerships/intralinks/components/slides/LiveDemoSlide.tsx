@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { FileText, MessageSquare, BarChart3, FolderOpen, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 
 export function LiveDemoSlide(): JSX.Element {
   const [activeTab, setActiveTab] = useState<'before' | 'after'>('before');
@@ -51,11 +52,87 @@ export function LiveDemoSlide(): JSX.Element {
           {activeTab === 'before' ? (
             <div className="space-y-6">
               <Card className="overflow-hidden border-2 border-gray-300">
-                <img 
-                  src="/intralinks_diligence_overview.png.webp" 
-                  alt="Intralinks Diligence Overview" 
-                  className="w-full"
-                />
+                {/* Intralinks UI Mock - Before */}
+                <div className="bg-gray-50">
+                  {/* Header */}
+                  <div className="bg-white border-b border-gray-200 px-6 py-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="text-2xl font-bold text-gray-800">INTRALINKS</div>
+                      </div>
+                      <div className="text-sm text-gray-600">Project: TechCo Acquisition</div>
+                    </div>
+                  </div>
+                  
+                  {/* Tabs */}
+                  <div className="bg-gray-100 border-b border-gray-200 px-6">
+                    <div className="flex gap-6">
+                      <button className="py-3 px-1 border-b-2 border-blue-600 text-blue-600 font-medium flex items-center gap-2">
+                        <FolderOpen className="w-4 h-4" />
+                        Documents
+                      </button>
+                      <button className="py-3 px-1 text-gray-600 flex items-center gap-2">
+                        <MessageSquare className="w-4 h-4" />
+                        Q&A
+                      </button>
+                      <button className="py-3 px-1 text-gray-600 flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        Reports
+                      </button>
+                      <button className="py-3 px-1 text-gray-600 flex items-center gap-2">
+                        <BarChart3 className="w-4 h-4" />
+                        Analytics
+                      </button>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-6 bg-white">
+                    <div className="grid grid-cols-3 gap-6">
+                      <div className="col-span-2">
+                        <h3 className="font-medium text-gray-800 mb-4">Document Library</h3>
+                        <div className="space-y-2">
+                          <div className="p-3 bg-gray-50 rounded flex items-center justify-between">
+                            <span className="text-sm">Financial Statements 2023.pdf</span>
+                            <span className="text-xs text-gray-500">2.4 MB</span>
+                          </div>
+                          <div className="p-3 bg-gray-50 rounded flex items-center justify-between">
+                            <span className="text-sm">Customer Contracts.zip</span>
+                            <span className="text-xs text-gray-500">15.8 MB</span>
+                          </div>
+                          <div className="p-3 bg-gray-50 rounded flex items-center justify-between">
+                            <span className="text-sm">Board Meeting Minutes.docx</span>
+                            <span className="text-xs text-gray-500">856 KB</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-medium text-gray-800 mb-4">Activity Summary</h3>
+                        <div className="space-y-3">
+                          <div className="text-sm">
+                            <p className="text-gray-600">Documents Uploaded</p>
+                            <p className="text-2xl font-semibold">147</p>
+                          </div>
+                          <div className="text-sm">
+                            <p className="text-gray-600">Q&A Pending</p>
+                            <p className="text-2xl font-semibold">23</p>
+                          </div>
+                          <div className="text-sm">
+                            <p className="text-gray-600">Users Active</p>
+                            <p className="text-2xl font-semibold">12</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-8 p-6 bg-gray-100 rounded-lg text-center">
+                      <p className="text-gray-500 font-ibm">
+                        Technical assessment happens outside the platform
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </Card>
               <div className="text-center">
                 <p className="font-ibm text-lg text-brand-gunmetal">
@@ -69,44 +146,120 @@ export function LiveDemoSlide(): JSX.Element {
           ) : (
             <div className="space-y-6">
               <Card className="overflow-hidden border-2 border-brand-teal relative">
-                <img 
-                  src="/intralinks_diligence_overview.png.webp" 
-                  alt="Intralinks with TechScan IQ" 
-                  className="w-full"
-                />
-                {/* Overlay showing TechScan IQ integration */}
-                <div className="absolute top-4 right-4 bg-brand-teal text-white px-4 py-2 rounded-lg shadow-lg">
-                  <span className="font-space text-sm">✨ TechScan IQ Enabled</span>
-                </div>
-                
-                {/* Enhanced intelligence panel overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
-                  <div className="bg-white/95 backdrop-blur rounded-lg p-4 shadow-xl">
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="font-space text-lg text-brand-black">AI Technical Intelligence</h4>
-                        <p className="font-ibm text-sm text-brand-gunmetal">
-                          1,000+ sources analyzed • Updated in real-time
-                        </p>
+                {/* Intralinks UI Mock - After with TechScan IQ */}
+                <div className="bg-gray-50">
+                  {/* Header */}
+                  <div className="bg-white border-b border-gray-200 px-6 py-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="text-2xl font-bold text-gray-800">INTRALINKS</div>
+                        <div className="bg-brand-teal text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+                          ✨ TechScan IQ Enabled
+                        </div>
                       </div>
-                      <Button size="sm" className="bg-brand-teal text-white">
-                        View Full Report
-                      </Button>
+                      <div className="text-sm text-gray-600">Project: TechCo Acquisition</div>
+                    </div>
+                  </div>
+                  
+                  {/* Tabs */}
+                  <div className="bg-gray-100 border-b border-gray-200 px-6">
+                    <div className="flex gap-6">
+                      <button className="py-3 px-1 text-gray-600 flex items-center gap-2">
+                        <FolderOpen className="w-4 h-4" />
+                        Documents
+                      </button>
+                      <button className="py-3 px-1 text-gray-600 flex items-center gap-2">
+                        <MessageSquare className="w-4 h-4" />
+                        Q&A
+                      </button>
+                      <button className="py-3 px-1 text-gray-600 flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        Reports
+                      </button>
+                      <button className="py-3 px-1 text-gray-600 flex items-center gap-2">
+                        <BarChart3 className="w-4 h-4" />
+                        Analytics
+                      </button>
+                      <button className="py-3 px-1 border-b-2 border-brand-teal text-brand-teal font-medium flex items-center gap-2">
+                        ✨ Tech Intelligence
+                      </button>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-6 bg-white">
+                    {/* AI Intelligence Panel */}
+                    <div className="bg-gradient-to-r from-brand-teal/5 to-brand-teal/10 border border-brand-teal rounded-lg p-6 mb-6">
+                      <div className="flex justify-between items-start mb-4">
+                        <div>
+                          <h3 className="font-space text-xl text-brand-black">AI-Powered Technical Analysis</h3>
+                          <p className="font-ibm text-sm text-brand-gunmetal mt-1">
+                            Generated in 48 hours • 5,000+ sources analyzed • No seller input required
+                          </p>
+                        </div>
+                        <Button size="sm" className="bg-brand-teal text-white">
+                          View Full Report
+                        </Button>
+                      </div>
+                      
+                      {/* Key Metrics */}
+                      <div className="grid grid-cols-4 gap-4 mb-6">
+                        <div className="bg-white p-4 rounded-lg">
+                          <p className="text-sm text-gray-600 mb-1">Technical Score</p>
+                          <p className="text-2xl font-bold text-brand-gunmetal">67/100</p>
+                          <p className="text-xs text-yellow-600">Medium Risk</p>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg">
+                          <p className="text-sm text-gray-600 mb-1">Integration Cost</p>
+                          <p className="text-2xl font-bold text-brand-gunmetal">$4.7M</p>
+                          <p className="text-xs text-gray-600">18-24 months</p>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg">
+                          <p className="text-sm text-gray-600 mb-1">Team Stability</p>
+                          <p className="text-2xl font-bold text-green-600">85%</p>
+                          <p className="text-xs text-gray-600">Low flight risk</p>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg">
+                          <p className="text-sm text-gray-600 mb-1">Scalability</p>
+                          <p className="text-2xl font-bold text-red-600">Limited</p>
+                          <p className="text-xs text-gray-600">Architecture concerns</p>
+                        </div>
+                      </div>
+                      
+                      {/* Critical Findings */}
+                      <div className="space-y-2">
+                        <div className="flex items-start gap-3 p-3 bg-red-50 rounded-lg">
+                          <XCircle className="w-5 h-5 text-red-600 mt-0.5" />
+                          <div className="flex-1">
+                            <p className="font-medium text-sm">Critical: Database architecture limits scale beyond 10M users</p>
+                            <p className="text-xs text-gray-600 mt-1">Source: GitHub commits, engineering blog posts, API response times</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 bg-yellow-50 rounded-lg">
+                          <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
+                          <div className="flex-1">
+                            <p className="font-medium text-sm">Medium: 67% revenue concentration in top 3 customers</p>
+                            <p className="text-xs text-gray-600 mt-1">Source: SEC filings, customer case studies, renewal patterns</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
+                          <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+                          <div className="flex-1">
+                            <p className="font-medium text-sm">Positive: Strong engineering culture with 85% retention</p>
+                            <p className="text-xs text-gray-600 mt-1">Source: LinkedIn data, Glassdoor reviews, hiring patterns</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     
-                    <div className="grid grid-cols-3 gap-4 text-sm">
-                      <div className="bg-red-50 p-2 rounded">
-                        <p className="font-ibm text-red-700">⚠️ High Risk</p>
-                        <p className="font-space text-xs">Scalability Issues</p>
-                      </div>
-                      <div className="bg-yellow-50 p-2 rounded">
-                        <p className="font-ibm text-yellow-700">⚡ Medium Risk</p>
-                        <p className="font-space text-xs">Integration: $4.7M</p>
-                      </div>
-                      <div className="bg-green-50 p-2 rounded">
-                        <p className="font-ibm text-green-700">✓ Low Risk</p>
-                        <p className="font-space text-xs">Team Stability</p>
-                      </div>
+                    {/* Quick Actions */}
+                    <div className="flex gap-4">
+                      <Button className="flex-1 bg-brand-teal text-white">
+                        Download Technical DD Report
+                      </Button>
+                      <Button variant="outline" className="flex-1">
+                        Schedule Expert Call
+                      </Button>
                     </div>
                   </div>
                 </div>

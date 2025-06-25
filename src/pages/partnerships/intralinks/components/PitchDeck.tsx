@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { StatusQuoSlide } from './slides/StatusQuo';
 import { BreakthroughSlide } from './slides/Breakthrough';
 import { IntroducingTechScanSlide } from './slides/IntroducingTechScan';
+import { HowItWorksSlide } from './slides/HowItWorks';
 import { TransformationSlide } from './slides/TransformationSlide';
 import { IntelligenceGapSlide } from './slides/IntelligenceGapSlide';
 import { AIRevolutionSlide } from './slides/AIRevolutionSlide';
@@ -19,6 +20,7 @@ const slides = [
   StatusQuoSlide,
   BreakthroughSlide,
   IntroducingTechScanSlide,
+  HowItWorksSlide,
   TransformationSlide,
   IntelligenceGapSlide,
   AIRevolutionSlide,
@@ -32,6 +34,7 @@ const slideNames = [
   'Status Quo',
   'Breakthrough',
   'Introducing TechScan',
+  'How It Works',
   'The Transformation',
   'Intelligence Gap',
   'AI Revolution',
