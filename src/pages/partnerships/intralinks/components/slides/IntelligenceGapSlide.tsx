@@ -192,7 +192,7 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
           transition={{ duration: 0.6 }}
         >
           <p className="font-ibm text-xl text-brand-gunmetal mb-4">
-            Today Intralinks powers M&A workflow for 10,000+ clients, but it could do so much more
+            Today, Intralinks powers M&A workflow for 10,000+ clients, but it could do so much more
           </p>
         </motion.div>
 
@@ -315,7 +315,7 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
               <ul className="space-y-3 font-ibm text-sm">
                 <li className="flex items-start gap-2">
                   <TrendingUp className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
-                  <span>New revenue stream: $7,900 per assessment</span>
+                  <span>New revenue stream and source of growth</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Users className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
@@ -464,7 +464,7 @@ export function IntelligenceGapSlide({ onNext, onPrev }: SlideProps): JSX.Elemen
             onClick={onNext}
             className="bg-brand-teal text-white hover:bg-brand-teal/90 px-10 py-6 text-lg"
           >
-            See the breakthrough →
+            See how it works →
           </Button>
         </motion.div>
 

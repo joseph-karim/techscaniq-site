@@ -126,7 +126,7 @@ export function IntroducingTechScanSlide({ onNext, onPrev }: SlideProps) {
             onClick={onNext}
             className="bg-brand-teal text-white hover:bg-brand-teal/90 px-10 py-6 text-lg"
           >
-            See how it works →
+            Uncover the opportunity →
           </Button>
         </motion.div>
 

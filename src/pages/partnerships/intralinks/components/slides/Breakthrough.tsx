@@ -307,7 +307,7 @@ export function BreakthroughSlide({ onNext, onPrev }: SlideProps) {
             onClick={onNext}
             className="bg-brand-teal text-white hover:bg-brand-teal/90 px-8 py-6 text-lg group"
           >
-            See it in action 
+            See how it integrates 
             <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </motion.div>
