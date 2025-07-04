@@ -3,11 +3,15 @@ import { ArrowRight, Check, ChevronDown, TrendingUp, Building2, AlertCircle, Fil
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { useState } from "react"
+import { ScanRequestModal } from "@/components/ScanRequestModal"
+import { ContactModal } from "@/components/ContactModal"
 
 export function TechScanLandingPage() {
   const { scrollYProgress } = useScroll()
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isScanModalOpen, setIsScanModalOpen] = useState(false)
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
 
   return (
     <div className="min-h-screen bg-brand-white text-brand-black overflow-x-hidden">
@@ -31,7 +35,9 @@ export function TechScanLandingPage() {
             <a href="#how-it-works" className="font-ibm text-brand-gunmetal hover:text-brand-black transition-colors">How It Works</a>
             <a href="#use-cases" className="font-ibm text-brand-gunmetal hover:text-brand-black transition-colors">Use Cases</a>
             <a href="#pricing" className="font-ibm text-brand-gunmetal hover:text-brand-black transition-colors">Pricing</a>
-            <Button className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium group">
+            <Button 
+              onClick={() => setIsScanModalOpen(true)}
+              className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium group">
               Start Intelligence Scan
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -95,7 +101,9 @@ export function TechScanLandingPage() {
               View Sample Report
               <FileCode className="ml-2 h-5 w-5 group-hover:rotate-3 transition-transform" />
             </Button>
-            <Button className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium text-lg px-10 py-6 shadow-lg hover:shadow-xl transition-shadow group">
+            <Button 
+              onClick={() => setIsScanModalOpen(true)}
+              className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium text-lg px-10 py-6 shadow-lg hover:shadow-xl transition-shadow group">
               Start Intelligence Scan
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -1042,7 +1050,9 @@ export function TechScanLandingPage() {
                   Perfect for: PE/VC firms, Corp Dev teams
                 </p>
 
-                <Button className="w-full bg-gray-900 text-white hover:bg-gray-800 font-space font-medium">
+                <Button 
+                  onClick={() => setIsScanModalOpen(true)}
+                  className="w-full bg-gray-900 text-white hover:bg-gray-800 font-space font-medium">
                   Start Analysis
                 </Button>
               </div>
@@ -1092,7 +1102,9 @@ export function TechScanLandingPage() {
                   Perfect for: Enterprise sales teams, $100K+ deals
                 </p>
 
-                <Button className="w-full bg-gray-900 text-white hover:bg-gray-800 font-space font-medium">
+                <Button 
+                  onClick={() => setIsScanModalOpen(true)}
+                  className="w-full bg-gray-900 text-white hover:bg-gray-800 font-space font-medium">
                   Start Analysis
                 </Button>
               </div>
@@ -1140,7 +1152,9 @@ export function TechScanLandingPage() {
                   Perfect for: PE firms with portfolio companies
                 </p>
 
-                <Button className="w-full bg-white text-brand-teal hover:bg-gray-100 font-space font-medium">
+                <Button 
+                  onClick={() => setIsContactModalOpen(true)}
+                  className="w-full bg-white text-brand-teal hover:bg-gray-100 font-space font-medium">
                   Contact Us
                 </Button>
               </div>
@@ -1178,7 +1192,9 @@ export function TechScanLandingPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-              <Button className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium text-xl px-12 py-8 shadow-2xl hover:shadow-brand-teal/20 group">
+              <Button 
+                onClick={() => setIsScanModalOpen(true)}
+                className="bg-brand-teal text-brand-white hover:bg-brand-teal/90 font-space font-medium text-xl px-12 py-8 shadow-2xl hover:shadow-brand-teal/20 group">
                 Start Your Intelligence Scan
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </Button>
@@ -1206,6 +1222,18 @@ export function TechScanLandingPage() {
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* Scan Request Modal */}
+      <ScanRequestModal 
+        isOpen={isScanModalOpen} 
+        onClose={() => setIsScanModalOpen(false)} 
+      />
+
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </div>
   )
 }
