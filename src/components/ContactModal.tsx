@@ -99,12 +99,12 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[500px] bg-[#0A1A2F] border-gray-800">
+      <DialogContent className="sm:max-w-[500px] bg-white border-gray-200">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-white">
+          <DialogTitle className="text-2xl font-bold font-space text-brand-black">
             Get in Touch
           </DialogTitle>
-          <DialogDescription className="text-gray-400">
+          <DialogDescription className="text-brand-gunmetal font-ibm">
             Have questions about TechScanIQ? We'd love to hear from you.
           </DialogDescription>
         </DialogHeader>
@@ -116,14 +116,14 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-white flex items-center gap-2">
-                    <User className="h-4 w-4 text-[#00C2B2]" />
+                  <FormLabel className="text-brand-black font-ibm flex items-center gap-2">
+                    <User className="h-4 w-4 text-brand-teal" />
                     Name *
                   </FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Your full name"
-                      className="bg-[#1a2b47] border-gray-700 text-white placeholder:text-gray-500"
+                      className="bg-white border-gray-300 text-brand-black placeholder:text-gray-400 font-ibm focus:border-brand-teal focus:ring-brand-teal"
                       {...field}
                     />
                   </FormControl>
@@ -137,15 +137,15 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-white flex items-center gap-2">
-                    <Mail className="h-4 w-4 text-[#00C2B2]" />
+                  <FormLabel className="text-brand-black font-ibm flex items-center gap-2">
+                    <Mail className="h-4 w-4 text-brand-teal" />
                     Email *
                   </FormLabel>
                   <FormControl>
                     <Input
                       type="email"
                       placeholder="your@email.com"
-                      className="bg-[#1a2b47] border-gray-700 text-white placeholder:text-gray-500"
+                      className="bg-white border-gray-300 text-brand-black placeholder:text-gray-400 font-ibm focus:border-brand-teal focus:ring-brand-teal"
                       {...field}
                     />
                   </FormControl>
@@ -159,15 +159,15 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-white flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-[#00C2B2]" />
+                  <FormLabel className="text-brand-black font-ibm flex items-center gap-2">
+                    <Phone className="h-4 w-4 text-brand-teal" />
                     Phone (Optional)
                   </FormLabel>
                   <FormControl>
                     <Input
                       type="tel"
                       placeholder="+1 (555) 000-0000"
-                      className="bg-[#1a2b47] border-gray-700 text-white placeholder:text-gray-500"
+                      className="bg-white border-gray-300 text-brand-black placeholder:text-gray-400 font-ibm focus:border-brand-teal focus:ring-brand-teal"
                       {...field}
                     />
                   </FormControl>
@@ -181,11 +181,11 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-white">Message *</FormLabel>
+                  <FormLabel className="text-brand-black font-ibm">Message *</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Tell us how we can help..."
-                      className="bg-[#1a2b47] border-gray-700 text-white placeholder:text-gray-500 min-h-[120px]"
+                      className="bg-white border-gray-300 text-brand-black placeholder:text-gray-400 min-h-[120px] font-ibm focus:border-brand-teal focus:ring-brand-teal"
                       {...field}
                     />
                   </FormControl>
@@ -195,10 +195,10 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             />
 
             {submitResult && (
-              <div className={`p-4 rounded-lg text-center ${
+              <div className={`p-4 rounded-lg text-center font-ibm ${
                 submitResult.includes('Success') 
-                  ? 'bg-green-900/20 text-green-400 border border-green-800' 
-                  : 'bg-red-900/20 text-red-400 border border-red-800'
+                  ? 'bg-green-50 text-green-700 border border-green-200' 
+                  : 'bg-red-50 text-red-700 border border-red-200'
               }`}>
                 {submitResult}
               </div>
@@ -209,14 +209,14 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 type="button"
                 variant="outline"
                 onClick={onClose}
-                className="border-gray-700 text-gray-300 hover:bg-[#1a2b47]"
+                className="border-gray-300 text-brand-gunmetal hover:bg-gray-50 font-space"
               >
                 Cancel
               </Button>
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#00C2B2] hover:bg-[#00a599] text-black font-semibold"
+                className="bg-brand-teal hover:bg-brand-teal/90 text-white font-space font-medium"
               >
                 {isSubmitting ? (
                   <>

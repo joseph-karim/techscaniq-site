@@ -115,209 +115,213 @@ export function ScanRequestModal({ isOpen, onClose }: ScanRequestModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[600px] bg-[#0A1A2F] border-gray-800">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-white">
-            Request Technology Scan
-          </DialogTitle>
-          <DialogDescription className="text-gray-400">
-            Analyze any website's technology stack, performance, and security
-          </DialogDescription>
-        </DialogHeader>
+      <DialogContent className="sm:max-w-[700px] max-h-[90vh] bg-white border-gray-200 p-0">
+        <div className="px-6 pt-6">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold font-space text-brand-black">
+              Request Technology Scan
+            </DialogTitle>
+            <DialogDescription className="text-brand-gunmetal font-ibm">
+              Analyze any website's technology stack, performance, and security
+            </DialogDescription>
+          </DialogHeader>
 
-        <div className="mt-4 p-4 bg-[#1a2b47] rounded-lg border border-gray-700">
-          <h4 className="text-sm font-semibold text-[#00C2B2] mb-2">
-            What happens after you submit:
-          </h4>
-          <ul className="text-sm text-gray-300 space-y-1">
-            <li>• Our AI analyzes the company's technology stack and digital presence</li>
-            <li>• We generate a comprehensive report based on your selected criteria</li>
-            <li>• You'll receive an email when the report is ready (typically 12-48 hours)</li>
-          </ul>
+          <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <h4 className="text-sm font-semibold text-brand-teal mb-2 font-space">
+              What happens after you submit:
+            </h4>
+            <ul className="text-sm text-brand-gunmetal space-y-1 font-ibm">
+              <li>• Our AI analyzes the company's technology stack and digital presence</li>
+              <li>• We generate a comprehensive report based on your selected criteria</li>
+              <li>• You'll receive an email when the report is ready (typically 12-48 hours)</li>
+            </ul>
+          </div>
         </div>
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 mt-6">
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white">Company Information</h3>
-              
-              <FormField
-                control={form.control}
-                name="companyName"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-white">Company Name *</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Enter company name"
-                        className="bg-[#1a2b47] border-gray-700 text-white placeholder:text-gray-500"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="websiteUrl"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-white">Website URL *</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="https://example.com"
-                        className="bg-[#1a2b47] border-gray-700 text-white placeholder:text-gray-500"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="companyDescription"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-white">Company Description (Optional)</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Brief description of the company and its business"
-                        className="bg-[#1a2b47] border-gray-700 text-white placeholder:text-gray-500 min-h-[80px]"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="reportType"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-white">Report Type *</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <div className="overflow-y-auto max-h-[calc(90vh-200px)] px-6 pb-6">
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 mt-6">
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold font-space text-brand-black">Company Information</h3>
+                
+                <FormField
+                  control={form.control}
+                  name="companyName"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-brand-black font-ibm">Company Name *</FormLabel>
                       <FormControl>
-                        <SelectTrigger className="bg-[#1a2b47] border-gray-700 text-white">
-                          <SelectValue placeholder="Select a report type" />
-                        </SelectTrigger>
+                        <Input
+                          placeholder="Enter company name"
+                          className="bg-white border-gray-300 text-brand-black placeholder:text-gray-400 font-ibm focus:border-brand-teal focus:ring-brand-teal"
+                          {...field}
+                        />
                       </FormControl>
-                      <SelectContent className="bg-[#1a2b47] border-gray-700">
-                        <SelectItem value="pe-due-diligence" className="text-white hover:bg-[#2a3b57]">
-                          PE Due Diligence
-                        </SelectItem>
-                        <SelectItem value="sales-intelligence" className="text-white hover:bg-[#2a3b57]">
-                          Sales Intelligence
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white">Contact Information</h3>
-              
-              <FormField
-                control={form.control}
-                name="contactName"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-white">Name *</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Your full name"
-                        className="bg-[#1a2b47] border-gray-700 text-white placeholder:text-gray-500"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                <FormField
+                  control={form.control}
+                  name="websiteUrl"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-brand-black font-ibm">Website URL *</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="https://example.com"
+                          className="bg-white border-gray-300 text-brand-black placeholder:text-gray-400 font-ibm focus:border-brand-teal focus:ring-brand-teal"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-              <FormField
-                control={form.control}
-                name="contactEmail"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-white">Email *</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="email"
-                        placeholder="your@email.com"
-                        className="bg-[#1a2b47] border-gray-700 text-white placeholder:text-gray-500"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                <FormField
+                  control={form.control}
+                  name="companyDescription"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-brand-black font-ibm">Company Description (Optional)</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Brief description of the company and its business"
+                          className="bg-white border-gray-300 text-brand-black placeholder:text-gray-400 min-h-[80px] font-ibm focus:border-brand-teal focus:ring-brand-teal"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-              <FormField
-                control={form.control}
-                name="contactPhone"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-white">Phone (Optional)</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="tel"
-                        placeholder="+1 (555) 000-0000"
-                        className="bg-[#1a2b47] border-gray-700 text-white placeholder:text-gray-500"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-
-            {submitResult && (
-              <div className={`p-4 rounded-lg text-center ${
-                submitResult.includes('Success') 
-                  ? 'bg-green-900/20 text-green-400 border border-green-800' 
-                  : 'bg-red-900/20 text-red-400 border border-red-800'
-              }`}>
-                {submitResult}
+                <FormField
+                  control={form.control}
+                  name="reportType"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-brand-black font-ibm">Report Type *</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="bg-white border-gray-300 text-brand-black font-ibm focus:border-brand-teal focus:ring-brand-teal">
+                            <SelectValue placeholder="Select a report type" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent className="bg-white border-gray-200">
+                          <SelectItem value="pe-due-diligence" className="text-brand-black hover:bg-gray-100 font-ibm">
+                            PE Due Diligence
+                          </SelectItem>
+                          <SelectItem value="sales-intelligence" className="text-brand-black hover:bg-gray-100 font-ibm">
+                            Sales Intelligence
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
               </div>
-            )}
 
-            <div className="flex justify-end space-x-4 pt-4">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={onClose}
-                className="border-gray-700 text-gray-300 hover:bg-[#1a2b47]"
-              >
-                Cancel
-              </Button>
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="bg-[#00C2B2] hover:bg-[#00a599] text-black font-semibold"
-              >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Submitting...
-                  </>
-                ) : (
-                  'Submit Scan Request'
-                )}
-              </Button>
-            </div>
-          </form>
-        </Form>
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold font-space text-brand-black">Contact Information</h3>
+                
+                <FormField
+                  control={form.control}
+                  name="contactName"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-brand-black font-ibm">Name *</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Your full name"
+                          className="bg-white border-gray-300 text-brand-black placeholder:text-gray-400 font-ibm focus:border-brand-teal focus:ring-brand-teal"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="contactEmail"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-brand-black font-ibm">Email *</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="email"
+                          placeholder="your@email.com"
+                          className="bg-white border-gray-300 text-brand-black placeholder:text-gray-400 font-ibm focus:border-brand-teal focus:ring-brand-teal"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="contactPhone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-brand-black font-ibm">Phone (Optional)</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="tel"
+                          placeholder="+1 (555) 000-0000"
+                          className="bg-white border-gray-300 text-brand-black placeholder:text-gray-400 font-ibm focus:border-brand-teal focus:ring-brand-teal"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              {submitResult && (
+                <div className={`p-4 rounded-lg text-center font-ibm ${
+                  submitResult.includes('Success') 
+                    ? 'bg-green-50 text-green-700 border border-green-200' 
+                    : 'bg-red-50 text-red-700 border border-red-200'
+                }`}>
+                  {submitResult}
+                </div>
+              )}
+
+              <div className="flex justify-end space-x-4 pt-4 sticky bottom-0 bg-white">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={onClose}
+                  className="border-gray-300 text-brand-gunmetal hover:bg-gray-50 font-space"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-brand-teal hover:bg-brand-teal/90 text-white font-space font-medium"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    'Submit Scan Request'
+                  )}
+                </Button>
+              </div>
+            </form>
+          </Form>
+        </div>
       </DialogContent>
     </Dialog>
   );
