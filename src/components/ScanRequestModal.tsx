@@ -115,18 +115,18 @@ export function ScanRequestModal({ isOpen, onClose }: ScanRequestModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[700px] max-h-[90vh] bg-white border-gray-200 p-0">
-        <div className="px-6 pt-6">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold font-space text-brand-black">
-              Request Technology Scan
-            </DialogTitle>
-            <DialogDescription className="text-brand-gunmetal font-ibm">
-              Analyze any website's technology stack, performance, and security
-            </DialogDescription>
-          </DialogHeader>
+      <DialogContent className="sm:max-w-[700px] max-h-[90vh] bg-white border-gray-200 flex flex-col p-0 overflow-hidden">
+        <DialogHeader className="px-6 pt-6 pb-4 border-b border-gray-100">
+          <DialogTitle className="text-2xl font-bold font-space text-brand-black">
+            Request Technology Scan
+          </DialogTitle>
+          <DialogDescription className="text-brand-gunmetal font-ibm">
+            Analyze any website's technology stack, performance, and security
+          </DialogDescription>
+        </DialogHeader>
 
-          <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+        <div className="flex-1 overflow-y-auto px-6">
+          <div className="mt-4 mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
             <h4 className="text-sm font-semibold text-brand-teal mb-2 font-space">
               What happens after you submit:
             </h4>
@@ -136,11 +136,9 @@ export function ScanRequestModal({ isOpen, onClose }: ScanRequestModalProps) {
               <li>• You'll receive an email when the report is ready (typically 12-48 hours)</li>
             </ul>
           </div>
-        </div>
 
-        <div className="overflow-y-auto max-h-[calc(90vh-200px)] px-6 pb-6">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 mt-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 pb-6">
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold font-space text-brand-black">Company Information</h3>
                 
@@ -294,33 +292,33 @@ export function ScanRequestModal({ isOpen, onClose }: ScanRequestModalProps) {
                   {submitResult}
                 </div>
               )}
-
-              <div className="flex justify-end space-x-4 pt-4 sticky bottom-0 bg-white">
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={onClose}
-                  className="border-gray-300 text-brand-gunmetal hover:bg-gray-50 font-space"
-                >
-                  Cancel
-                </Button>
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-brand-teal hover:bg-brand-teal/90 text-white font-space font-medium"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Submitting...
-                    </>
-                  ) : (
-                    'Submit Scan Request'
-                  )}
-                </Button>
-              </div>
             </form>
           </Form>
+        </div>
+
+        <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 flex justify-end space-x-4">
+          <Button
+            type="button"
+            variant="outline"
+            onClick={onClose}
+            className="border-gray-300 text-brand-gunmetal hover:bg-gray-50 font-space"
+          >
+            Cancel
+          </Button>
+          <Button
+            onClick={form.handleSubmit(onSubmit)}
+            disabled={isSubmitting}
+            className="bg-brand-teal hover:bg-brand-teal/90 text-white font-space font-medium"
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Submitting...
+              </>
+            ) : (
+              'Submit Scan Request'
+            )}
+          </Button>
         </div>
       </DialogContent>
     </Dialog>
