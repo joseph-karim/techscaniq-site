@@ -1214,7 +1214,7 @@ export function TechScanLandingPage() {
           </DialogHeader>
           <div className="flex-1 w-full h-full min-h-[600px] overflow-hidden">
             <iframe
-              src="https://scan.techscaniq.com/shared/share_1355125f-e7e6-4d9a-8df1-e7d016765001"
+              src="https://scan.techscaniq.com/shared/share_80b73048-cb71-4c7f-a531-3712516f39da"
               className="w-full h-full border-0"
               title="TechScan IQ Sample Report"
               allowFullScreen
